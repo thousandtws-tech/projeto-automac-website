@@ -259,5 +259,40 @@ export const dictionary = {
     visionDesc: "Melhoria contínua de seus produtos, contribuindo com a modernização e acessibilidade.",
     valuesTitle: "Valores",
     valuesDesc: "Valorizamos pessoas e talentos ; alicerçados com tecnologia e inovação."
-  }
+  },
+  contato: {
+    headline: "Seu projeto não pode depender de fornecedores que fazem promessas que não podem cumprir.",
+    subheadline: "Envie seus projetos e receba uma análise técnica de quem fabrica com precisão industrial — do corte CNC à instalação final em obra.",
+    emailLabel: "E-mail",
+    phoneLabel: "Telefone",
+    factoryLabel: "Fábrica",
+    factoryLocation: "Campinas, SP - Brasil",
+    ps: "PS: Atrasos em projetos nunca são apenas uma questão de prazo — significam multas, reputação abalada e o próximo projeto que pode nunca vir. Envie seus projetos e experimente a diferença entre contratar uma promessa e contratar um processo.",
+    successTitle: "Mensagem Enviada!",
+    successMessage: "Agradecemos seu contato. Nossa equipe técnica analisará sua solicitação e entrará em contato em breve.",
+    sendNewMessage: "Enviar Nova Mensagem",
+    formTitle: "Formulário de Solicitação",
+    labels: {
+      name: "Nome Completo",
+      company: "Empresa",
+      email: "E-mail",
+      phone: "Telefone / WhatsApp",
+      segment: "Segmento do Projeto",
+      message: "Mensagem / Notas",
+    },
+    placeholders: {
+      name: "Seu nome completo",
+      company: "Sua construtora ou escritório de arquitetura",
+      email: "seu@email.com.br",
+      phone: "+55 19 99999-9999",
+      message: "Descreva prazos específicos, dimensões de abertura ou necessidades especiais do projeto...",
+    },
+    segments: [
+      { value: "Comercial", label: "Comercial (Lojas, Prédios comerciais)" },
+      { value: "Hospitalar", label: "Hospitalar (Clínicas, Hospitais)" },
+      { value: "Industrial", label: "Industrial (Docas, Galpões)" },
+      { value: "Residencial", label: "Residencial (Condomínios, Casas)" },
+    ],
+    submitButton: "Enviar Projeto para Análise",
+  },
 } as const;

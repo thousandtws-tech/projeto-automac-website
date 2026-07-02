@@ -5,7 +5,8 @@ import { Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 
-export function ContatoForm() {
+export function ContatoForm({ dictionary }: { dictionary: any }) {
+  const c = dictionary.contato;
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     nome: "",
@@ -36,37 +37,36 @@ export function ContatoForm() {
           <FadeIn direction="left" delay={0.1} className="h-full">
             <div className="flex flex-col justify-center px-8 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0 h-full">
 
-
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-black tracking-tighter leading-[1] text-white uppercase mb-8">
-                Seu projeto não pode depender de fornecedores que fazem promessas que não podem cumprir.
+                {c.headline}
               </h1>
 
               <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-12">
-                Envie seus projetos e receba uma análise técnica de quem fabrica com precisão industrial — do corte CNC à instalação final em obra.
+                {c.subheadline}
               </p>
 
               <div className="flex flex-col gap-6 mb-12">
                 <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">E-mail</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">{c.emailLabel}</span>
                   <a href="mailto:contato@automec.com.br" className="text-white font-bold hover:text-white/80 transition-colors">
                     contato@automec.com.br
                   </a>
                 </div>
                 <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">Telefone</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">{c.phoneLabel}</span>
                   <a href="tel:+551932138251" className="text-white font-bold hover:text-white/80 transition-colors">
                     +55 19 3213-8251
                   </a>
                 </div>
                 <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">Fábrica</span>
-                  <span className="text-white font-bold">Campinas, SP - Brasil</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">{c.factoryLabel}</span>
+                  <span className="text-white font-bold">{c.factoryLocation}</span>
                 </div>
               </div>
 
               <div className="border-l-2 border-white pl-6">
                 <p className="text-sm text-white italic leading-relaxed">
-                  PS: Atrasos em projetos nunca são apenas uma questão de prazo — significam multas, reputação abalada e o próximo projeto que pode nunca vir. Envie seus projetos e experimente a diferença entre contratar uma promessa e contratar um processo.
+                  {c.ps}
                 </p>
               </div>
             </div>
@@ -79,25 +79,25 @@ export function ContatoForm() {
               {submitted ? (
                 <div className="flex flex-col items-center justify-center text-center py-16">
                   <CheckCircle className="h-16 w-2xl text-[#25D366] mb-6" />
-                  <h3 className="text-2xl font-black uppercase text-black mb-2">Mensagem Enviada!</h3>
+                  <h3 className="text-2xl font-black uppercase text-black mb-2">{c.successTitle}</h3>
                   <p className="text-neutral-600 max-w-sm mb-8">
-                    Agradecemos seu contato. Nossa equipe técnica analisará sua solicitação e entrará em contato em breve.
+                    {c.successMessage}
                   </p>
                   <Button
                     onClick={() => setSubmitted(false)}
                     className="bg-black hover:bg-neutral-800 text-white font-bold uppercase tracking-widest px-8 h-12"
                   >
-                    Enviar Nova Mensagem
+                    {c.sendNewMessage}
                   </Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                   <h2 className="text-xl font-black uppercase tracking-tight text-black border-b border-black pb-4">
-                    Formulário de Solicitação
+                    {c.formTitle}
                   </h2>
 
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="nome" className="text-xs font-bold uppercase tracking-widest text-black">Nome Completo</label>
+                    <label htmlFor="nome" className="text-xs font-bold uppercase tracking-widest text-black">{c.labels.name}</label>
                     <input
                       type="text"
                       id="nome"
@@ -105,27 +105,27 @@ export function ContatoForm() {
                       required
                       value={formData.nome}
                       onChange={handleChange}
-                      placeholder="Seu nome completo"
+                      placeholder={c.placeholders.name}
                       className="h-12 px-4 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
                     />
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="empresa" className="text-xs font-bold uppercase tracking-widest text-black">Empresa</label>
+                    <label htmlFor="empresa" className="text-xs font-bold uppercase tracking-widest text-black">{c.labels.company}</label>
                     <input
                       type="text"
                       id="empresa"
                       name="empresa"
                       value={formData.empresa}
                       onChange={handleChange}
-                      placeholder="Sua construtora ou escritório de arquitetura"
+                      placeholder={c.placeholders.company}
                       className="h-12 px-4 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-black">E-mail</label>
+                      <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-black">{c.labels.email}</label>
                       <input
                         type="email"
                         id="email"
@@ -133,13 +133,13 @@ export function ContatoForm() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="seu@email.com.br"
+                        placeholder={c.placeholders.email}
                         className="h-12 px-4 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
                       />
                     </div>
 
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="telefone" className="text-xs font-bold uppercase tracking-widest text-black">Telefone / WhatsApp</label>
+                      <label htmlFor="telefone" className="text-xs font-bold uppercase tracking-widest text-black">{c.labels.phone}</label>
                       <input
                         type="tel"
                         id="telefone"
@@ -147,14 +147,14 @@ export function ContatoForm() {
                         required
                         value={formData.telefone}
                         onChange={handleChange}
-                        placeholder="+55 19 99999-9999"
+                        placeholder={c.placeholders.phone}
                         className="h-12 px-4 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
                       />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="segmento" className="text-xs font-bold uppercase tracking-widest text-black">Segmento do Projeto</label>
+                    <label htmlFor="segmento" className="text-xs font-bold uppercase tracking-widest text-black">{c.labels.segment}</label>
                     <select
                       id="segmento"
                       name="segmento"
@@ -162,15 +162,14 @@ export function ContatoForm() {
                       onChange={handleChange}
                       className="h-12 px-4 border border-black bg-white text-sm text-black focus:outline-none focus:border-brand-red-600 cursor-pointer"
                     >
-                      <option value="Comercial">Comercial (Lojas, Prédios comerciais)</option>
-                      <option value="Hospitalar">Hospitalar (Clínicas, Hospitais)</option>
-                      <option value="Industrial">Industrial (Docas, Galpões)</option>
-                      <option value="Residencial">Residencial (Condomínios, Casas)</option>
+                      {c.segments.map((seg: { value: string; label: string }) => (
+                        <option key={seg.value} value={seg.value}>{seg.label}</option>
+                      ))}
                     </select>
                   </div>
 
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="mensagem" className="text-xs font-bold uppercase tracking-widest text-black">Mensagem / Notas</label>
+                    <label htmlFor="mensagem" className="text-xs font-bold uppercase tracking-widest text-black">{c.labels.message}</label>
                     <textarea
                       id="mensagem"
                       name="mensagem"
@@ -178,7 +177,7 @@ export function ContatoForm() {
                       required
                       value={formData.mensagem}
                       onChange={handleChange}
-                      placeholder="Descreva prazos específicos, dimensões de abertura ou necessidades especiais do projeto..."
+                      placeholder={c.placeholders.message}
                       className="p-4 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600 resize-none"
                     />
                   </div>
@@ -188,7 +187,7 @@ export function ContatoForm() {
                     className="w-full bg-black hover:bg-neutral-800 text-white font-bold uppercase tracking-widest h-13 flex items-center justify-center gap-2"
                   >
                     <Send className="h-4 w-4" />
-                    Enviar Projeto para Análise
+                    {c.submitButton}
                   </Button>
                 </form>
               )}

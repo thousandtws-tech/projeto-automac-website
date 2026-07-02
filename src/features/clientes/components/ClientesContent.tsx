@@ -4,14 +4,14 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  Building2,
-  ShieldCheck,
-  Truck,
-  Stethoscope,
-  ShoppingBag,
-  Plane,
-  Factory,
-  CheckCircle,
+    Building2,
+    ShieldCheck,
+    Truck,
+    Stethoscope,
+    ShoppingBag,
+    Plane,
+    Factory,
+    CheckCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
