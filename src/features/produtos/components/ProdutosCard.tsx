@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Box } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Locale, withLocale } from "@/src/i18n/config";
 import { ProdutoItem } from "../types";
 
 interface ProdutosCardProps {
+  locale: Locale;
   item: ProdutoItem;
   labels?: {
     badge: string;
@@ -17,12 +19,14 @@ const fallbackLabels = {
   action: "Ver Detalhes",
 };
 
-export function ProdutosCard({ item, labels }: ProdutosCardProps) {
+export function ProdutosCard({ locale, item, labels }: ProdutosCardProps) {
   const cardLabels = labels ?? fallbackLabels;
+  const p = item.i18n[locale] || item.i18n["pt-BR"];
+
   return (
     <div className="h-full group">
       <Link
-        href={item.href}
+        href={withLocale(locale, item.href)}
         className={cn(
           "relative flex flex-col h-full border border-black bg-white transition-colors duration-300 hover:bg-neutral-50",
           "after:absolute after:inset-0 after:from-brand-red-500/5 after:to-transparent after:opacity-0 group-hover:after:opacity-100 after:transition-opacity"
@@ -31,7 +35,7 @@ export function ProdutosCard({ item, labels }: ProdutosCardProps) {
         <div className="relative aspect-video w-full border-b border-black bg-white">
           <Image
             src={item.image}
-            alt={item.title}
+            alt={p.title}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="object-contain p-6 transition-transform duration-700 ease-out group-hover:scale-105"
@@ -47,7 +51,7 @@ export function ProdutosCard({ item, labels }: ProdutosCardProps) {
         <div className="flex flex-1 flex-col p-5">
           <div className="mb-1">
             <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500">
-              {item.title}
+              {p.title}
             </span>
           </div>
           <h3 className="text-2xl font-black tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500">

@@ -22,6 +22,7 @@ export default async function Acessorios({params}: { params: Promise<{ locale: s
                 items={acessoriosMock}
                 toolbarLabels={dictionary.acessorios.toolbar}
                 cardItems={dictionary.acessorios.items}
+                viewDetails={dictionary.acessorios.viewDetails}
                 ctaContent={dictionary.acessorios.cta}
             />
         </main>

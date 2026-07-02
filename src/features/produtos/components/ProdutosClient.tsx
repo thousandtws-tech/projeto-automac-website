@@ -3,13 +3,14 @@
 import { ProdutosGrid } from "@features/produtos/components/ProdutosGrid";
 import { produtosMock } from "@features/produtos/services/produtoService";
 import { FadeIn } from "@/components/fade-in";
+import { Locale } from "@/src/i18n/config";
 
-export function ProdutosClient({ dictionary }: { dictionary: any }) {
+export function ProdutosClient({ locale, dictionary }: { locale: Locale; dictionary: any }) {
   return (
     <section className="py-20">
       <div className="container mx-auto px-6">
         <FadeIn direction="up" delay={0.1}>
-          <ProdutosGrid items={produtosMock} labels={{ badge: dictionary.produtos.cardBadge, action: dictionary.produtos.cardAction }} />
+          <ProdutosGrid locale={locale} items={produtosMock} labels={{ badge: dictionary.produtos.cardBadge, action: dictionary.produtos.cardAction }} />
         </FadeIn>
 
         <FadeIn direction="up" delay={0.3}>

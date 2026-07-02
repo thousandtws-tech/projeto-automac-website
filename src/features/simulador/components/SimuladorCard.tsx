@@ -10,6 +10,7 @@ interface SimuladorCardProps {
     badge: string;
     action: string;
   };
+  categories?: Record<string, string>;
 }
 
 const fallbackLabels = {
@@ -17,8 +18,9 @@ const fallbackLabels = {
   action: "Abrir Simulador",
 };
 
-export function SimuladorCard({ item, labels }: SimuladorCardProps) {
+export function SimuladorCard({ item, labels, categories }: SimuladorCardProps) {
   const cardLabels = labels ?? fallbackLabels;
+  const category = categories?.[item.categoryKey] ?? item.categoryKey;
   return (
     <div className="h-full group">
       <Link
@@ -32,7 +34,7 @@ export function SimuladorCard({ item, labels }: SimuladorCardProps) {
         <div className="relative aspect-video w-full border-b border-black bg-white">
           <Image
             src={item.image}
-            alt={item.title}
+            alt={item.model}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="object-contain p-6 transition-transform duration-700 ease-out group-hover:scale-105"
@@ -48,7 +50,7 @@ export function SimuladorCard({ item, labels }: SimuladorCardProps) {
         <div className="flex flex-1 flex-col p-5">
           <div className="mb-1">
             <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500">
-              {item.title}
+              {category}
             </span>
           </div>
           <h3 className="text-2xl font-black tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500">

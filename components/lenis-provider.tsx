@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export function LenisProvider({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null);
   const rafId = useRef<number>(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -29,6 +31,19 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
       lenisRef.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    const lenis = lenisRef.current;
+    if (!lenis) return;
+
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+
+    requestAnimationFrame(() => {
+      lenis.scrollTo(0, { immediate: true });
+      lenis.resize();
+    });
+  }, [pathname]);
 
   return <>{children}</>;
 }

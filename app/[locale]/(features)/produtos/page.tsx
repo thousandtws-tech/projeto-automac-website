@@ -19,7 +19,7 @@ export default async function Produtos({ params }: { params: Promise<{ locale: s
   return (
     <main className="min-h-screen bg-white">
       <ProdutosHeader content={dictionary.produtos.header} />
-      <ProdutosClient dictionary={dictionary} />
+      <ProdutosClient locale={locale} dictionary={dictionary} />
     </main>
   );
 }

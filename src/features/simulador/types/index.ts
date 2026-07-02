@@ -1,7 +1,7 @@
 export interface SimuladorItem {
   id: string;
   image: string;
-  title: string;
+  categoryKey: string;
   model: string;
   href: string;
 }

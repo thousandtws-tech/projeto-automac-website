@@ -43,18 +43,34 @@ function useCountUp(end: number, duration: number = 2000, startOnView: boolean =
   return { count, ref };
 }
 
+const clientLogos = [
+  { id: "accor", src: "/clientes/accor.svg", alt: "Accor" },
+  { id: "bosch", src: "/clientes/bosch.svg", alt: "Bosch" },
+  { id: "carrefour", src: "/clientes/carrefour.svg", alt: "Carrefour" },
+  { id: "colinas", src: "/clientes/Colinas  Shopping (1).svg", alt: "Colinas Shopping" },
+  { id: "droga-raia", src: "/clientes/droga-raia.svg", alt: "Droga Raia" },
+  { id: "drogasil", src: "/clientes/drogasil.svg", alt: "Drogasil" },
+  { id: "ems", src: "/clientes/EMS.svg", alt: "EMS" },
+  { id: "graal", src: "/clientes/graal.svg", alt: "Graal" },
+  { id: "sirioli", src: "/clientes/hospital sirioli banes.svg", alt: "Hospital Sirioli" },
+  { id: "lilly", src: "/clientes/Lilly.svg", alt: "Lilly" },
+  { id: "odebrecht", src: "/clientes/odebrecht.svg", alt: "Odebrecht" },
+  { id: "patio-ciane", src: "/clientes/Pátio Cianê.svg", alt: "Pátio Cianê" },
+  { id: "rio-galeao", src: "/clientes/Rio Galeão.svg", alt: "Rio Galeão" },
+  { id: "royal-palm", src: "/clientes/royal palm plaza.svg", alt: "Royal Palm Plaza" },
+  { id: "saint-gobain", src: "/clientes/saint gobain.svg", alt: "Saint Gobain" },
+  { id: "market-place", src: "/clientes/Shopping Market Place.svg", alt: "Shopping Market Place" },
+  { id: "smart-fit", src: "/clientes/Smart Fit.svg", alt: "Smart Fit" },
+  { id: "tetra-pak", src: "/clientes/tetra-pak.svg", alt: "Tetra Pak" },
+  { id: "royal-palm-v2", src: "/clientes/The Royal Palm Plaza - V2.svg", alt: "The Royal Palm Plaza" },
+  { id: "viracopos", src: "/clientes/Viracopos.svg", alt: "Viracopos" },
+];
+
 export function ClientsSection() {
   const { count, ref } = useCountUp(30000, 2500);
 
-  const row1 = Array.from({ length: 15 }, (_, i) => ({
-    id: `logo-a-${i}`,
-    url: `https://placehold.net/120x60.png?text=Logo+${i + 1}`,
-  }));
-
-  const row2 = Array.from({ length: 15 }, (_, i) => ({
-    id: `logo-b-${i}`,
-    url: `https://placehold.net/120x60.png?text=Logo+${i + 16}`,
-  }));
+  const row1 = clientLogos.slice(0, 10);
+  const row2 = clientLogos.slice(10, 20);
 
   const formatNumber = (num: number) =>
     num.toLocaleString("pt-BR");
@@ -80,26 +96,14 @@ export function ClientsSection() {
 
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
             <div className="animate-marquee gap-5 flex">
-              {row1.map((logo, index) => (
+              {[...row1, ...row1].map((logo, index) => (
                 <div
                   key={`${logo.id}-${index}`}
                   className="flex shrink-0 items-center justify-center p-3 bg-white border border-black w-36 h-18"
                 >
                   <img
-                    src={logo.url}
-                    alt="Cliente Automec"
-                    className="max-h-full max-w-full object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-              ))}
-              {row1.map((logo, index) => (
-                <div
-                  key={`${logo.id}-dup-${index}`}
-                  className="flex shrink-0 items-center justify-center p-3 bg-white border border-black w-36 h-18"
-                >
-                  <img
-                    src={logo.url}
-                    alt="Cliente Automec"
+                    src={logo.src}
+                    alt={logo.alt}
                     className="max-h-full max-w-full object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
@@ -109,26 +113,14 @@ export function ClientsSection() {
 
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
             <div className="animate-marquee-reverse gap-5 flex">
-              {row2.map((logo, index) => (
+              {[...row2, ...row2].map((logo, index) => (
                 <div
                   key={`${logo.id}-${index}`}
                   className="flex shrink-0 items-center justify-center p-3 bg-white border border-black w-36 h-18"
                 >
                   <img
-                    src={logo.url}
-                    alt="Cliente Automec"
-                    className="max-h-full max-w-full object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-              ))}
-              {row2.map((logo, index) => (
-                <div
-                  key={`${logo.id}-dup-${index}`}
-                  className="flex shrink-0 items-center justify-center p-3 bg-white border border-black w-36 h-18"
-                >
-                  <img
-                    src={logo.url}
-                    alt="Cliente Automec"
+                    src={logo.src}
+                    alt={logo.alt}
                     className="max-h-full max-w-full object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
                   />
                 </div>

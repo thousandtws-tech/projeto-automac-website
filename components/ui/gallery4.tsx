@@ -23,6 +23,7 @@ export interface Gallery4Item {
 export interface Gallery4Props {
   title?: string;
   description?: string;
+  viewDetails?: string;
   items: Gallery4Item[];
 }
 
@@ -80,6 +81,7 @@ const data: Gallery4Item[] = [
 const Gallery4 = ({
   title = "Modelos de Portas",
   description = "Conheça nossa gama completa de portas automáticas, desenvolvidas com tecnologia de ponta para atender aos mais diversos segmentos e necessidades arquitetônicas.",
+  viewDetails = "Saiba Mais",
   items = data,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -164,7 +166,7 @@ const Gallery4 = ({
 
                     <div className="mt-auto pt-4 flex items-center justify-between">
                       <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-red-500 opacity-0 transition-all duration-300 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
-                        Saiba Mais
+                        {viewDetails}
                       </span>
                       <div className="flex h-10 w-10 items-center justify-center border border-black bg-white text-slate-900 transition-all duration-300 group-hover:bg-slate-950 group-hover:text-white">
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />

@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  HeartPulse,
   Building2,
   ShieldCheck,
   Truck,
@@ -54,11 +53,10 @@ const categories = [
     title: "Saúde & Hospitais",
     desc: "Portas automáticas herméticas e antibacterianas para salas cirúrgicas, UTIs e laboratórios.",
     logos: [
-      { name: "Einstein", text: "Einstein" },
-      { name: "Sírio-Libanês", text: "Sírio Libanês" },
-      { name: "Unimed", text: "Unimed" },
-      { name: "Hospital São Luiz", text: "Hosp. São Luiz" },
-      { name: "Hospital Moinhos", text: "Hosp. Moinhos" },
+      { name: "Hospital Sirioli", src: "/clientes/hospital sirioli banes.svg" },
+      { name: "EMS", src: "/clientes/EMS.svg" },
+      { name: "Lilly", src: "/clientes/Lilly.svg" },
+      { name: "Graal", src: "/clientes/graal.svg" },
     ],
   },
   {
@@ -67,12 +65,12 @@ const categories = [
     title: "Varejo & Shoppings",
     desc: "Sistemas deslizantes e telescópicos de alto fluxo com design minimalista e economia de climatização.",
     logos: [
-      { name: "Market Place", text: "Market Place" },
-      { name: "Colinas Shopping", text: "Colinas" },
-      { name: "Pátio Cianê", text: "Pátio Cianê" },
-      { name: "Walmart", text: "Walmart" },
-      { name: "Carrefour", text: "Carrefour" },
-      { name: "Tok&Stok", text: "Tok&Stok" },
+      { name: "Market Place", src: "/clientes/Shopping Market Place.svg" },
+      { name: "Colinas Shopping", src: "/clientes/Colinas  Shopping (1).svg" },
+      { name: "Pátio Cianê", src: "/clientes/Pátio Cianê.svg" },
+      { name: "Carrefour", src: "/clientes/carrefour.svg" },
+      { name: "Royal Palm Plaza", src: "/clientes/royal palm plaza.svg" },
+      { name: "The Royal Palm Plaza", src: "/clientes/The Royal Palm Plaza - V2.svg" },
     ],
   },
   {
@@ -81,10 +79,9 @@ const categories = [
     title: "Infraestrutura & Aeroportos",
     desc: "Acessos de extrema segurança e durabilidade para aeroportos, estações de metrô e terminais logísticos.",
     logos: [
-      { name: "Viracopos", text: "Viracopos" },
-      { name: "RioGaleão", text: "RioGaleão" },
-      { name: "Metrô SP", text: "Metrô SP" },
-      { name: "Aeroportos Brasil", text: "Aerop. Brasil" },
+      { name: "Viracopos", src: "/clientes/Viracopos.svg" },
+      { name: "Rio Galeão", src: "/clientes/Rio Galeão.svg" },
+      { name: "Smart Fit", src: "/clientes/Smart Fit.svg" },
     ],
   },
   {
@@ -93,12 +90,11 @@ const categories = [
     title: "Indústrias & Logística",
     desc: "Portas industriais automáticas de alta velocidade, cortinas de vento e trincos magnéticos integrados.",
     logos: [
-      { name: "Bosch", text: "Bosch" },
-      { name: "Goodyear", text: "Goodyear" },
-      { name: "3M", text: "3M" },
-      { name: "Lilly", text: "Lilly" },
-      { name: "Odebrecht", text: "Odebrecht" },
-      { name: "Natura", text: "Natura" },
+      { name: "Bosch", src: "/clientes/bosch.svg" },
+      { name: "Tetra Pak", src: "/clientes/tetra-pak.svg" },
+      { name: "Saint Gobain", src: "/clientes/saint gobain.svg" },
+      { name: "Odebrecht", src: "/clientes/odebrecht.svg" },
+      { name: "Accor", src: "/clientes/accor.svg" },
     ],
   },
 ];
@@ -120,9 +116,7 @@ export function ClientesContent() {
 
   return (
     <div className="w-full">
-      {/* ═══════════════════════════════════════════════════════════════
-          1. HEADER — Swiss grid pattern
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* HEADER */}
       <section className="relative border-b border-black bg-white pt-36 pb-16 md:pt-40 md:pb-20">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -148,9 +142,7 @@ export function ClientesContent() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          2. STATS — Counting animation on scroll
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* STATS */}
       <FadeIn direction="up" delay={0.1}>
         <div className="border-b border-black py-16 md:py-20">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -176,13 +168,10 @@ export function ClientesContent() {
         </div>
       </FadeIn>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          3. CLIENT CATEGORIES — Bordered grid with logos
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* CLIENT CATEGORIES */}
       <FadeIn direction="up" delay={0.15}>
         <div className="border-b border-black">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            {/* Section label */}
             <div className="pt-20 pb-12">
               <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 Segmentos Atendidos
@@ -192,7 +181,6 @@ export function ClientesContent() {
               </h2>
             </div>
 
-            {/* Categories list */}
             <div className="flex flex-col">
               {categories.map((cat, catIdx) => {
                 const Icon = cat.icon;
@@ -203,7 +191,6 @@ export function ClientesContent() {
                       catIdx < categories.length - 1 ? "border-b border-black" : ""
                     }`}
                   >
-                    {/* Left: category info */}
                     <div className="p-8 md:p-10 lg:border-r border-black flex flex-col gap-4">
                       <div className="flex h-12 w-12 items-center justify-center bg-black text-white">
                         <Icon className="h-6 w-6" />
@@ -216,7 +203,6 @@ export function ClientesContent() {
                       </p>
                     </div>
 
-                    {/* Right: logos grid */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-0">
                       {cat.logos.map((logo, logoIdx) => {
                         const isLastRow = logoIdx >= cat.logos.length - (cat.logos.length % 5 || 5);
@@ -230,9 +216,11 @@ export function ClientesContent() {
                               !isLastRow ? "border-b" : ""
                             } border-neutral-200`}
                           >
-                            <span className="text-sm font-bold uppercase tracking-widest text-neutral-400 hover:text-black transition-colors">
-                              {logo.text}
-                            </span>
+                            <img
+                              src={logo.src}
+                              alt={logo.name}
+                              className="max-h-40 max-w-full object-contain hover:scale-105 transition-all duration-300"
+                            />
                           </div>
                         );
                       })}
@@ -245,14 +233,11 @@ export function ClientesContent() {
         </div>
       </FadeIn>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          4. TRUST / WHY PARTNER — Split layout
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* TRUST */}
       <FadeIn direction="up" delay={0.2}>
         <div className="border-b border-black py-20 md:py-28">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-              {/* Left */}
               <div>
                 <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                   Por que a Automec
@@ -265,7 +250,6 @@ export function ClientesContent() {
                 </p>
               </div>
 
-              {/* Right — trust checklist */}
               <div className="border border-black p-8 md:p-10 flex flex-col gap-5">
                 {trustItems.map((item) => (
                   <div key={item} className="flex items-start gap-4">
@@ -283,9 +267,7 @@ export function ClientesContent() {
         </div>
       </FadeIn>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          5. CONTRACT CTA — Bordered box
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* CONTRACT CTA */}
       <FadeIn direction="up" delay={0.25}>
         <div className="py-20 md:py-28">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
@@ -317,9 +299,7 @@ export function ClientesContent() {
         </div>
       </FadeIn>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          6. CTA — Full-width red section
-      ═══════════════════════════════════════════════════════════════ */}
+      {/* CTA */}
       <FadeIn direction="up" delay={0.3}>
         <div className="border-t border-black bg-brand-red-600 py-20 md:py-28">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">

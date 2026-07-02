@@ -25,6 +25,61 @@ export const dictionary = {
   home: {
     title: "Nuestros Servicios",
     description: "Descubre cómo podemos transformar tu espacio con tecnología de punta.",
+    counters: {
+      doorsInstalled: "Puertas Instaladas",
+      activeClients: "Clientes Activos",
+      projectsDelivered: "Proyectos Entregados",
+      technicalSupport: "Soporte Técnico",
+    },
+    about: {
+      badge: "Tecnología & Seguridad",
+      titlePart1: "Innovando accesos con ",
+      titleHighlight: "alto rendimiento",
+      description: "Desde 1993, Automec desarrolla soluciones a medida en puertas automáticas deslizantes, telescópicas y herméticas. Combinamos mecánica de alta precisión y diseño premium para valorar la arquitectura y optimizar flujos corporativos.",
+      cta: "Conoce Automec",
+      stats: [
+        { value: "+ de 35 años", description: "Haciendo Historia" },
+        { value: "Todo Brasil", description: "Y América del Sur" },
+        { value: "100%", description: "Tecnología Nacional" },
+      ],
+    },
+    features: {
+      badge: "Por qué Automec",
+      title: "Diferenciales",
+      items: [
+        { title: "Ingeniería de Precisión", description: "Proyectos a medida con mecánica industrial de alto rendimiento para ambientes exigentes." },
+        { title: "Seguridad Certificada", description: "Puertas homologadas por ABNT con sistemas antipánico y sellado hermético garantizado." },
+        { title: "Mantenimiento Continuo", description: "Soporte técnico 24h con repuestos originales y SLA garantizado en contrato para grandes redes." },
+        { title: "Tecnología Avanzada", description: "Operadores de última generación con sensores inteligentes e integración BMS." },
+      ],
+    },
+    clients: {
+      badge: "Nuestros Socios",
+      title: "Quién Confía en Automec",
+    },
+    gallery: {
+      title: "Modelos de Puertas",
+      viewDetails: "Saber Más",
+      description: "Conoce nuestra gama completa de puertas automáticas, desarrolladas con tecnología de punta para atender diversos segmentos y necesidades arquitectónicas.",
+      categories: {
+        sliding: "Puerta Automática Deslizante",
+        antipanic: "Puerta Automática Antipánico",
+        controlled: "Puerta Automática Ambientes Controlados",
+        telescopic: "Puerta Automática Telescópica",
+      },
+      items: [
+        { title: "K-200R®", description: "Puerta deslizante de alto rendimiento y flujo continuo para diversos sectores." },
+        { title: "K-500R®", description: "Puerta deslizante robusta para alto flujo de personas y cargas pesadas." },
+        { title: "STS-20®", description: "Sistema antipánico de apertura integral de las hojas para máxima seguridad de evacuación." },
+        { title: "STH-70®", description: "Sellado hermético absoluto ideal para hospitales, laboratorios e industrias limpias." },
+        { title: "STC-40®", description: "Apertura telescópica inteligente para vanos de paso con espacio lateral reducido." },
+        { title: "B-120T® / B-300T®", description: "Mecanismo clásico de funcionamiento silencioso y durabilidad inigualable." },
+      ],
+    },
+    cta: {
+      titlePart1: "Puertas automáticas con ",
+      titleHighlight: "ingeniería de precisión",
+    },
   },
   hero: {
     heading: "Ingeniería de acceso seguro e inteligente",
@@ -52,6 +107,21 @@ export const dictionary = {
     ctaHighlight: "ACCESO",
     ctaDescription: "Tecnología, seguridad y diseño para tu proyecto de automatización.",
     ctaButton: "Solicitar Presupuesto",
+    detail: {
+      backToProducts: "Productos",
+      automec: "Automec",
+      viewFullSpec: "Ver especificación completa",
+      specification: "Especificación",
+      accessories: "Accesorios",
+      accessoriesDescription: "Accesorios opcionales para el modelo: Sensor de Detección por Microondas, Sensor de Detección por Microondas e Infrarrojo, Sensor de Acceso No-Touch, Barrera Infrarroja con 94 haces de seguridad, Selector de Funciones con 4 posiciones, Cerradura Electromecánica, Control de Acceso Biométrico con Display Touchscreen, Teclado de Contraseña, Control Transmisor para accionamiento, Botoneras con o sin retención.",
+      viewAccessories: "Ver catálogo de accesorios",
+      idealFor: "Ideal para",
+      resources: "Recursos",
+      technicalSpecs: "Característica Técnica",
+      application: "Aplicación Convencional",
+      otherModels: "Otros Modelos",
+      confiraOutros: "Conoce otros modelos de",
+    },
   },
   simulador: {
     header: {
@@ -67,6 +137,12 @@ export const dictionary = {
     ctaHighlight: "SOPORTE?",
     ctaDescription: "Nuestro equipo técnico está listo para ayudar en la configuración de tu proyecto.",
     ctaButton: "Contactar Ingeniería",
+    categories: {
+      sliding: "Puerta Automática Deslizante",
+      antipanic: "Puerta Automática Antipánico",
+      controlled: "Puerta Automática Ambientes Controlados",
+      telescopic: "Puerta Automática Telescópica",
+    },
   },
   acessorios: {
     header: {
@@ -119,7 +195,28 @@ export const dictionary = {
         title: "Barrera Infrarroja AS-2",
         description: "La barrera forma un campo de luz infrarroja de 94 haces que garantiza seguridad adicional al usuario.",
       },
+      {
+        title: "Sensor Inalámbrico No-Touch AT-22",
+        description: "Sensor de apertura para puertas automáticas NO Touch (aproximación manual) con tecnología infrarroja.",
+      },
+      {
+        title: "Teclado de Contraseña AT-5",
+        description: "Para obtener mayor seguridad en el control de acceso, una excelente opción es el Teclado de Contraseña, que posibilita además de la contraseña de acceso, también el control por tarjeta de proximidad.",
+      },
+      {
+        title: "Control de Acceso Biométrico AT-4",
+        description: "El Controlador de Acceso Biométrico es capaz de controlar con eficiencia y rapidez la entrada y salida de personas. Cada uno de sus recursos fue concebido con las más modernas tecnologías para hacer su operación más fácil e intuitiva.",
+      },
+      {
+        title: "Batería - Dispositivo Antipánico",
+        description: "Dispositivo responsable en caso de caída de energía eléctrica. Su función es mantener la apertura total de la puerta para ruta de escape.",
+      },
+      {
+        title: "Sensor No-Touch AT-3",
+        description: "Sensor de apertura para puertas automáticas No Touch (aproximación manual) con tecnología infrarroja y LED.",
+      },
     ],
+    viewDetails: "Ver Detalles",
     cta: {
       title: "PROYECTOS",
       highlight: "PERSONALIZADOS",
