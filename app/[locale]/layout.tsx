@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Footer } from "@shared/components/Footer";
 import { Navbar } from "@shared/components/Navbar";
-import { FloatingContactButton } from "@shared/components/FloatingContactButton";
+import Whatsapp from "@shared/components/FloatingContactButton";
 import { ResponsiveWrapper } from "@/src/core/responsive/ResponsiveWrapper";
 import { LenisProvider } from "@/components/lenis-provider";
 import { getDictionary } from "@/src/i18n/dictionaries";
@@ -52,7 +52,7 @@ export default async function LocaleLayout({
 
           <main className="grow">{children}</main>
           <Footer locale={currentLocale} dictionary={dictionary} />
-          <FloatingContactButton />
+          <Whatsapp />
         </div>
       </LenisProvider>
     </ResponsiveWrapper>
