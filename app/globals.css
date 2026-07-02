@@ -175,7 +175,6 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Glassmorphism & 3D Tokens from SKILL.md */
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-bg-hover: rgba(255, 255, 255, 0.12);
   --glass-border: rgba(255, 255, 255, 0.15);
@@ -268,7 +267,7 @@
     background: var(--automec-red-500);
     color: #ffffff;
     display: inline-flex;
-    font-family: var(--font-display-token);
+    font-family: var(--font-display-token), serif;
     font-size: calc(1.5rem * var(--rs));
     font-weight: 700;
     height: calc(3rem * var(--rs));

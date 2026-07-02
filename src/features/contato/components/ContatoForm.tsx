@@ -27,7 +27,7 @@ export function ContatoForm() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-30">
       {/* Main Contact Section - Red Background */}
       <section className="bg-brand-red-600 min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
@@ -35,39 +35,37 @@ export function ContatoForm() {
           {/* Left Column - Info */}
           <FadeIn direction="left" delay={0.1} className="h-full">
             <div className="flex flex-col justify-center px-8 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0 h-full">
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white/70 mb-4 block">
-                Contato & Orçamento
-              </span>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tighter leading-[0.9] text-white uppercase mb-8">
+
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-black tracking-tighter leading-[1] text-white uppercase mb-8">
                 Seu projeto não pode depender de fornecedores que fazem promessas que não podem cumprir.
               </h1>
 
-              <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-xl mb-12">
+              <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-12">
                 Envie seus projetos e receba uma análise técnica de quem fabrica com precisão industrial — do corte CNC à instalação final em obra.
               </p>
 
               <div className="flex flex-col gap-6 mb-12">
                 <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white/60 w-20">E-mail</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">E-mail</span>
                   <a href="mailto:contato@automec.com.br" className="text-white font-bold hover:text-white/80 transition-colors">
                     contato@automec.com.br
                   </a>
                 </div>
                 <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white/60 w-20">Telefone</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">Telefone</span>
                   <a href="tel:+551932138251" className="text-white font-bold hover:text-white/80 transition-colors">
                     +55 19 3213-8251
                   </a>
                 </div>
                 <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white/60 w-20">Fábrica</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">Fábrica</span>
                   <span className="text-white font-bold">Campinas, SP - Brasil</span>
                 </div>
               </div>
 
-              <div className="border-l-2 border-white/30 pl-6">
-                <p className="text-sm text-white/70 italic leading-relaxed">
+              <div className="border-l-2 border-white pl-6">
+                <p className="text-sm text-white italic leading-relaxed">
                   PS: Atrasos em projetos nunca são apenas uma questão de prazo — significam multas, reputação abalada e o próximo projeto que pode nunca vir. Envie seus projetos e experimente a diferença entre contratar uma promessa e contratar um processo.
                 </p>
               </div>

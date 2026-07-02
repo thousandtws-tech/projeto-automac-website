@@ -31,7 +31,7 @@ export function AcessoriosCTA({ content }: AcessoriosCTAProps) {
             <p className="mt-4 text-base text-neutral-600 max-w-xl">{ctaContent.description}</p>
           </div>
           <div className="col-span-12 md:col-span-4 md:text-right">
-            <Button className="inline-flex h-14 items-center justify-center bg-brand-red-500 px-8 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600">
+            <Button className="inline-flex h-14 cursor-pointer items-center justify-center bg-brand-red-500 px-8 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600">
               {ctaContent.button}
             </Button>
           </div>

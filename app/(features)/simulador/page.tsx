@@ -21,7 +21,7 @@ export default function Simulador() {
               Nossa equipe técnica está pronta para auxiliar na configuração do seu projeto.
             </p>
             <div className="mt-16">
-              <button className="bg-brand-red-600 hover:bg-brand-red-700 text-white rounded-2xl h-20 px-16 text-xl font-black shadow-red-glow transition-all active:scale-95">
+              <button className="bg-brand-red-600 hover:bg-brand-red-700 cursor-pointer text-white rounded-2xl h-20 px-16 text-xl font-black shadow-red-glow transition-all active:scale-95">
                 Contatar Engenharia
               </button>
             </div>
