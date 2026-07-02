@@ -68,6 +68,21 @@ interface FooterProps {
 export function Footer({ locale, dictionary }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/automecportasautomaticas",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/automecportas",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/user/AutomecPortas",
+    },
+  ];
+
   return (
     <footer className="border-t border-black bg-white">
       <div className="border-b border-black bg-neutral-50">
@@ -137,14 +152,16 @@ export function Footer({ locale, dictionary }: FooterProps) {
               ))}
             </ul>
             <div className="mt-6 flex items-center gap-2">
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
-                <Link
-                  key={i}
-                  href="#"
-                  className="flex h-8 w-8 items-center justify-center bg-brand-red-500 text-white transition-colors hover:bg-brand-red-600"
-                >
-                  <Icon className="h-4 w-4" />
-                </Link>
+              {socialLinks.map(({ icon: Icon, href }, index) => (
+                  <Link
+                      key={index}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-8 w-8 items-center justify-center bg-brand-red-500 text-white transition-colors hover:bg-brand-red-600"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </Link>
               ))}
             </div>
           </div>
