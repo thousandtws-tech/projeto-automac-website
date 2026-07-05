@@ -16,7 +16,7 @@ export function GridFeatureSection() {
     <section className="border-b border-black bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         
-        <div className="grid grid-cols-1 xl:grid-cols-2 border border-black">
+        <div className="grid grid-cols-1 xl:grid-cols-2 border border-black shadow-sm">
           
           {/* QUADRANT 1: Top-Left */}
           <div className="relative w-full h-[300px] sm:h-[380px] xl:h-[500px] overflow-hidden border-b border-black xl:border-b-0 xl:border-r border-black">

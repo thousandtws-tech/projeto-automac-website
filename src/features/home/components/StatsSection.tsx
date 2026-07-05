@@ -23,7 +23,7 @@ export function StatsSection() {
   return (
     <section className="border-b border-black bg-white py-20">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 border border-black">
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-black shadow-sm">
           {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
@@ -31,7 +31,7 @@ export function StatsSection() {
                 key={i}
                 className="flex flex-col items-center text-center p-10 md:p-12 border-r border-black last:border-r-0 transition-colors hover:bg-neutral-50"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center bg-black text-white">
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-black text-white">
                   <Icon className="h-7 w-7" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-black mb-2">

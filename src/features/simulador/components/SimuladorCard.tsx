@@ -27,7 +27,7 @@ export function SimuladorCard({ item, labels, categories }: SimuladorCardProps) 
         href={item.href}
         target="_blank"
         className={cn(
-          "relative flex flex-col h-full border border-black bg-white transition-colors duration-300 hover:bg-neutral-50",
+          "relative flex flex-col h-full border border-black bg-white transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
           "after:absolute after:inset-0 after:from-brand-red-500/5 after:to-transparent after:opacity-0 group-hover:after:opacity-100 after:transition-opacity"
         )}
       >
@@ -61,7 +61,7 @@ export function SimuladorCard({ item, labels, categories }: SimuladorCardProps) 
             <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500 opacity-0 transition-all duration-500 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
               {cardLabels.action}
             </span>
-            <div className="flex h-10 w-10 items-center justify-center bg-black text-white transition-colors duration-300 group-hover:bg-brand-red-500">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-brand-red-500">
               <ArrowRight className="h-5 w-5" />
             </div>
           </div>

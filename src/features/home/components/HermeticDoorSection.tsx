@@ -32,7 +32,7 @@ export function HermeticDoorSection() {
                 "Certificação internacional de segurança"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm text-neutral-700">
-                  <div className="flex h-5 w-5 items-center justify-center bg-black text-white shrink-0">
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full bg-black text-white shrink-0">
                     <Check className="h-3 w-3" />
                   </div>
                   {item}
@@ -40,7 +40,7 @@ export function HermeticDoorSection() {
               ))}
             </ul>
 
-            <button className="inline-flex h-12 items-center justify-center gap-2 bg-black px-6 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800">
+            <button className="inline-flex h-12 items-center justify-center rounded-md gap-2 bg-black px-6 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800">
               <span>Solicitar Orçamento</span>
               <ArrowRight className="h-4 w-4" />
             </button>
@@ -60,7 +60,7 @@ export function HermeticDoorSection() {
             
             <div className="absolute -bottom-4 -left-4 bg-white border-2 border-black p-4">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>

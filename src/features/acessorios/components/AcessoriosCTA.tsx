@@ -1,6 +1,4 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
+import { CtaBlock } from "@shared/components/CtaBlock";
 
 interface AcessoriosCTAProps {
   content?: {
@@ -19,24 +17,14 @@ const fallbackContent = {
 };
 
 export function AcessoriosCTA({ content }: AcessoriosCTAProps) {
-  const ctaContent = content ?? fallbackContent;
+  const c = content ?? fallbackContent;
   return (
-    <div className="mt-32">
-      <div className="border-2 border-black bg-white p-12 md:p-20">
-        <div className="grid grid-cols-12 gap-6 items-center">
-          <div className="col-span-12 md:col-span-8">
-            <h3 className="text-4xl font-black tracking-tighter text-black lg:text-6xl leading-none">
-              {ctaContent.title} <span className="text-brand-red-500">{ctaContent.highlight}</span>
-            </h3>
-            <p className="mt-4 text-base text-neutral-600 max-w-xl">{ctaContent.description}</p>
-          </div>
-          <div className="col-span-12 md:col-span-4 md:text-right">
-            <Button className="inline-flex h-14 cursor-pointer items-center justify-center bg-brand-red-500 px-8 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600">
-              {ctaContent.button}
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <CtaBlock
+      variant="white"
+      title={c.title}
+      highlight={c.highlight}
+      description={c.description}
+      buttonText={c.button}
+    />
   );
 }

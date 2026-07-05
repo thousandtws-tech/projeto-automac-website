@@ -1,11 +1,11 @@
 "use client";
 
-import {AcessoriosCTA} from "./AcessoriosCTA";
 import {AcessoriosGrid} from "./AcessoriosGrid";
 import {AcessoriosToolbar} from "./AcessoriosToolbar";
 import {Acessorio} from "../types/acessorio";
 import {useAcessorios} from "../hooks/useAcessorios";
 import {FadeIn} from "@/components/fade-in";
+import {CtaBlock} from "@shared/components/CtaBlock";
 
 interface AcessoriosPageClientProps {
     items: Acessorio[];
@@ -19,7 +19,12 @@ interface AcessoriosPageClientProps {
         description: string;
     }>;
     viewDetails?: string;
-    ctaContent: React.ComponentProps<typeof AcessoriosCTA>["content"];
+    ctaContent: {
+        title: string;
+        highlight: string;
+        description: string;
+        button: string;
+    };
 }
 
 export function AcessoriosPageClient({items, toolbarLabels, cardItems, viewDetails, ctaContent}: AcessoriosPageClientProps) {
@@ -43,11 +48,15 @@ export function AcessoriosPageClient({items, toolbarLabels, cardItems, viewDetai
                     <FadeIn direction="up" delay={0.1}>
                         <AcessoriosGrid items={filteredAcessorios} categoryLabels={toolbarLabels.categories} viewDetails={viewDetails}/>
                     </FadeIn>
-                    <FadeIn direction="up" delay={0.3}>
-                        <AcessoriosCTA content={ctaContent}/>
-                    </FadeIn>
                 </div>
             </section>
+            <CtaBlock
+                variant="white"
+                title={ctaContent.title}
+                highlight={ctaContent.highlight}
+                description={ctaContent.description}
+                buttonText={ctaContent.button}
+            />
         </>
     );
 }

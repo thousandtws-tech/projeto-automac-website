@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
+import { CtaBlock } from "@shared/components/CtaBlock";
 import type { Locale } from "@/src/i18n/config";
 
 function useCountUp(end: number, duration: number = 2000, suffix: string = "") {
@@ -170,11 +171,11 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
           3. SERVICES — Preventiva vs Corretiva split layout
       ═══════════════════════════════════════════════════════════════ */}
       <FadeIn direction="up" delay={0.15}>
-        <div className="border-b border-black">
+        <div className="border-b shadow ">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             {/* Section label */}
             <div className="pt-20 pb-12">
-              <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
+              <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 Nossos Serviços
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black uppercase leading-[0.9]">
@@ -183,24 +184,24 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
             </div>
 
             {/* Two columns */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-black">
+            <div className="grid grid-cols-1 lg:grid-cols-2 border-t  shadow ">
               {/* ── Preventiva ── */}
-              <div className="border-b lg:border-b-0 lg:border-r border-black p-10 md:p-14 flex flex-col gap-8 group hover:bg-black transition-colors duration-300">
+              <div className="border-b lg:border-b-0 lg:border-r border-black/20 p-10 md:p-14 flex flex-col gap-8 group hover:bg-black transition-colors duration-300">
                 <div className="flex items-center gap-5">
-                  <div className="flex h-14 w-14 items-center justify-center bg-black text-white group-hover:bg-white group-hover:text-black transition-colors">
+                  <div className="flex h-14 w-14 items-center rounded-full justify-center bg-black text-white group-hover:bg-white group-hover:text-black transition-colors">
                     <Shield className="h-7 w-7" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-black uppercase tracking-tight text-black group-hover:text-white transition-colors">
                       Preventiva
                     </h3>
-                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white/50 transition-colors">
+                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white transition-colors">
                       Programa recorrente
                     </p>
                   </div>
                 </div>
 
-                <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white/70 transition-colors">
+                <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white transition-colors">
                   Inspeções periódicas programadas para calibrar sensores, lubrificar engrenagens e testar barreiras de segurança. Reduz o índice de falhas em até 85%, estendendo a vida útil do automatizador.
                 </p>
 
@@ -212,7 +213,7 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
                     "Teste de baterias auxiliares de emergência",
                     "Lubrificação preventiva de trilhos e engrenagens",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white/70 transition-colors">
+                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white transition-colors">
                       <CheckCircle className="h-4 w-4 mt-0.5 shrink-0 text-brand-red-600 group-hover:text-brand-red-500 transition-colors" />
                       {item}
                     </li>
@@ -232,8 +233,8 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
               {/* ── Corretiva ── */}
               <div className="p-10 md:p-14 flex flex-col gap-8 group hover:bg-brand-red-600 transition-colors duration-300">
                 <div className="flex items-center gap-5">
-                  <div className="flex h-14 w-14 items-center justify-center bg-brand-red-600 text-white group-hover:bg-white group-hover:text-brand-red-600 transition-colors">
-                    <Zap className="h-7 w-7" />
+                  <div className="flex h-14 w-14 rounded-full items-center justify-center bg-brand-red-600 text-white group-hover:bg-white group-hover:text-brand-red-600 transition-colors">
+                    <Zap className="h-7 w-7"  />
                   </div>
                   <div>
                     <h3 className="text-2xl font-black uppercase tracking-tight text-black group-hover:text-white transition-colors">
@@ -245,7 +246,7 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
                   </div>
                 </div>
 
-                <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white/70 transition-colors">
+                <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white transition-colors">
                   Atendimento de emergência imediato para correção de pane técnica ou travamento mecânico. Técnicos carregam estoques de peças originais para resolução na primeira visita.
                 </p>
 
@@ -257,7 +258,7 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
                     "SLA rápido para hospitais e aeroportos",
                     "Relatório técnico pós-atendimento incluído",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white/70 transition-colors">
+                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white transition-colors">
                       <CheckCircle className="h-4 w-4 mt-0.5 shrink-0 text-brand-red-600 group-hover:text-white transition-colors" />
                       {item}
                     </li>
@@ -285,7 +286,7 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
         <div className="border-b border-black py-20 md:py-28">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
+              <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 Fluxo de Atendimento
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black uppercase leading-[0.9]">
@@ -293,21 +294,21 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-black">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border shadow">
               {processSteps.map((step, idx) => {
                 const Icon = step.icon;
                 return (
                   <div
                     key={step.num}
                     className={`p-8 md:p-10 flex flex-col gap-6 ${
-                      idx < processSteps.length - 1 ? "border-b md:border-b-0 md:border-r border-black" : ""
+                      idx < processSteps.length - 1 ? "border-b md:border-b-0 md:border-r border-black/20" : ""
                     }`}
                   >
                     <div className="flex items-center gap-4">
                       <span className="text-4xl font-black text-brand-red-600 tracking-tighter leading-none">
                         {step.num}
                       </span>
-                      <div className="flex h-10 w-10 items-center justify-center bg-black text-white">
+                      <div className="flex h-10 w-10 items-center justify-center bg-black rounded-full text-white">
                         <Icon className="h-5 w-5" />
                       </div>
                     </div>
@@ -331,20 +332,20 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
           5. INDUSTRIES — Who we serve
       ═══════════════════════════════════════════════════════════════ */}
       <FadeIn direction="up" delay={0.25}>
-        <div className="border-b border-black py-20 md:py-28">
+        <div className="border-b border-black  py-20 md:py-28">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-stretch">
-              {/* Left label */}
-              <div className="flex flex-col justify-between">
-                <div>
-                  <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
+                  {/* Left label */}
+                  <div className="flex flex-col justify-between">
+                    <div>
+                  <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                     Segmentos Atendidos
                   </span>
-                  <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-black uppercase leading-[0.85] mb-8">
+                      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-black uppercase leading-[0.85] mb-8">
                     Portas que<br />não podem<br />parar
                   </h2>
                 </div>
-                <Button className="bg-black text-white hover:bg-neutral-800 font-bold uppercase tracking-widest px-8 h-12 text-xs self-start" asChild>
+                <Button className="bg-brand-red-600 text-white hover:bg-neutral-800 font-bold uppercase tracking-widest px-8 h-12 text-xs self-start" asChild>
                   <Link href="/contato">
                     Ver Todos os Segmentos
                     <ArrowRight className="h-4 w-4 ml-2" />
@@ -353,17 +354,17 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
               </div>
 
               {/* Right grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-black">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-black shadow-sm">
                 {industries.map((ind, idx) => {
                   const Icon = ind.icon;
                   return (
                     <div
                       key={ind.title}
                       className={`p-8 flex flex-col gap-4 ${
-                        idx < industries.length - 2 ? "border-b sm:border-b-0 sm:border-r border-black" : ""
-                      } ${idx === industries.length - 2 ? "border-b border-black sm:border-b-0" : ""} ${idx % 2 === 0 ? "sm:border-r border-black" : ""}`}
+                        idx < industries.length - 2 ? "border-b sm:border-b-0 sm:border-r " : ""
+                      } ${idx === industries.length - 2 ? "border-b border-black/20 sm:border-b-0" : ""} ${idx % 2 === 0 ? "sm:border-r border-black/20" : ""}`}
                     >
-                      <div className="flex h-12 w-12 items-center justify-center bg-black text-white">
+                      <div className="flex h-12 w-12 items-center justify-center bg-black rounded-full text-white">
                         <Icon className="h-6 w-6" />
                       </div>
                       <h4 className="text-lg font-black uppercase tracking-tight text-black">
@@ -381,63 +382,14 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
         </div>
       </FadeIn>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          6. CONTRACT SLA — Professional CTA
-      ═══════════════════════════════════════════════════════════════ */}
-      <FadeIn direction="up" delay={0.3}>
-        <div className="py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="border-2 border-black p-10 md:p-16 lg:p-20">
-              <div className="grid grid-cols-12 gap-8 items-center">
-                <div className="col-span-12 lg:col-span-7">
-                  <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-4 block">
-                    Contrato Corporativo
-                  </span>
-                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9] mb-4">
-                    SLA garantido em contrato e{" "}
-                    <span className="text-brand-red-600">peças originais</span>
-                  </h3>
-                  <p className="text-base text-neutral-600 max-w-xl leading-relaxed">
-                    Grandes redes necessitam de confiabilidade contínua. Solicite uma visita comercial para elaborarmos um contrato de manutenção personalizada com tempos de resposta garantidos.
-                  </p>
-                </div>
-                <div className="col-span-12 lg:col-span-5 lg:text-right">
-                  <Button className="bg-brand-red-600 text-white hover:bg-brand-red-700 font-bold uppercase tracking-widest px-10 h-14 text-sm" asChild>
-                    <Link href="/contato">
-                      Orçar Contrato
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-
-      {/* ═══════════════════════════════════════════════════════════════
-          7. CTA — Full-width red section
-      ═══════════════════════════════════════════════════════════════ */}
-      <FadeIn direction="up" delay={0.35}>
-        <div className="border-t border-black bg-brand-red-600 py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
-              <div>
-                <h4 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[0.9] uppercase">
-                  Portas que não podem parar<br />
-                  <span className="text-white/80">precisam de manutenção que não falha</span>
-                </h4>
-              </div>
-              <div className="lg:text-right">
-                <Button className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-10 h-16 text-sm">
-                  Falar com Especialista
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
+      {/* 6. CONTRACT SLA — Professional CTA */}
+      <CtaBlock
+        variant="bordered"
+        title={m.contract.title}
+        highlight={m.contract.highlight}
+        description={m.contract.description}
+        buttonText={m.contract.cta}
+      />
     </div>
   );
 }

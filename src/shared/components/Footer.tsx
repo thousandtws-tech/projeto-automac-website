@@ -158,7 +158,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-8 w-8 items-center justify-center bg-brand-red-500 text-white transition-colors hover:bg-brand-red-600"
+                      className="flex h-8 w-8 items-center justify-center rounded-md bg-brand-red-500 text-white transition-colors hover:bg-brand-red-600"
                   >
                     <Icon className="h-4 w-4" />
                   </Link>

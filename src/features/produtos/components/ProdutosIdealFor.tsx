@@ -37,7 +37,7 @@ export function ProdutosIdealFor({ dictionary, items }: ProdutosIdealForProps) {
                       isLastRow && "border-b-0"
                     )}
                   >
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center border border-brand-red-500">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brand-red-500">
                       <Check className="h-3.5 w-3.5 text-brand-red-500" />
                     </div>
                     <span className="text-[13px] font-bold text-black">{item}</span>

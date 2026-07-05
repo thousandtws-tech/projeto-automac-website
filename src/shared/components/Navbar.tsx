@@ -99,7 +99,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
       <div className="border-b border-black">
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           <Link href={withLocale(locale, "/")} className="flex items-center">
-            <Image src={LogoMarca} alt="Automec" width={160} height={40} style={{ width: "auto", height: "auto" }} loading="eager" />
+            <Image src={LogoMarca} alt="Automec" width={160} height={40} style={{ width: "auto", height: "45px" }} loading="eager" />
           </Link>
 
           {/* Desktop nav */}
@@ -120,7 +120,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             ))}
             <Link
               href={withLocale(locale, "/contato")}
-              className="inline-flex h-10 items-center justify-center bg-brand-red-500 px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-brand-red-500 px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
             >
               {dictionary.common.budget}
             </Link>
@@ -168,7 +168,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             <Link
               href={withLocale(locale, "/contato")}
               onClick={() => setIsOpen(false)}
-              className="flex h-12 w-full items-center justify-center bg-brand-red-500 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
+              className="flex h-12 w-full items-center justify-center rounded-md bg-brand-red-500 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
             >
               {dictionary.common.requestBudget}
             </Link>

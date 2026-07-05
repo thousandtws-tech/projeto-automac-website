@@ -57,7 +57,7 @@ export function ProdutosCatalogSection({ dictionary, catalog }: ProdutosCatalogS
                     <a
                       key={actionIndex}
                       href={action.href}
-                      className="inline-flex items-center justify-center gap-2.5 bg-brand-red-500 hover:bg-brand-red-700 text-white px-6 py-4 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors"
+                      className="inline-flex items-center justify-center gap-2.5 rounded-md bg-brand-red-500 hover:bg-brand-red-700 text-white px-6 py-4 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors"
                     >
                       {action.label}
                       <Icon className="h-4 w-4" />

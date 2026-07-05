@@ -376,5 +376,10 @@ export const dictionary = {
       description: "Large networks require continuous reliability. Request a commercial visit to create a customized maintenance contract with guaranteed response times.",
       cta: "Request Quote",
     },
+    cta: {
+      titlePart1: "Doors that cannot stop",
+      titlePart2: "need maintenance that never fails",
+      button: "Talk to Specialist",
+    },
   },
 } as const;

@@ -32,7 +32,7 @@ export function CtaSection() {
             <div className="flex items-center gap-5">
               <Link
                 href="/contato"
-                className="inline-flex h-11 items-center justify-center gap-2 bg-brand-red-500 px-6 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-brand-red-500 px-6 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
               >
                 <span>Saiba mais</span>
                 <ArrowRight className="h-4 w-4" />

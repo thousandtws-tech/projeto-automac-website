@@ -26,7 +26,7 @@ export function ProdutosAccessories({ dictionary }: ProdutosAccessoriesProps) {
             </p>
             <Link
               href="#"
-              className="inline-flex items-center gap-3 bg-brand-red-500 hover:bg-brand-red-600 text-white px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors"
+              className="inline-flex items-center gap-3 rounded-md bg-brand-red-500 hover:bg-brand-red-600 text-white px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors"
             >
               {t.viewAccessories}
               <ChevronRight className="h-4 w-4" />

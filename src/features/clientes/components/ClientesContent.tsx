@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import {
-  ArrowRight,
     Building2,
     ShieldCheck,
     Truck,
@@ -13,8 +11,8 @@ import {
     Factory,
     CheckCircle,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
+import { CtaBlock } from "@shared/components/CtaBlock";
 
 function useCountUp(end: number, duration: number = 2000) {
   const [count, setCount] = useState(0);
@@ -192,7 +190,7 @@ export function ClientesContent() {
                     }`}
                   >
                     <div className="p-8 md:p-10 lg:border-r border-black flex flex-col gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center bg-black text-white">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
                         <Icon className="h-6 w-6" />
                       </div>
                       <h3 className="text-xl font-black uppercase tracking-tight text-black">
@@ -250,10 +248,10 @@ export function ClientesContent() {
                 </p>
               </div>
 
-              <div className="border border-black p-8 md:p-10 flex flex-col gap-5">
+              <div className="border border-black p-8 md:p-10 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow">
                 {trustItems.map((item) => (
                   <div key={item} className="flex items-start gap-4">
-                    <div className="flex h-6 w-6 shrink-0 items-center justify-center bg-brand-red-600 text-white mt-0.5">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-red-600 text-white mt-0.5">
                       <CheckCircle className="h-4 w-4" />
                     </div>
                     <span className="text-sm font-medium text-black leading-relaxed">
@@ -268,58 +266,13 @@ export function ClientesContent() {
       </FadeIn>
 
       {/* CONTRACT CTA */}
-      <FadeIn direction="up" delay={0.25}>
-        <div className="py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="border-2 border-black p-10 md:p-16 lg:p-20">
-              <div className="grid grid-cols-12 gap-8 items-center">
-                <div className="col-span-12 lg:col-span-7">
-                  <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-4 block">
-                    Seja Parceiro
-                  </span>
-                  <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9] mb-4">
-                    Seu projeto merece{" "}
-                    <span className="text-brand-red-600">execução impecável</span>
-                  </h3>
-                  <p className="text-base text-neutral-600 max-w-xl leading-relaxed">
-                    Traga o seu desafio de arquitetura ou automação comercial. Nossa equipe técnica está pronta para orçar e instalar no seu estabelecimento.
-                  </p>
-                </div>
-                <div className="col-span-12 lg:col-span-5 lg:text-right">
-                  <Button className="bg-brand-red-600 text-white hover:bg-brand-red-700 font-bold uppercase tracking-widest px-10 h-14 text-sm" asChild>
-                    <Link href="/contato">
-                      Solicitar Orçamento
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-
-      {/* CTA */}
-      <FadeIn direction="up" delay={0.3}>
-        <div className="border-t border-black bg-brand-red-600 py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
-              <div>
-                <h4 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[0.9] uppercase">
-                  Mais de 30 mil portas<br />
-                  <span className="text-white/80">instaladas em todo o Brasil</span>
-                </h4>
-              </div>
-              <div className="lg:text-right">
-                <Button className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-10 h-16 text-sm">
-                  Falar com Especialista
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
+      <CtaBlock
+        variant="bordered"
+        title="Seu projeto merece "
+        highlight="execução impecável"
+        description="Traga o seu desafio de arquitetura ou automação comercial. Nossa equipe técnica está pronta para orçar e instalar no seu estabelecimento."
+        buttonText="Solicitar Orçamento"
+      />
     </div>
   );
 }
