@@ -370,5 +370,38 @@ export const dictionary = {
       titlePart2: "precisam de manutenção que não falha",
       button: "Falar com Especialista",
     },
+    process: {
+      label: "Fluxo de Atendimento",
+      title: "Do Chamado à Resolução",
+      steps: [
+        { num: "01", title: "Abertura", desc: "Registro do chamado técnico via telefone ou e-mail 24h.", icon: "PhoneCall" },
+        { num: "02", title: "Triagem", desc: "Diagnóstico remoto e classificação de prioridade por especialista.", icon: "ClipboardCheck" },
+        { num: "03", title: "Deslocamento", desc: "Equipe técnica enviada com maleta de peças originais certificadas.", icon: "Wrench" },
+        { num: "04", title: "Resolução", desc: "Porta testada, calibrada e liberada com relatório técnico completo.", icon: "CheckCircle" },
+      ],
+    },
+    industries: {
+      label: "Segmentos Atendidos",
+      title: "Portas que<br />não podem<br />parar",
+      items: [
+        { title: "Hospitais & Saúde", desc: "Portas herméticas e antibacterianas para UTIs, salas cirúrgicas e laboratórios.", icon: "Stethoscope" },
+        { title: "Shoppings & Varejo", desc: "Sistemas de alto fluxo com manutenção preventiva contínua.", icon: "Building2" },
+        { title: "Indústria & Logística", desc: "Portas industriais de alta velocidade e cortinas de vento.", icon: "Factory" },
+        { title: "Aeroportos & Metrô", desc: "Acessos de extrema segurança e durabilidade 24/7.", icon: "ShieldCheck" },
+      ],
+      cta: "Ver Todos os Segmentos",
+    },
+    contract: {
+      label: "Contrato Corporativo",
+      title: "SLA garantido em contrato e ",
+      highlight: "peças originais",
+      description: "Grandes redes necessitam de confiabilidade contínua. Solicite uma visita comercial para elaborarmos um contrato de manutenção personalizada com tempos de resposta garantidos.",
+      cta: "Orçar Contrato",
+    },
+    cta: {
+      titlePart1: "Portas que não podem parar<br />",
+      titlePart2: "precisam de manutenção que não falha",
+      button: "Falar com Especialista",
+    },
   },
 } as const;
