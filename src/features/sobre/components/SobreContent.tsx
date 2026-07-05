@@ -151,7 +151,7 @@ export function SobreContent({ content }: SobreContentProps) {
                     onClick={handleVideoToggle}
                     onError={() => setVideoError(true)}
                   >
-                    <source src="/institutional.mp4" type="video/mp4" />
+                    <source src="#" type="video/mp4" />
                   </video>
                 )}
 
