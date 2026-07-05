@@ -276,4 +276,80 @@ export const dictionary = {
     ],
     submitButton: "Submit Project for Analysis",
   },
+  manutencao: {
+    header: {
+      title: "Maintenance",
+      highlight: "Specialized",
+      description: "Preventive and corrective maintenance contracts for shopping centers, hospitals and airports with guaranteed SLA in contract.",
+    },
+    stats: [
+      { value: "4h", label: "Response Time" },
+      { value: "99%", label: "Guaranteed Uptime" },
+      { value: "100%", label: "SLA Met" },
+      { value: "120+", label: "Specialized Technicians" },
+    ],
+    services: {
+      label: "Our Services",
+      title: "Preventive & Corrective",
+      preventive: {
+        title: "Preventive",
+        subtitle: "Recurring program",
+        description: "Scheduled periodic inspections to calibrate sensors, lubricate gears and test safety barriers. Reduces failure rate by up to 85%, extending operator lifespan.",
+        items: [
+          "Glass leaf alignment and clearance",
+          "Analytical radar calibration",
+          "Belt and bearing inspection",
+          "Emergency backup battery testing",
+          "Preventive track and gear lubrication",
+        ],
+        cta: "Schedule Preventive",
+      },
+      corrective: {
+        title: "Corrective 24h",
+        subtitle: "Immediate emergency",
+        description: "Immediate emergency response for technical failure or mechanical jamming. Technicians carry original parts stock for first-visit resolution.",
+        items: [
+          "24/7 technical support hotline",
+          "Motor and control board replacement",
+          "Original certified spare parts",
+          "Fast SLA for hospitals and airports",
+          "Post-service technical report included",
+        ],
+        cta: "Call Emergency",
+      },
+    },
+    process: {
+      label: "Service Flow",
+      title: "From Call to Resolution",
+      steps: [
+        { num: "01", title: "Opening", desc: "Technical call registration via phone or email 24h.", icon: "PhoneCall" },
+        { num: "02", title: "Triage", desc: "Remote diagnosis and priority classification by specialist.", icon: "ClipboardCheck" },
+        { num: "03", title: "Dispatch", desc: "Technical team dispatched with certified original parts kit.", icon: "Wrench" },
+        { num: "04", title: "Resolution", desc: "Door tested, calibrated and released with full technical report.", icon: "CheckCircle" },
+      ],
+    },
+    industries: {
+      label: "Sectors Served",
+      title: "Doors that<br />cannot<br />stop",
+      items: [
+        { title: "Hospitals & Healthcare", desc: "Hermetic and antibacterial doors for ICUs, ORs and laboratories.", icon: "Stethoscope" },
+        { title: "Shopping & Retail", desc: "High-traffic systems with continuous preventive maintenance.", icon: "Building2" },
+        { title: "Industry & Logistics", desc: "High-speed industrial doors and air curtains.", icon: "Factory" },
+        { title: "Airports & Metro", desc: "Ultra-secure high-durability access 24/7.", icon: "ShieldCheck" },
+      ],
+      cta: "View All Sectors",
+    },
+    contract: {
+      label: "Corporate Contract",
+      title: "Guaranteed SLA in contract and ",
+      highlight: "original parts",
+      description: "Large networks require continuous reliability. Request a commercial visit to create a customized maintenance contract with guaranteed response times.",
+      cta: "Request Quote",
+    },
+    cta: {
+      titlePart1: "Doors that cannot stop<br />",
+      titlePart2: "need maintenance that doesn't fail",
+      button: "Talk to Specialist",
+    },
+  },
 } as const;

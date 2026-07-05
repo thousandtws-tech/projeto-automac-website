@@ -295,4 +295,80 @@ export const dictionary = {
     ],
     submitButton: "Enviar Projeto para Análise",
   },
+  manutencao: {
+    header: {
+      title: "Manutenção",
+      highlight: "Especializada",
+      description: "Contratos de manutenção preventiva e corretiva para shopping centers, hospitais e aeroportos com SLA garantido em contrato.",
+    },
+    stats: [
+      { value: "4h", label: "Tempo de Resposta" },
+      { value: "99%", label: "Uptime Garantido" },
+      { value: "100%", label: "SLA Cumprido" },
+      { value: "120+", label: "Técnicos Especializados" },
+    ],
+    services: {
+      label: "Nossos Serviços",
+      title: "Preventiva & Corretiva",
+      preventive: {
+        title: "Preventiva",
+        subtitle: "Programa recorrente",
+        description: "Inspeções periódicas programadas para calibrar sensores, lubrificar engrenagens e testar barreiras de segurança. Reduz o índice de falhas em até 85%, estendendo a vida útil do automatizador.",
+        items: [
+          "Alinhamento e folga das folhas de vidro",
+          "Calibração analítica de radares de presença",
+          "Inspeção de correias e rolamentos",
+          "Teste de baterias auxiliares de emergência",
+          "Lubrificação preventiva de trilhos e engrenagens",
+        ],
+        cta: "Agendar Preventiva",
+      },
+      corrective: {
+        title: "Corretiva 24h",
+        subtitle: "Emergência imediata",
+        description: "Atendimento de emergência imediato para correção de pane técnica ou travamento mecânico. Técnicos carregam estoques de peças originais para resolução na primeira visita.",
+        items: [
+          "Plantão técnico de suporte 24h por dia",
+          "Substituição de motores e placas de comando",
+          "Peças de reposição originais e certificadas",
+          "SLA rápido para hospitais e aeroportos",
+          "Relatório técnico pós-atendimento incluído",
+        ],
+        cta: "Chamar Emergência",
+      },
+    },
+    process: {
+      label: "Fluxo de Atendimento",
+      title: "Do Chamado à Resolução",
+      steps: [
+        { num: "01", title: "Abertura", desc: "Registro do chamado técnico via telefone ou e-mail 24h.", icon: "PhoneCall" },
+        { num: "02", title: "Triagem", desc: "Diagnóstico remoto e classificação de prioridade por especialista.", icon: "ClipboardCheck" },
+        { num: "03", title: "Deslocamento", desc: "Equipe técnica enviada com maleta de peças originais certificadas.", icon: "Wrench" },
+        { num: "04", title: "Resolução", desc: "Porta testada, calibrada e liberada com relatório técnico completo.", icon: "CheckCircle" },
+      ],
+    },
+    industries: {
+      label: "Segmentos Atendidos",
+      title: "Portas que<br />não podem<br />parar",
+      items: [
+        { title: "Hospitais & Saúde", desc: "Portas herméticas e antibacterianas para UTIs, salas cirúrgicas e laboratórios.", icon: "Stethoscope" },
+        { title: "Shoppings & Varejo", desc: "Sistemas de alto fluxo com manutenção preventiva contínua.", icon: "Building2" },
+        { title: "Indústria & Logística", desc: "Portas industriais de alta velocidade e cortinas de vento.", icon: "Factory" },
+        { title: "Aeroportos & Metrô", desc: "Acessos de extrema segurança e durabilidade 24/7.", icon: "ShieldCheck" },
+      ],
+      cta: "Ver Todos os Segmentos",
+    },
+    contract: {
+      label: "Contrato Corporativo",
+      title: "SLA garantido em contrato e ",
+      highlight: "peças originais",
+      description: "Grandes redes necessitam de confiabilidade contínua. Solicite uma visita comercial para elaborarmos um contrato de manutenção personalizada com tempos de resposta garantidos.",
+      cta: "Orçar Contrato",
+    },
+    cta: {
+      titlePart1: "Portas que não podem parar<br />",
+      titlePart2: "precisam de manutenção que não falha",
+      button: "Falar com Especialista",
+    },
+  },
 } as const;

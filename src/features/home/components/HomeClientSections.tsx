@@ -121,7 +121,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 py-16 md:py-24 items-center">
               <div>
-                <span className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4 block">
+                <span className="text-sm font-bold uppercase tracking-widest text-white mb-4 block">
                   {home.about.badge}
                 </span>
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
@@ -130,7 +130,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                     {home.about.titleHighlight}
                   </span>
                 </h2>
-                <p className="text-base text-white/80 leading-relaxed max-w-lg mb-8">
+                <p className="text-base text-white leading-relaxed max-w-lg mb-8">
                   {home.about.description}
                 </p>
                 <Button className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-8 h-12 text-xs" asChild>
@@ -148,7 +148,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                     <div
                       key={stat.value}
                       className={`flex items-center gap-6 p-8 ${
-                        idx < home.about.stats.length - 1 ? "border-b border-white/20" : ""
+                        idx < home.about.stats.length - 1 ? "border-b border-white" : ""
                       }`}
                     >
                       <div className="flex h-14 w-14 shrink-0 items-center justify-center bg-white text-brand-red-600">
@@ -158,7 +158,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                         <h3 className="text-2xl font-black tracking-tighter text-white">
                           {stat.value}
                         </h3>
-                        <p className="text-sm font-bold uppercase tracking-widest text-white/60">
+                        <p className="text-sm font-bold uppercase tracking-widest text-white">
                           {stat.description}
                         </p>
                       </div>

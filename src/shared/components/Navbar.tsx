@@ -85,7 +85,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
                 <Link
                   key={l}
                   href={withLocale(l, currentPath)}
-                  className={cn("text-sm leading-none", l === locale ? "opacity-100" : "opacity-50 hover:opacity-80")}
+                  className={cn("text-[10px] font-bold uppercase tracking-widest leading-none px-1.5 py-0.5 border", l === locale ? "text-white border-white" : "text-white/60 border-white/20 hover:text-white/80 hover:border-white/40")}
                 >
                   {localeLabels[l].flag}
                 </Link>

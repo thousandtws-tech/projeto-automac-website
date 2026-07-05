@@ -12,7 +12,7 @@ export default async function Manutencao({ params }: { params: Promise<{ locale:
 
   return (
     <main className="min-h-screen bg-white">
-      <ManutencaoContent />
+      <ManutencaoContent dictionary={undefined} locale={locale} />
     </main>
   );
 }

@@ -13,7 +13,7 @@ export function Hero({ locale, dictionary }: HeroProps) {
   const slides: HeroSlide[] = [
     {
       id: "slide-1",
-      image: "https://placehold.net/9-600x800.png",
+      image: "https://placehold.net/8-600x800.png",
       title: t.heading,
       subtitle: t.subheading,
       ctaText: t.ctaPrimary,

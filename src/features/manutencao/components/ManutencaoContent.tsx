@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
+import type { Locale } from "@/src/i18n/config";
 
 function useCountUp(end: number, duration: number = 2000, suffix: string = "") {
   const [count, setCount] = useState(0);
@@ -100,7 +101,8 @@ const industries = [
   },
 ];
 
-export function ManutencaoContent() {
+export function ManutencaoContent({ dictionary, locale }: { dictionary: any; locale: Locale }) {
+  const m = dictionary.manutencao;
   const { count: countResponse, ref: refResponse } = useCountUp(4, 2000);
   const { count: countUptime, ref: refUptime } = useCountUp(99, 2000);
   const { count: countSLA, ref: refSLA } = useCountUp(100, 2000);
@@ -145,11 +147,11 @@ export function ManutencaoContent() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div ref={refResponse} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{countResponse}h</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">Tempo de Resposta</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{m.stats[0].label}</p>
               </div>
               <div ref={refUptime} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{countUptime}%</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">Uptime Garantido</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{m.stats[1].label}</p>
               </div>
               <div ref={refSLA} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{countSLA}%</span>
@@ -218,7 +220,7 @@ export function ManutencaoContent() {
                 </ul>
 
                 <div className="mt-auto pt-4">
-                  <Button className="bg-black text-white hover:bg-neutral-800 group-hover:bg-white group-hover:text-black font-bold uppercase tracking-widest px-8 h-12 text-xs transition-colors" asChild>
+                  <Button className="bg-black text-white hover:text-white group-hover:bg-white group-hover:text-black font-bold uppercase tracking-widest px-8 h-12 text-xs transition-colors" asChild>
                     <Link href="/contato">
                       Agendar Preventiva
                       <ArrowRight className="h-4 w-4 ml-2" />
@@ -237,7 +239,7 @@ export function ManutencaoContent() {
                     <h3 className="text-2xl font-black uppercase tracking-tight text-black group-hover:text-white transition-colors">
                       Corretiva 24h
                     </h3>
-                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white/50 transition-colors">
+                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white transition-colors">
                       Emergência imediata
                     </p>
                   </div>
@@ -263,7 +265,7 @@ export function ManutencaoContent() {
                 </ul>
 
                 <div className="mt-auto pt-4">
-                  <Button className="bg-brand-red-600 text-white hover:bg-brand-red-700 group-hover:bg-white group-hover:text-brand-red-600 font-bold uppercase tracking-widest px-8 h-12 text-xs transition-colors" asChild>
+                  <Button className="bg-brand-red-600 text-white hover:bg-brand-red-50 group-hover:bg-white group-hover:text-brand-red-800 font-bold uppercase tracking-widest px-8 h-12 text-xs transition-colors" asChild>
                     <Link href="/contato">
                       Chamar Emergência
                       <ArrowRight className="h-4 w-4 ml-2" />
