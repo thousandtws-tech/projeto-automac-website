@@ -87,11 +87,12 @@ export const dictionary = {
     ctaPrimary: "Orçamento",
     ctaSecondary: "Ver Vídeo",
     metrics: [
-      { value: "25+", label: "Anos de\nexperiência" },
-      { value: "3.000+", label: "Projetos\nentregues" },
-      { value: "100%", label: "Tecnologia\nnacional" },
-      { value: "24h", label: "Suporte\ntécnico" },
-    ],
+        { value: "25+", label: "Anos de\nexperiência" },
+        { value: "3.000+", label: "Projetos\nentregues" },
+        { value: "100%", label: "Tecnologia\nnacional" },
+        { value: "24h", label: "Suporte\ntécnico" },
+      ],
+    };
   },
   produtos: {
     header: {
