@@ -242,6 +242,82 @@ export const dictionary = {
       { name: "Simulador 360º", href: "/simulador" },
     ],
   },
+  manutencao: {
+    header: {
+      title: "Mantenimiento",
+      highlight: "Especializado",
+      description: "Contratos de mantenimiento preventivo y correctivo para centros comerciales, hospitales y aeropuertos con SLA garantizado en contrato.",
+    },
+    stats: [
+      { value: "4h", label: "Tiempo de Respuesta" },
+      { value: "99%", label: "Uptime Garantizado" },
+      { value: "100%", label: "SLA Cumplido" },
+      { value: "120+", label: "Técnicos Especializados" },
+    ],
+    services: {
+      label: "Nuestros Servicios",
+      title: "Preventivo & Correctivo",
+      preventive: {
+        title: "Preventivo",
+        subtitle: "Programa recurrente",
+        description: "Inspecciones periódicas programadas para calibrar sensores, lubricar engranajes y probar barreras de seguridad. Reduce la tasa de fallos hasta un 85%, extendiendo la vida útil del automatizador.",
+        items: [
+          "Alineación y ajuste de hojas de vidrio",
+          "Calibración analítica de radares de presencia",
+          "Inspección de correas y rodamientos",
+          "Prueba de baterías auxiliares de emergencia",
+          "Lubricación preventiva de rieles y engranajes",
+        ],
+        cta: "Agendar Preventivo",
+      },
+      corrective: {
+        title: "Correctivo 24h",
+        subtitle: "Emergencia inmediata",
+        description: "Atención de emergencia inmediata para corrección de avería técnica o bloqueo mecánico. Técnicos llevan existencias de piezas originales para resolución en la primera visita.",
+        items: [
+          "Plantón técnico de soporte 24h al día",
+          "Sustitución de motores y placas de mando",
+          "Piezas de repuesto originales y certificadas",
+          "SLA rápido para hospitales y aeropuertos",
+          "Informe técnico post-servicio incluido",
+        ],
+        cta: "Llamar Emergencia",
+      },
+    },
+    process: {
+      label: "Flujo de Servicio",
+      title: "Del Llamado a la Resolución",
+      steps: [
+        { num: "01", title: "Apertura", desc: "Registro del llamado técnico por teléfono o correo electrónico 24h.", icon: "PhoneCall" },
+        { num: "02", title: "Triaje", desc: "Diagnóstico remoto y clasificación de prioridad por especialista.", icon: "ClipboardCheck" },
+        { num: "03", title: "Desplazamiento", desc: "Equipo técnico enviado con maletín de piezas originales certificadas.", icon: "Wrench" },
+        { num: "04", title: "Resolución", desc: "Puerta probada, calibrada y liberada con informe técnico completo.", icon: "CheckCircle" },
+      ],
+    },
+    industries: {
+      label: "Sectores Atendidos",
+      title: "Puertas que<br />no pueden<br />parar",
+      items: [
+        { title: "Hospitales & Salud", desc: "Puertas herméticas y antibacterianas para UCIs, quirófanos y laboratorios.", icon: "Stethoscope" },
+        { title: "Centros Comerciales & Retail", desc: "Sistemas de alto flujo con mantenimiento preventivo continuo.", icon: "Building2" },
+        { title: "Industria & Logística", desc: "Puertas industriales de alta velocidad y cortinas de viento.", icon: "Factory" },
+        { title: "Aeropuertos & Metro", desc: "Accesos de extrema seguridad y durabilidad 24/7.", icon: "ShieldCheck" },
+      ],
+      cta: "Ver Todos los Sectores",
+    },
+    contract: {
+      label: "Contrato Corporativo",
+      title: "SLA garantizado en contrato y ",
+      highlight: "piezas originales",
+      description: "Las grandes redes necesitan confiabilidad continua. Solicite una visita comercial para elaborar un contrato de mantenimiento personalizado con tiempos de respuesta garantizados.",
+      cta: "Cotizar Contrato",
+    },
+    cta: {
+      titlePart1: "Puertas que no pueden parar<br />",
+      titlePart2: "necesitan mantenimiento que no falla",
+      button: "Hablar con Especialista",
+    },
+  },
   contato: {
     headline: "Tu proyecto no puede depender de proveedores que hacen promesas que no pueden cumplir.",
     subheadline: "Envía tus proyectos y recibe un análisis técnico de quien fabrica con precisión industrial — del corte CNC a la instalación final en obra.",

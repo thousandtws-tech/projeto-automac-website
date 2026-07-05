@@ -346,43 +346,5 @@ export const dictionary = {
       description: "Large networks require continuous reliability. Request a commercial visit to create a customized maintenance contract with guaranteed response times.",
       cta: "Request Quote",
     },
-    cta: {
-      titlePart1: "Doors that cannot stop<br />",
-      titlePart2: "need maintenance that doesn't fail",
-      button: "Talk to Specialist",
-    },
-    process: {
-      label: "Service Flow",
-      title: "From Call to Resolution",
-      steps: [
-        { num: "01", title: "Opening", desc: "Technical call registration via phone or email 24h.", icon: "PhoneCall" },
-        { num: "02", title: "Triage", desc: "Remote diagnosis and priority classification by specialist.", icon: "ClipboardCheck" },
-        { num: "03", title: "Dispatch", desc: "Technical team dispatched with certified original parts kit.", icon: "Wrench" },
-        { num: "04", title: "Resolution", desc: "Door tested, calibrated and released with full technical report.", icon: "CheckCircle" },
-      ],
-    },
-    industries: {
-      label: "Sectors Served",
-      title: "Doors that<br />cannot<br />stop",
-      items: [
-        { title: "Hospitals & Healthcare", desc: "Hermetic and antibacterial doors for ICUs, ORs and laboratories.", icon: "Stethoscope" },
-        { title: "Shopping & Retail", desc: "High-traffic systems with continuous preventive maintenance.", icon: "Building2" },
-        { title: "Industry & Logistics", desc: "High-speed industrial doors and air curtains.", icon: "Factory" },
-        { title: "Airports & Metro", desc: "Ultra-secure high-durability access 24/7.", icon: "ShieldCheck" },
-      ],
-      cta: "View All Sectors",
-    },
-    contract: {
-      label: "Corporate Contract",
-      title: "Guaranteed SLA in contract and ",
-      highlight: "original parts",
-      description: "Large networks require continuous reliability. Request a commercial visit to create a customized maintenance contract with guaranteed response times.",
-      cta: "Request Quote",
-    },
-    cta: {
-      titlePart1: "Doors that cannot stop<br />",
-      titlePart2: "need maintenance that doesn't fail",
-      button: "Talk to Specialist",
-    },
   },
 } as const;
