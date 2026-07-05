@@ -242,6 +242,36 @@ export const dictionary = {
       { name: "Simulador 360º", href: "/simulador" },
     ],
   },
+  sobre: {
+    header: {
+      titleLine1: "SOBRE",
+      titleLine2: "AUTOMEC",
+      description: "Desde 1993, lideramos la modernización de accesos en Brasil, diseñando e instalando puertas automáticas con tecnología propia."
+    },
+    stats: [
+      { label: "Años en el Mercado" },
+      { label: "Puertas Instaladas" },
+      { label: "Fabricación Propia" },
+      { label: "Soporte Técnico" },
+    ],
+    historyTitle: "Nuestra Historia",
+    historySub: "Vea en este vídeo lo que Automec ha consolidado en sus 35 años de historia",
+    historyButton: "Conozca Nuestra Historia",
+    credibilityTitle: "Credibilidad",
+    credibilityDesc: "La empresa es reconocida por su sólida credibilidad y compromiso inequívoco de satisfacer plenamente a sus clientes.",
+    videoLabel: "Vídeo Institucional",
+    videoDuration: "02:45",
+    diretrizesLabel: "DIRECTRICES",
+    pilaresTitle: "Pilares Corporativos",
+    missionTitle: "Misión",
+    missionDesc: "Facilitar el acceso de todas las personas con tecnología y seguridad.",
+    visionTitle: "Visión",
+    visionDesc: "Mejora continua de nuestros productos, contribuyendo a la modernización y accesibilidad.",
+    valuesTitle: "Valores",
+    valuesDesc: "Valoramos a las personas y los talentos; basados en tecnología e innovación.",
+    ctaTitle: "Sea parte de la historia de más de 30 mil puertas instaladas",
+    ctaButton: "Solicitar Presupuesto",
+  },
   manutencao: {
     header: {
       title: "Mantenimiento",

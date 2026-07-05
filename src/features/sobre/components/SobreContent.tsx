@@ -48,30 +48,51 @@ function useCountUp(end: number, duration: number = 2000, startOnView: boolean =
 
 interface SobreContentProps {
   content?: {
+    stats: readonly { readonly label: string }[];
     historyTitle: string;
     historySub: string;
+    historyButton: string;
     credibilityTitle: string;
     credibilityDesc: string;
+    videoLabel: string;
+    videoDuration: string;
+    diretrizesLabel: string;
+    pilaresTitle: string;
     missionTitle: string;
     missionDesc: string;
     visionTitle: string;
     visionDesc: string;
     valuesTitle: string;
     valuesDesc: string;
+    ctaTitle: string;
+    ctaButton: string;
   };
 }
 
 const fallbackContent = {
+  stats: [
+    { label: "Anos de Mercado" },
+    { label: "Portas Instaladas" },
+    { label: "Fabricação Própria" },
+    { label: "Suporte Técnico" },
+  ],
   historyTitle: "Nossa História",
   historySub: "Veja neste vídeo o que a Automec consolidou nestes 35 anos de história",
+  historyButton: "Conheça Nossa História",
   credibilityTitle: "Credibilidade",
   credibilityDesc: "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",
+  videoLabel: "Vídeo Institucional",
+  videoDuration: "02:45",
+  diretrizesLabel: "DIRETRIZES",
+  pilaresTitle: "Pilares Corporativos",
   missionTitle: "Missão",
   missionDesc: "Facilitar o acesso de todas as pessoas com tecnologia e segurança.",
   visionTitle: "Visão",
   visionDesc: "Melhoria contínua de seus produtos, contribuindo com a modernização e acessibilidade.",
   valuesTitle: "Valores",
   valuesDesc: "Valorizamos pessoas e talentos; alicerçados com tecnologia e inovação.",
+  ctaTitle: "Faça parte da história de mais de 30 mil portas instaladas",
+  ctaButton: "Solicitar Orçamento",
 };
 
 export function SobreContent({ content }: SobreContentProps) {
@@ -92,19 +113,19 @@ export function SobreContent({ content }: SobreContentProps) {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div ref={ref35} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count35}+</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">Anos de Mercado</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[0].label}</p>
               </div>
               <div ref={ref30} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count30}k+</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">Portas Instaladas</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[1].label}</p>
               </div>
               <div ref={ref100} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count100}%</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">Fabricação Própria</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[2].label}</p>
               </div>
               <div ref={ref24} className="text-center md:text-left">
                 <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count24}h</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">Suporte Técnico</p>
+                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[3].label}</p>
               </div>
             </div>
           </div>
@@ -132,7 +153,7 @@ export function SobreContent({ content }: SobreContentProps) {
                   </p>
                 </div>
                 <Button className="bg-black hover:bg-neutral-800 text-white font-bold uppercase tracking-widest px-10 h-14 text-sm">
-                  Conheça Nossa História
+                  {c.historyButton}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>
@@ -149,10 +170,10 @@ export function SobreContent({ content }: SobreContentProps) {
 
                 <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between text-white bg-gradient-to-t from-black/60 to-transparent p-6">
                   <span className="text-[10px] font-bold uppercase tracking-widest bg-black/60 px-3 py-1.5">
-                    Vídeo Institucional
+                    {c.videoLabel}
                   </span>
                   <span className="text-[10px] font-bold opacity-80">
-                    02:45
+                    {c.videoDuration}
                   </span>
                 </div>
               </div>
@@ -167,10 +188,10 @@ export function SobreContent({ content }: SobreContentProps) {
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-20">
               <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-4 block">
-                DIRETRIZES
+                {c.diretrizesLabel}
               </span>
               <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black">
-                Pilares Corporativos
+                {c.pilaresTitle}
               </h3>
             </div>
 
@@ -225,12 +246,12 @@ export function SobreContent({ content }: SobreContentProps) {
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
               <div>
                 <h4 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[0.9]">
-                  Faça parte da história de mais de 30 mil portas instaladas
+                  {c.ctaTitle}
                 </h4>
               </div>
               <div className="lg:text-right">
                 <Button className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-10 h-16 text-sm">
-                  Solicitar Orçamento
+                  {c.ctaButton}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>

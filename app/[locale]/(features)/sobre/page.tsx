@@ -16,7 +16,7 @@ export default async function Sobre({ params }: { params: Promise<{ locale: stri
 
   return (
     <main className="min-h-screen bg-white">
-      <SobreHeader />
+      <SobreHeader content={dictionary.sobre.header} />
       <SobreContent content={dictionary.sobre} />
     </main>
   );

@@ -245,20 +245,33 @@ export const dictionary = {
   },
   sobre: {
     header: {
-      titleLine1: "SOBRE NÓS",
-      titleLine2: "35 ANOS",
-      description: "Credibilidade, tecnologia e inovação aplicadas na modernização de acessos há mais de três décadas."
+      titleLine1: "SOBRE A",
+      titleLine2: "AUTOMEC",
+      description: "Desde 1993, lideramos a modernização de acessos no Brasil, projetando e instalando portas automáticas com tecnologia proprietária."
     },
+    stats: [
+      { label: "Anos de Mercado" },
+      { label: "Portas Instaladas" },
+      { label: "Fabricação Própria" },
+      { label: "Suporte Técnico" },
+    ],
     historyTitle: "Nossa História",
     historySub: "Veja neste vídeo o que a Automec consolidou nestes 35 anos de história",
+    historyButton: "Conheça Nossa História",
     credibilityTitle: "Credibilidade",
     credibilityDesc: "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",
+    videoLabel: "Vídeo Institucional",
+    videoDuration: "02:45",
+    diretrizesLabel: "DIRETRIZES",
+    pilaresTitle: "Pilares Corporativos",
     missionTitle: "Missão",
     missionDesc: "Facilitar o acesso de todas as pessoas com tecnologia e segurança.",
     visionTitle: "Visão",
     visionDesc: "Melhoria contínua de seus produtos, contribuindo com a modernização e acessibilidade.",
     valuesTitle: "Valores",
-    valuesDesc: "Valorizamos pessoas e talentos ; alicerçados com tecnologia e inovação."
+    valuesDesc: "Valorizamos pessoas e talentos ; alicerçados com tecnologia e inovação.",
+    ctaTitle: "Faça parte da história de mais de 30 mil portas instaladas",
+    ctaButton: "Solicitar Orçamento",
   },
   contato: {
     headline: "Seu projeto não pode depender de fornecedores que fazem promessas que não podem cumprir.",
