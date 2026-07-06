@@ -274,8 +274,8 @@ export const dictionary = {
     ctaButton: "Solicitar Orçamento",
   },
   contato: {
-    headline: "Seu projeto não pode depender de fornecedores que fazem promessas que não podem cumprir.",
-    subheadline: "Envie seus projetos e receba uma análise técnica de quem fabrica com precisão industrial — do corte CNC à instalação final em obra.",
+    headline: "Para o Diretor de Engenharia que não tolera atrasos e retrabalhos.",
+    subheadline: "Pare de depender de promessas. Envie o seu projeto e receba um orçamento de quem domina a precisão industrial em alumínio, com fabricação própria e equipe técnica especializada.",
     emailLabel: "E-mail",
     phoneLabel: "Telefone",
     factoryLabel: "Fábrica",
@@ -296,8 +296,8 @@ export const dictionary = {
     placeholders: {
       name: "Seu nome completo",
       company: "Sua construtora ou escritório de arquitetura",
-      email: "seu@email.com.br",
-      phone: "+55 19 99999-9999",
+      email: "contato@automec.com.br",
+      phone: "(19) 3213-8251",
       message: "Descreva prazos específicos, dimensões de abertura ou necessidades especiais do projeto...",
     },
     segments: [

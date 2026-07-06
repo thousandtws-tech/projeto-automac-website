@@ -272,8 +272,8 @@ export const dictionary = {
     ctaButton: "Request a Quote",
   },
   contato: {
-    headline: "Your project cannot depend on suppliers who make promises they can't keep.",
-    subheadline: "Submit your projects and receive a technical analysis from those who manufacture with industrial precision — from CNC cutting to final on-site installation.",
+    headline: "For the Engineering Director who won’t tolerate delays or rework.\n",
+    subheadline: "Stop relying on promises. Send us your project and receive a quotation from experts in industrial-grade aluminum precision.\n",
     emailLabel: "E-mail",
     phoneLabel: "Phone",
     factoryLabel: "Factory",

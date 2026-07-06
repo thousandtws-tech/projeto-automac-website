@@ -349,8 +349,8 @@ export const dictionary = {
     },
   },
   contato: {
-    headline: "Tu proyecto no puede depender de proveedores que hacen promesas que no pueden cumplir.",
-    subheadline: "Envía tus proyectos y recibe un análisis técnico de quien fabrica con precisión industrial — del corte CNC a la instalación final en obra.",
+    headline: "Para el Director de Ingeniería que no tolera retrasos ni retrabajos.",
+    subheadline: "Deje de depender de promesas. Envíenos su proyecto y reciba un presupuesto de especialistas en precisión industrial en aluminio.",
     emailLabel: "Correo",
     phoneLabel: "Teléfono",
     factoryLabel: "Fábrica",
@@ -371,8 +371,8 @@ export const dictionary = {
     placeholders: {
       name: "Tu nombre completo",
       company: "Tu empresa constructora o escritorio de arquitectura",
-      email: "tu@email.com",
-      phone: "+55 19 99999-9999",
+      email: "contato@automec.com.br",
+      phone: "(19) 3213-8251",
       message: "Describe plazos específicos, dimensiones de apertura o necesidades especiales del proyecto...",
     },
     segments: [
