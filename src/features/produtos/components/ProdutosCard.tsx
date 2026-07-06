@@ -4,6 +4,7 @@ import { ArrowRight, Box } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Locale, withLocale } from "@/src/i18n/config";
 import { ProdutoItem } from "../types";
+import { FormattedTrademark } from "@shared/components/FormattedTrademark";
 
 interface ProdutosCardProps {
   locale: Locale;
@@ -55,7 +56,7 @@ export function ProdutosCard({ locale, item, labels }: ProdutosCardProps) {
             </span>
           </div>
           <h3 className="text-2xl font-black tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500">
-            {item.model}
+            <FormattedTrademark text={item.model} />
           </h3>
 
           <div className="mt-auto pt-6 flex items-center justify-between">

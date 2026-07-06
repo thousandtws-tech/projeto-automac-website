@@ -10,6 +10,7 @@ import {ProdutosApplications} from "./ProdutosApplications";
 import {ProdutosIdealFor} from "./ProdutosIdealFor";
 import {ProdutosRelatedModels} from "./ProdutosRelatedModels";
 import {ProdutosAccessories} from "./ProdutosAccessories";
+import { FormattedTrademark } from "@shared/components/FormattedTrademark";
 
 interface ProdutoDetailProps {
     locale: Locale;
@@ -58,7 +59,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
                                     <div className="mb-8">
                                         <span
                                             className="inline-block bg-brand-red-500 text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 mb-6">{t.automec}</span>
-                                        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] leading-[0.85] text-black uppercase mb-4">{produto.model}</h1>
+                                        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] leading-[0.85] text-black uppercase mb-4"><FormattedTrademark text={produto.model} /></h1>
                                         <p className="text-sm font-bold uppercase tracking-[0.15em] text-neutral-400">{p.title}</p>
                                     </div>
                                     <div className="border-t border-black pt-8">

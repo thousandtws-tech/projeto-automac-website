@@ -4,6 +4,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Dictionary } from "@/src/i18n/dictionaries";
 import { ProdutoTechnicalSpec } from "../types";
+import { FormattedTrademark } from "@shared/components/FormattedTrademark";
 
 interface ProdutosTechnicalSpecsProps {
   dictionary: Dictionary;
@@ -42,7 +43,7 @@ export function ProdutosTechnicalSpecs({ dictionary, specs, model }: ProdutosTec
                     : "border-transparent text-neutral-400 hover:text-black hover:bg-neutral-50"
                 )}
               >
-                {spec.tabLabel}
+                <FormattedTrademark text={spec.tabLabel} />
               </button>
             ))}
           </div>

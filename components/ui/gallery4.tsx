@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { FormattedTrademark } from "@/src/shared/components/FormattedTrademark";
 
 import {
   Carousel,
@@ -158,7 +159,7 @@ const Gallery4 = ({
                       </span>
                     </div>
                     <h3 className="text-2xl font-black tracking-tighter text-slate-900 transition-colors duration-300 group-hover:text-brand-red-600 mb-2 line-clamp-1">
-                      {item.title}
+                      <FormattedTrademark text={item.title} />
                     </h3>
                     <p className="text-sm text-slate-500 line-clamp-2 mb-6 font-medium">
                       {item.description}
@@ -168,7 +169,7 @@ const Gallery4 = ({
                       <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-red-500 opacity-0 transition-all duration-300 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
                         {viewDetails}
                       </span>
-                      <div className="flex h-10 w-10 items-center justify-center border border-black bg-white text-slate-900 transition-all duration-300 group-hover:bg-slate-950 group-hover:text-white">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-red-500 text-white transition-all duration-300 group-hover:bg-brand-red-600">
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                       </div>
                     </div>

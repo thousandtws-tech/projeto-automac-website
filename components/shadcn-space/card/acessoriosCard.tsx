@@ -57,7 +57,7 @@ export function AcessoriosCard({
             <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500 opacity-0 transition-all duration-500 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
               {viewDetails}
             </span>
-            <div className="flex h-10 w-10 items-center justify-center bg-black text-white transition-colors duration-300 group-hover:bg-brand-red-500">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-brand-red-500">
               <ArrowRight className="h-5 w-5" />
             </div>
           </div>

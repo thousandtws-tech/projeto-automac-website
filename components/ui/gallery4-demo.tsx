@@ -1,5 +1,5 @@
 import { Gallery4, type Gallery4Props } from "@/components/ui/gallery4";
-import type { Locale } from "@/src/i18n/config";
+import { Locale, withLocale } from "@/src/i18n/config";
 
 function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale }) {
   const gallery = dictionary.home.gallery;
@@ -14,7 +14,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
         category: gallery.categories.sliding,
         title: gallery.items[0].title,
         description: gallery.items[0].description,
-        href: "#",
+        href: withLocale(locale, "/produtos/k-200r"),
         image: "/produtos/K-200R®.png",
       },
       {
@@ -22,7 +22,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
         category: gallery.categories.sliding,
         title: gallery.items[1].title,
         description: gallery.items[1].description,
-        href: "#",
+        href: withLocale(locale, "/produtos/k-500r"),
         image: "/produtos/K-500R®.png",
       },
       {
@@ -30,7 +30,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
         category: gallery.categories.antipanic,
         title: gallery.items[2].title,
         description: gallery.items[2].description,
-        href: "#",
+        href: withLocale(locale, "/produtos/sts-20"),
         image: "/produtos/STS-20®.png",
       },
       {
@@ -38,7 +38,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
         category: gallery.categories.controlled,
         title: gallery.items[3].title,
         description: gallery.items[3].description,
-        href: "#",
+        href: withLocale(locale, "/produtos/sth-70"),
         image: "/produtos/STH-70®.png",
       },
       {
@@ -46,7 +46,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
         category: gallery.categories.telescopic,
         title: gallery.items[4].title,
         description: gallery.items[4].description,
-        href: "#",
+        href: withLocale(locale, "/produtos/stc-40"),
         image: "/produtos/STC-40®.png",
       },
       {
@@ -54,7 +54,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
         category: gallery.categories.sliding,
         title: gallery.items[5].title,
         description: gallery.items[5].description,
-        href: "#",
+        href: withLocale(locale, "/produtos/b-120t-b-300t"),
         image: "/produtos/B-120T®  B-300T®.png",
       },
     ],

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Box } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SimuladorItem } from "../types";
+import { FormattedTrademark } from "@shared/components/FormattedTrademark";
 
 interface SimuladorCardProps {
   item: SimuladorItem;
@@ -54,7 +55,7 @@ export function SimuladorCard({ item, labels, categories }: SimuladorCardProps) 
             </span>
           </div>
           <h3 className="text-2xl font-black tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500">
-            {item.model}
+            <FormattedTrademark text={item.model} />
           </h3>
 
           <div className="mt-auto pt-6 flex items-center justify-between">
