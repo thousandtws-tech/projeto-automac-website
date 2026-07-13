@@ -81,11 +81,11 @@ export const dictionary = {
     },
   },
   hero: {
-    heading: "Engenharia de acesso seguro e inteligente",
+    heading: "Soluções Sob Medida.",
     subheading:
-      "Projetamos, fabricamos e instalamos portas automáticas com tecnologia proprietária, atendimento técnico especializado e suporte em todo o Brasil.",
-    ctaPrimary: "Orçamento",
-    ctaSecondary: "Ver Vídeo",
+      "Exclusividade em Cadas Detalhe.",
+    ctaPrimary: "Falar com Especialista",
+    //ctaSecondary: "Ver Vídeo",
     metrics: [
         { value: "25+", label: "Anos de\nexperiência" },
         { value: "3.000+", label: "Projetos\nentregues" },
