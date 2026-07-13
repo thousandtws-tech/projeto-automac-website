@@ -18,7 +18,7 @@ export function AcessoriosGrid({ items, categoryLabels, viewDetails }: Acessorio
           description={item.description}
           category={categoryLabels?.[item.category] ?? item.category}
           viewDetails={viewDetails}
-          href="/produtos/botoeiras"
+          href="#"
         />
       ))}
     </div>
