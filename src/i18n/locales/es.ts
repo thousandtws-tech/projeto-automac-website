@@ -15,7 +15,7 @@ export const dictionary = {
   nav: [
     { name: "Inicio", href: "/" },
     { name: "Productos", href: "/produtos" },
-    { name: "Simulador", href: "/simulador" },
+    //{ name: "Simulador", href: "/simulador" },
     { name: "Accesorios", href: "/acessorios" },
     { name: "Sobre Nosotros", href: "/sobre" },
     { name: "Clientes", href: "/clientes" },
