@@ -116,7 +116,7 @@ const Gallery4 = ({
             <h2 className="text-5xl font-black tracking-tighter text-slate-900 sm:text-6xl lg:text-5xl">
               {title}
             </h2>
-            <p className="max-w-2xl text-slate-500 font-medium text-lg md:text-xl">{description}</p>
+            <p className="max-w-2xl text-slate-500 font-medium text-lg md:text-md">{description}</p>
           </div>
         </div>
       </div>
