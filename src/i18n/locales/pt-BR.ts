@@ -81,10 +81,10 @@ export const dictionary = {
     },
   },
   hero: {
-    heading: "Soluções\nSob Medida",
-    secondaryTitle: "Exclusividade em cada detalhe.",
+    heading: "Engenharia de acesso seguro e inteligente",
+    secondaryTitle: "Projetamos, fabricamos e instalamos portas automáticas com tecnologia proprietária, atendimento técnico especializado e suporte em todo o Brasil.",
     subheading:
-      "Projetos personalizados para exigências técnicas únicas, com engenharia de alto padrão e acabamento impecável.",
+      "Projetamos, fabricamos e instalamos portas automáticas com tecnologia proprietária, atendimento técnico especializado e suporte em todo o Brasil.",
     ctaPrimary: "Falar com Especialista",
     ctaSecondary: "Ver Vídeo",
     metrics: [

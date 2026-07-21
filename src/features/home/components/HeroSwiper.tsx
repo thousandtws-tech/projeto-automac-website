@@ -63,7 +63,7 @@ export function HeroSwiper({ slides, locale }: HeroSwiperProps) {
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
             <div className="relative z-10 flex flex-col justify-center h-full container mx-auto px-6 sm:px-8 lg:px-12">
               <div className="max-w-2xl">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
                   {slide.title}
                 </h1>
                 <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed mb-8">
