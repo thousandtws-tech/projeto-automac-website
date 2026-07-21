@@ -82,16 +82,16 @@ export const dictionary = {
   },
   hero: {
     heading: "Engenharia de acesso seguro e inteligente",
-    secondaryTitle: "Projetamos, fabricamos e instalamos portas automáticas com tecnologia proprietária, atendimento técnico especializado e suporte em todo o Brasil.",
+    secondaryTitle: "Projetamos, fabricamos e instalamos portas automáticas com atendimento técnico especializado e suporte em todo o Brasil.",
     subheading:
       "Projetamos, fabricamos e instalamos portas automáticas com tecnologia proprietária, atendimento técnico especializado e suporte em todo o Brasil.",
     ctaPrimary: "Falar com Especialista",
     ctaSecondary: "Ver Vídeo",
     metrics: [
-        { value: "25+", label: "Anos de\nexperiência" },
-        { value: "3.000+", label: "Projetos\nentregues" },
+        { value: "35+", label: "Anos de\nexperiência" },
+        { value: "15.000+", label: "Projetos\nentregues" },
         { value: "100%", label: "Tecnologia\nnacional" },
-        { value: "24h", label: "Suporte\ntécnico" },
+        { value: "30k", label: "Portas Instaladas" },
       ],
   },
   produtos: {

@@ -69,20 +69,7 @@ export function HeroSwiper({ slides, locale }: HeroSwiperProps) {
                 <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed mb-8">
                   {slide.subtitle}
                 </p>
-                <div className="flex flex-wrap items-center gap-4">
-                  <Link
-                    href={slide.ctaHref}
-                    className="inline-flex items-center gap-2 rounded-md bg-brand-red-500 px-8 py-3.5 text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 hover:bg-brand-red-600 hover:scale-105"
-                  >
-                    {slide.ctaText}
-                  </Link>
-                  <Link
-                    href={slide.ctaSecondaryHref}
-                    className="inline-flex items-center gap-2 rounded-md border-2 border-white/30 px-8 py-3 text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 hover:border-white hover:bg-white/10"
-                  >
-                    {slide.ctaSecondaryText}
-                  </Link>
-                </div>
+                
               </div>
             </div>
 
