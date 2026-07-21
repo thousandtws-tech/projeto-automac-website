@@ -218,9 +218,9 @@ export const dictionary = {
     ],
     viewDetails: "Ver Detalhes",
     cta: {
-      title: "PROJETOS",
-      highlight: "CUSTOMIZADOS",
-      description: "Temos soluções personalizadas para desafios complexos de engenharia de acesso.",
+      title: "SOLUÇÕES",
+      highlight: "SOB MEDIDA",
+      description: "EXCLUSIVIDADE EM CADA DETALHE",
       button: "Falar com Especialista",
     },
   },
