@@ -75,7 +75,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                 <span className="text-sm font-bold uppercase tracking-widest text-white mb-4 block">
                   {home.about.badge}
                 </span>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
+                <h2 className="text-4xl sm:text-5xl lg:text-4xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
                   {home.about.titlePart1}
                   <span className="underline decoration-white/30 underline-offset-4">
                     {home.about.titleHighlight}
@@ -128,7 +128,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
               <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 {home.features.badge}
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black uppercase leading-[0.9]">
+              <h2 className="text-4xl sm:text-5xl lg:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9]">
                 {home.features.title}
               </h2>
             </div>
@@ -171,7 +171,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
               <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 {home.clients.badge}
               </span>
-              <h2 className="text-4xl sm:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9]">
+              <h2 className="text-4xl sm:text-4xl font-black tracking-tighter text-black uppercase leading-[0.9]">
                 {home.clients.title}
               </h2>
             </div>

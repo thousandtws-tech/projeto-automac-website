@@ -81,11 +81,12 @@ export const dictionary = {
     },
   },
   hero: {
-    heading: "Soluções Sob Medida.",
+    heading: "Soluções\nSob Medida",
+    secondaryTitle: "Exclusividade em cada detalhe.",
     subheading:
-      "Exclusividade em Cadas Detalhe.",
+      "Projetos personalizados para exigências técnicas únicas, com engenharia de alto padrão e acabamento impecável.",
     ctaPrimary: "Falar com Especialista",
-    //ctaSecondary: "Ver Vídeo",
+    ctaSecondary: "Ver Vídeo",
     metrics: [
         { value: "25+", label: "Anos de\nexperiência" },
         { value: "3.000+", label: "Projetos\nentregues" },
@@ -95,8 +96,8 @@ export const dictionary = {
   },
   produtos: {
     header: {
-      titleLine1: "MODELOS",
-      titleLine2: "DISPONÍVEIS",
+      titleLine1: "SOLUÇÕES",
+      titleLine2: "PARA CADA PROJETO",
       description:
         "Conheça nossa gama completa de portas automáticas, desenvolvidas com tecnologia de ponta para atender aos mais diversos segmentos e necessidades arquitetônicas.",
     },
