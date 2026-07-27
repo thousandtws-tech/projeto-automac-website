@@ -271,7 +271,7 @@ export const dictionary = {
     historyButton: "Explore Our Story",
     credibilityTitle: "Credibility",
     credibilityDesc: "The company is recognized for its solid credibility and unwavering commitment to fully satisfying its customers.",
-    videoLabel: "Institutional Video",
+    videoLabel: "Visit our factory",
     videoDuration: "02:45",
     diretrizesLabel: "GUIDELINES",
     pilaresTitle: "Corporate Pillars",

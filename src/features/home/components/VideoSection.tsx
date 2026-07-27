@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
+import MuxPlayer from "@mux/mux-player-react/lazy";
+import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 import { Play } from "lucide-react";
 import type { Locale } from "@/src/i18n/config";
 
@@ -21,6 +23,19 @@ interface VideoSectionProps {
 
 export function VideoSection({ locale, dictionary }: VideoSectionProps) {
   const videoSection = dictionary.home.videoSection;
+  const [isPlaying, setIsPlaying] = useState(false);
+  const muxPlaybackId =
+    process.env.NEXT_PUBLIC_MUX_HOME_PLAYBACK_ID ||
+    process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID;
+  const muxPlayerStyle = {
+    width: "100%",
+    height: "100%",
+    aspectRatio: "16 / 9",
+    "--media-object-fit": "cover",
+    "--media-object-position": "center",
+    "--seek-backward-button": "none",
+    "--seek-forward-button": "none",
+  } satisfies MuxPlayerCSSProperties;
 
   return (
     <div className="border-b border-black bg-white">
@@ -44,33 +59,48 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
           </div>
 
           {/* Right side - Video Card */}
-          <div className="relative w-full aspect-video bg-neutral-900 rounded-sm overflow-hidden group cursor-pointer shadow-lg">
-            <video
-              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-              muted
-              loop
-              playsInline
-              poster="/hero/hero-1.jpg"
-            >
-              <source src="#" type="video/mp4" />
-            </video>
+          <div className="relative aspect-video w-full overflow-hidden rounded-sm bg-neutral-900 shadow-lg">
+            {muxPlaybackId ? (
+              <MuxPlayer
+                className="automec-mux-player"
+                playbackId={muxPlaybackId}
+                streamType="on-demand"
+                loading="viewport"
+                preload="metadata"
+                poster=""
+                videoTitle={videoSection.videoLabel}
+                metadata={{
+                  video_id: `automec-fabrica-${locale}`,
+                  video_title: videoSection.videoLabel,
+                }}
+                accentColor="#d01c24"
+                primaryColor="#ffffff"
+                secondaryColor="#171717"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                onEnded={() => setIsPlaying(false)}
+                style={muxPlayerStyle}
+              />
+            ) : (
+              <button
+                type="button"
+                className="absolute inset-0 flex cursor-default items-center justify-center bg-neutral-900 text-white"
+                aria-label={`${videoSection.videoLabel}: configure NEXT_PUBLIC_MUX_HOME_PLAYBACK_ID para reproduzir`}
+                disabled
+              >
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-red-600 sm:h-20 sm:w-20">
+                  <Play className="ml-1 h-7 w-7 fill-current sm:h-8 sm:w-8" />
+                </span>
+              </button>
+            )}
 
-            {/* Play button overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white transition-all duration-300 group-hover:bg-brand-red-600 group-hover:scale-110">
-                <Play className="h-8 w-8 ml-1" fill="currentColor" />
+            {!isPlaying && (
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-16 sm:px-5 sm:pb-5">
+                <span className="text-xs font-bold uppercase tracking-widest text-white">
+                  {videoSection.videoLabel}
+                </span>
               </div>
-            </div>
-
-            {/* Bottom gradient */}
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
-
-            {/* Caption */}
-            <div className="absolute bottom-4 left-4 right-4">
-              <span className="text-xs font-bold uppercase tracking-widest text-white/80">
-                {videoSection.videoLabel}
-              </span>
-            </div>
+            )}
           </div>
         </div>
       </div>

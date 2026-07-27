@@ -272,7 +272,7 @@ export const dictionary = {
     historyButton: "Conozca Nuestra Historia",
     credibilityTitle: "Credibilidad",
     credibilityDesc: "La empresa es reconocida por su sólida credibilidad y compromiso inequívoco de satisfacer plenamente a sus clientes.",
-    videoLabel: "Vídeo Institucional",
+    videoLabel: "Visita nuestra fábrica",
     videoDuration: "02:45",
     diretrizesLabel: "DIRECTRICES",
     pilaresTitle: "Pilares Corporativos",

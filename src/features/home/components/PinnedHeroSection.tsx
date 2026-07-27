@@ -27,7 +27,7 @@ export function PinnedHeroSection({ locale, dictionary }: PinnedHeroSectionProps
       metrics: t.metrics,
     },
   ];
-
+  
   return (
     <div className="sticky top-0 h-screen z-0">
       <HeroSwiper slides={slides} locale={locale} />

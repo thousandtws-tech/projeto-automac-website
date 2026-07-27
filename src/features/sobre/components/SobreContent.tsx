@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { Play, Pause, Target, Eye, Heart, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import MuxPlayer from "@mux/mux-player-react/lazy";
+import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
+import { Play, Target, Eye, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { CtaBlock } from "@shared/components/CtaBlock";
-import { useCountUp } from "@shared/hooks/useCountUp";
 
 interface SobreContentProps {
   content?: {
@@ -42,7 +43,7 @@ const fallbackContent = {
   historyButton: "Conheça Nossa História",
   credibilityTitle: "Credibilidade",
   credibilityDesc: "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",
-  videoLabel: "Vídeo Institucional",
+  videoLabel: "Conheça nossa fábrica",
   videoDuration: "02:45",
   diretrizesLabel: "DIRETRIZES",
   pilaresTitle: "Pilares Corporativos",
@@ -58,27 +59,17 @@ const fallbackContent = {
 
 export function SobreContent({ content }: SobreContentProps) {
   const c = content ?? fallbackContent;
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [videoError, setVideoError] = useState(false);
-
-  const handleVideoToggle = () => {
-    if (!videoRef.current || videoError) return;
-    if (isPlaying) {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    } else {
-      videoRef.current.play().catch(() => {
-        setIsPlaying(false);
-      });
-      setIsPlaying(true);
-    }
-  };
-
-  const { displayValue: count35, ref: ref35 } = useCountUp(35, 2000);
-  const { displayValue: count30, ref: ref30 } = useCountUp(30, 2000);
-  const { displayValue: count100, ref: ref100 } = useCountUp(100, 2000);
-  const { displayValue: count24, ref: ref24 } = useCountUp(24, 2000);
+  const muxPlaybackId = process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID;
+  const muxPlayerStyle = {
+    width: "100%",
+    height: "100%",
+    aspectRatio: "16 / 9",
+    "--media-object-fit": "cover",
+    "--media-object-position": "center",
+    "--seek-backward-button": "none",
+    "--seek-forward-button": "none",
+  } satisfies MuxPlayerCSSProperties;
 
   return (
     <section className="bg-white">
@@ -108,56 +99,53 @@ export function SobreContent({ content }: SobreContentProps) {
                 </Button>
               </div>
 
-              <div className="relative w-full aspect-video border-2 border-black rounded-md overflow-hidden bg-black">
-                {videoError ? (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-neutral-900 text-white gap-4">
-                    <Play className="h-12 w-12 text-white/40" />
-                    <span className="text-xs uppercase tracking-widest text-white/40">{c.videoLabel}</span>
-                  </div>
-                ) : (
-                  <video
-                    ref={videoRef}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    muted
-                    playsInline
+              <div className="relative aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg">
+                {muxPlaybackId ? (
+                  <MuxPlayer
+                    className="automec-mux-player"
+                    playbackId={muxPlaybackId}
+                    streamType="on-demand"
+                    loading="viewport"
                     preload="metadata"
-                    onClick={handleVideoToggle}
-                    onError={() => setVideoError(true)}
+                    poster=""
+                    videoTitle={c.videoLabel}
+                    metadata={{
+                      video_id: "automec-fabrica",
+                      video_title: c.videoLabel,
+                    }}
+                    accentColor="#d01c24"
+                    primaryColor="#ffffff"
+                    secondaryColor="#171717"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                    style={muxPlayerStyle}
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    className="absolute inset-0 flex cursor-default items-center justify-center bg-neutral-900 text-white"
+                    aria-label={`${c.videoLabel}: configure NEXT_PUBLIC_MUX_PLAYBACK_ID para reproduzir`}
+                    disabled
                   >
-                    <source src="#" type="video/mp4" />
-                  </video>
+                    <span className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-red-600 sm:h-20 sm:w-20">
+                      <Play className="ml-1 h-7 w-7 fill-current sm:h-8 sm:w-8" />
+                    </span>
+                  </button>
                 )}
 
-                {!videoError && !isPlaying && (
-                  <div
-                    className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors duration-300 cursor-pointer"
-                    onClick={handleVideoToggle}
-                  >
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-red-600 text-white transition-transform duration-300 hover:scale-110 sm:h-20 sm:w-20">
-                      <Play className="ml-1 h-7 w-7 fill-current sm:h-8 sm:w-8" />
-                    </div>
+                {!isPlaying && (
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-16 sm:px-5 sm:pb-5">
+                    <span className="text-xs font-bold uppercase tracking-widest text-white">
+                      {c.videoLabel}
+                    </span>
+                    {!muxPlaybackId && (
+                      <span className="absolute bottom-4 right-4 text-[10px] font-bold text-white/80 sm:bottom-5 sm:right-5">
+                        {c.videoDuration}
+                      </span>
+                    )}
                   </div>
                 )}
-
-                <div className="pointer-events-none absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gradient-to-t from-black/60 to-transparent p-3 text-white sm:p-6">
-                  <span className="text-[10px] font-bold uppercase tracking-widest rounded-md bg-black/60 px-3 py-1.5">
-                    {videoError ? (
-                      c.videoLabel
-                    ) : isPlaying ? (
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1 h-3 bg-white rounded-full animate-pulse" />
-                        <span className="w-1 h-2 bg-white rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-                        <span className="w-1 h-3 bg-white rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
-                        Reproduzindo
-                      </span>
-                    ) : (
-                      c.videoLabel
-                    )}
-                  </span>
-                  <span className="text-[10px] font-bold opacity-80">
-                    {c.videoDuration}
-                  </span>
-                </div>
               </div>
             </div>
           </div>

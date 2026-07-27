@@ -1,55 +1,74 @@
-# Design QA — seção Nossa História
+# Design QA — Mux Player
 
-- Source visual truth: `mobile-reference-desktop.png`
-- Desktop implementation screenshot: `desktop-after.png`
-- Mobile implementation screenshot: `mobile-after.png`
-- Combined comparison: `design-comparison.png`
+- Source visual truth: `mux-reference.png`
+- Implementation screenshot: `mux-player-validated.png`
+- Combined focused comparison: `mux-comparison.png`
+- Home source visual truth: `home-mux-reference.png`
+- Home implementation screenshot: `home-mux-player.png`
 - Route: `http://localhost:3000/pt-BR/sobre`
-- State: page loaded, video paused, mobile menu closed
-
-## Capture normalization
-
-- Source pixels: 1917 × 906.
-- Desktop browser CSS viewport: 1903 × 904 at device scale 1; the in-app capture surface exported 1265 × 712.
-- Mobile browser viewport: 320 × 800; document client width 305 px after scrollbar allocation.
-- Mobile capture pixels: 320 × 800.
-- The desktop source and implementation were placed in one comparison canvas. The in-app browser export was rendered at its native capture size rather than upscaled, so typography and spacing were judged proportionally.
+- Viewport: 1265 × 712 CSS px, device scale 1
+- State: player paused, controls visible
 
 ## Full-view comparison evidence
 
-- The desktop implementation preserves the source hierarchy, two-column layout, red/black/white palette, CTA treatment, video aspect ratio, header structure, border treatment, and copy.
-- The mobile implementation stacks content before the video, clears the fixed header, keeps the heading on one line down to the tested 305 px content viewport, and avoids horizontal overflow.
+- The page retains the established two-column layout, fixed navigation clearance, typography, brand colors, CTA, spacing, and responsive behavior.
+- The player remains 16:9 and does not introduce horizontal overflow.
+- The home “Tecnologia e Inovação” section now uses the same player treatment without changing its text-column proportions.
 
-## Focused-region evidence
+## Focused-region comparison evidence
 
-- Header: phone and language controls remain visible at 320 px; the long address and email are progressively hidden to prevent wrapping.
-- History content: the left rule, body-copy hierarchy, full-width CTA, and spacing remain readable without clipping.
-- Video card: the 16:9 frame, centered play control, label, and duration remain visible at the narrow breakpoint.
+- The source and implementation were cropped to the player frame and normalized to 850 × 478 in `mux-comparison.png`.
+- The centered circular red play control, dark 16:9 frame, white uppercase title, rounded corners, and bottom fade match the supplied target.
+- The Mux demo poster appeared during runtime validation; production intentionally sets `poster=""` so the configured asset opens on the target's black idle frame.
+
+## Required fidelity surfaces
+
+- Fonts and typography: existing uppercase label, weight, letter spacing, and white foreground are preserved.
+- Spacing and layout rhythm: 16:9 ratio, centered control, lower-left title, radius, border, and shadow match the target proportions.
+- Colors and visual tokens: Automec red, neutral-black surface, and white controls remain consistent.
+- Image quality and asset fidelity: the official Mux player renders the video; no simulated video image is used.
+- Copy and content: title changed to “Conheça nossa fábrica”, with equivalent English and Spanish translations.
+
+## Runtime checks
+
+- Official `@mux/mux-player-react` lazy component loaded with a valid public demo Playback ID.
+- Player play action changed the Mux media state from paused to playing.
+- The custom title overlay hides while playback is active.
+- No Mux runtime console errors.
+- Without `NEXT_PUBLIC_MUX_PLAYBACK_ID`, a stable non-interactive visual fallback is rendered.
+- The home accepts `NEXT_PUBLIC_MUX_HOME_PLAYBACK_ID` and falls back to the shared `NEXT_PUBLIC_MUX_PLAYBACK_ID`.
+- The home fallback was rendered in-browser with no console errors or horizontal overflow.
+- Production build passes without a Playback ID.
 
 ## Findings
 
 - No actionable P0, P1, or P2 issues remain.
-- P3: the mobile header intentionally omits address and email because the narrow viewport cannot accommodate them without wrapping; phone and language access remain available.
+- P3: the final production video itself cannot be reviewed until the Automec Playback ID is supplied.
 
-## Required fidelity surfaces
+---
 
-- Fonts and typography: existing project fonts, weights, uppercase hierarchy, letter spacing, and copy are preserved; mobile sizes were reduced only where needed for fit.
-- Spacing and layout rhythm: desktop spacing is preserved; mobile now has explicit fixed-header clearance, tighter content rhythm, and a 40 px section gap.
-- Colors and visual tokens: existing brand red, neutral text, black borders, and white surfaces are unchanged.
-- Image quality and asset fidelity: the existing Automec logo and video presentation are reused; no replacement assets or approximations were introduced.
-- Copy and content: all supplied Portuguese content is unchanged.
+## Product video cards
 
-## Interaction and runtime checks
+- Source visual truth: `products-video-card-reference.png` (425 × 712 px).
+- Desktop implementation: `products-video-full-height.png`.
+- Route: `http://localhost:3000/pt-BR/produtos`.
 
-- Mobile navigation opens and closes successfully.
-- No horizontal document overflow at the 320 px test viewport.
-- Browser console: no runtime errors; one pre-existing Next Image aspect-ratio warning remains.
+### Evidence
+
+- Four video cards are rendered from the first four products.
+- At the target desktop size, every card measures exactly 425 × 713 CSS px; measured ratio: 0.59607.
+- The Mux player occupies 100% of the card width and height; there is no white content section.
+- Product model and title are presented as lightweight overlays and disappear during playback.
+- Each card has an independent Mux Playback ID and a stable fallback when its ID is absent.
+- Browser console: no runtime errors.
 - Production build: passed.
 
-## Comparison history
+### Required fidelity surfaces
 
-- Initial P2: fixed navigation covered the “Credibilidade” label on mobile, and the top-bar phone wrapped across lines.
-- Fix: added mobile-only section clearance, responsive top-bar visibility rules, nowrap contact controls, fluid heading sizing, full-width CTA, and compact video controls.
-- Post-fix evidence: `mobile-after.png` at 320 × 800 shows the complete header and section without clipping or horizontal overflow.
+- Fonts and typography: compact uppercase badge, model, and title overlays use the established project hierarchy.
+- Spacing and layout rhythm: target 425 × 713 dimensions and border are preserved while video fills the complete card.
+- Colors and visual tokens: the full dark media surface, Automec red play control, and white overlays use existing project tokens.
+- Image and video fidelity: the complete source card surface is intentionally replaced by the official Mux player, as requested.
+- Copy and content: overlays use localized titles already defined for the four products.
 
 final result: passed

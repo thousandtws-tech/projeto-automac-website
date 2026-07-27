@@ -254,7 +254,7 @@ export const dictionary = {
       { name: "Portas Automáticas", href: "/produtos" },
       { name: "Acessórios", href: "/acessorios" },
       { name: "Manutenção", href: "/acessorios" },
-      { name: "Simulador 360º", href: "/simulador" },
+     //{ name: "Simulador 360º", href: "/simulador" },
     ],
   },
   sobre: {
@@ -274,7 +274,7 @@ export const dictionary = {
     historyButton: "Conheça Nossa História",
     credibilityTitle: "Credibilidade",
     credibilityDesc: "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",
-    videoLabel: "Vídeo Institucional",
+    videoLabel: "Conheça nossa fábrica",
     videoDuration: "02:45",
     diretrizesLabel: "DIRETRIZES",
     pilaresTitle: "Pilares Corporativos",

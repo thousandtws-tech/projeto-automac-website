@@ -184,6 +184,23 @@
 }
 
 @layer utilities {
+  mux-player.automec-mux-player::part(center play button) {
+    width: 5rem;
+    height: 5rem;
+    padding: 1.4rem;
+    border-radius: 9999px;
+    background: var(--automec-red-600);
+    color: #fff;
+  }
+
+  @media (max-width: 639px) {
+    mux-player.automec-mux-player::part(center play button) {
+      width: 4rem;
+      height: 4rem;
+      padding: 1.1rem;
+    }
+  }
+
   .perspective-1200 {
     perspective: 1200px;
   }
