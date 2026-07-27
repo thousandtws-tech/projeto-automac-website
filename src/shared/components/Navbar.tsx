@@ -66,17 +66,17 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
     >
       {/* Top bar */}
       <div className="bg-black">
-        <div className="container mx-auto flex h-10 flex-row items-center justify-between px-6 text-[11px] font-medium uppercase tracking-wider">
-          <div className="flex items-center gap-2 text-white/80">
+        <div className="container mx-auto flex h-10 flex-row items-center justify-end gap-2 px-4 text-[10px] font-medium uppercase tracking-wide sm:justify-between sm:px-6 sm:text-[11px] sm:tracking-wider">
+          <div className="hidden items-center gap-2 text-white/80 md:flex">
             <MapPin className="h-3 w-3" />
-            <span className="hidden md:inline">{dictionary.common.addressShort}</span>
+            <span>{dictionary.common.addressShort}</span>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="mailto:atendimento@automec.com.br" className="text-white/70 hover:text-white transition-colors">
+          <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+            <a href="mailto:atendimento@automec.com.br" className="hidden whitespace-nowrap text-white/70 transition-colors hover:text-white sm:inline">
               {dictionary.common.email}
             </a>
-            <span className="h-3 w-px bg-white/20" />
-            <a href="tel:+551932138251" className="text-white/70 hover:text-white transition-colors">
+            <span className="hidden h-3 w-px bg-white/20 sm:block" />
+            <a href="tel:+551932138251" className="whitespace-nowrap text-white/70 transition-colors hover:text-white">
               {dictionary.common.phone}
             </a>
             <span className="h-3 w-px bg-white/20" />
@@ -143,7 +143,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
           "fixed inset-0 z-40 bg-white md:hidden overflow-y-auto transition-transform duration-300 ease-in-out",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
-        style={{ top: "116px" }}
+        style={{ top: "112px" }}
       >
         <div className="flex flex-col p-6">
           <nav className="flex flex-col gap-0">

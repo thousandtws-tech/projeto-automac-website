@@ -82,54 +82,27 @@ export function SobreContent({ content }: SobreContentProps) {
 
   return (
     <section className="bg-white">
-
-      {/* 1. Stats Section */}
-      <FadeIn direction="up" delay={0.1}>
-        <div className="border-b border-black py-16 md:py-20">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-              <div ref={ref35} className="text-center md:text-left">
-                <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count35}+</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[0].label}</p>
-              </div>
-              <div ref={ref30} className="text-center md:text-left">
-                <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count30}k+</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[1].label}</p>
-              </div>
-              <div ref={ref100} className="text-center md:text-left">
-                <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count100}%</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[2].label}</p>
-              </div>
-              <div ref={ref24} className="text-center md:text-left">
-                <span className="text-5xl sm:text-6xl font-black text-brand-red-600 tracking-tighter">{count24}h</span>
-                <p className="text-sm font-bold uppercase tracking-widest text-black mt-2">{c.stats[3].label}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-
       {/* 2. History Section */}
       <FadeIn direction="up" delay={0.2}>
-        <div className="border-b border-black py-16 md:py-24">
+        <div className="mt-0 border-b border-black pb-14 pt-[calc(7rem+3rem)] sm:pb-16 sm:pt-[calc(7rem+4rem)] md:mt-10 md:py-24">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+            <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
               <div className="flex flex-col items-start text-left">
-                <span className="text-1xl font-bold uppercase tracking-widest text-brand-red-600 mb-4">
+                <span className="mb-3 text-sm font-bold uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
                   {c.credibilityTitle}
                 </span>
-                <h2 className="text-4xl sm:text-5xl lg:text-5xl font-black leading-[0.9] tracking-tighter text-black mb-6 uppercase">
+                <h2 className="mb-5 whitespace-nowrap text-[clamp(1.75rem,8.5vw,2.25rem)] font-black uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 sm:text-5xl lg:text-5xl">
                   {c.historyTitle}
                 </h2>
-                <div className="border-l-2 border-brand-red-600 pl-6 mb-8">
-                  <p className="text-xl sm:text-1xl text-neutral-700 leading-relaxed mb-4 font-medium">
+                <div className="mb-7 border-l-2 border-brand-red-600 pl-4 sm:mb-8 sm:pl-6">
+                  <p className="mb-4 text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
                     {c.historySub}
                   </p>
-                  <p className="text-lg text-neutral-600 leading-relaxed">
+                  <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
                     {c.credibilityDesc}
                   </p>
                 </div>
-                <Button className="bg-brand-red-600 hover:bg-neutral-800 text-white font-bold uppercase tracking-widest px-10 h-14 text-sm">
+                <Button className="h-14 w-full bg-brand-red-600 px-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-neutral-800 sm:w-auto sm:px-10 sm:text-sm sm:tracking-widest">
                   {c.historyButton}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
@@ -160,13 +133,13 @@ export function SobreContent({ content }: SobreContentProps) {
                     className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors duration-300 cursor-pointer"
                     onClick={handleVideoToggle}
                   >
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-red-600 text-white transition-transform duration-300 hover:scale-110">
-                      <Play className="h-8 w-8 fill-current ml-1" />
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-red-600 text-white transition-transform duration-300 hover:scale-110 sm:h-20 sm:w-20">
+                      <Play className="ml-1 h-7 w-7 fill-current sm:h-8 sm:w-8" />
                     </div>
                   </div>
                 )}
 
-                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between text-white bg-gradient-to-t from-black/60 to-transparent p-6 pointer-events-none">
+                <div className="pointer-events-none absolute bottom-0 left-0 right-0 flex items-center justify-between bg-gradient-to-t from-black/60 to-transparent p-3 text-white sm:p-6">
                   <span className="text-[10px] font-bold uppercase tracking-widest rounded-md bg-black/60 px-3 py-1.5">
                     {videoError ? (
                       c.videoLabel
