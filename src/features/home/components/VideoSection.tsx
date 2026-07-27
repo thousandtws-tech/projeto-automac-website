@@ -67,6 +67,7 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
                 streamType="on-demand"
                 loading="viewport"
                 preload="metadata"
+                autoPlay="muted"
                 poster=""
                 videoTitle={videoSection.videoLabel}
                 metadata={{

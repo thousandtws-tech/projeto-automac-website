@@ -15,12 +15,14 @@ interface ProdutosVideoGridProps {
   };
 }
 
-const playbackIds = [
+const productPlaybackIds = [
   process.env.NEXT_PUBLIC_MUX_PRODUCT_1_PLAYBACK_ID,
   process.env.NEXT_PUBLIC_MUX_PRODUCT_2_PLAYBACK_ID,
   process.env.NEXT_PUBLIC_MUX_PRODUCT_3_PLAYBACK_ID,
   process.env.NEXT_PUBLIC_MUX_PRODUCT_4_PLAYBACK_ID,
 ];
+const muxEnvironmentKey =
+  process.env.NEXT_PUBLIC_MUX_ENV_KEY || "46vll6nbo38t3aj8cd8pip23o";
 
 const muxPlayerStyle = {
   width: "100%",
@@ -35,15 +37,20 @@ function ProdutoVideoCard({
   item,
   locale,
   playbackId,
+  envKey,
   labels,
 }: {
   item: ProdutoItem;
   locale: Locale;
   playbackId?: string;
+  envKey?: string;
   labels: ProdutosVideoGridProps["labels"];
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const content = item.i18n[locale] || item.i18n["pt-BR"];
+  const thumbnailUrl = playbackId
+    ? `https://image.mux.com/${playbackId}/thumbnail.webp?time=1&width=850&fit_mode=smartcrop`
+    : undefined;
 
   return (
     <article className="group relative aspect-[425/713] w-full max-w-[425px] overflow-hidden border border-black bg-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
@@ -52,10 +59,12 @@ function ProdutoVideoCard({
           <MuxPlayer
             className="automec-mux-player"
             playbackId={playbackId}
+            envKey={envKey}
             streamType="on-demand"
+            muted
             loading="viewport"
             preload="metadata"
-            poster=""
+            poster={thumbnailUrl}
             videoTitle={`${content.title} ${item.model}`}
             metadata={{
               video_id: `produto-${item.id}`,
@@ -108,7 +117,8 @@ export function ProdutosVideoGrid({
           key={item.id}
           item={item}
           locale={locale}
-          playbackId={playbackIds[index]}
+          playbackId={productPlaybackIds[index]}
+          envKey={productPlaybackIds[index] ? muxEnvironmentKey : undefined}
           labels={labels}
         />
       ))}
