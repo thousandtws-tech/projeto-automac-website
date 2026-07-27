@@ -80,6 +80,19 @@ export const dictionary = {
       titlePart1: "Puertas automáticas con ",
       titleHighlight: "ingeniería de precisión",
     },
+    videoSection: {
+      badge: "Conoce Automec",
+      titlePart1: "Tecnología e",
+      titleHighlight: "Innovación",
+      description: "Más de tres décadas desarrollando soluciones de acceso con ingeniería de precisión. Conoce nuestra historia y descubre cómo transformamos ambientes con puertas automáticas de alto rendimiento.",
+      videoLabel: "Visita nuestra fábrica",
+      metrics: {
+        years: "Años de Experiencia",
+        projects: "Proyectos Entregados",
+        technology: "Tecnología Nacional",
+        doors: "Puertas Instaladas",
+      },
+    },
   },
   hero: {
     heading: "Ingeniería de acceso seguro e inteligente",

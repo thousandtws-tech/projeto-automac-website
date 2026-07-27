@@ -80,6 +80,19 @@ export const dictionary = {
       titlePart1: "Automatic doors with ",
       titleHighlight: "precision engineering",
     },
+    videoSection: {
+      badge: "About Automec",
+      titlePart1: "Technology and",
+      titleHighlight: "Innovation",
+      description: "Over three decades developing access solutions with precision engineering. Discover our history and how we transform environments with high-performance automatic doors.",
+      videoLabel: "Visit our factory",
+      metrics: {
+        years: "Years of Experience",
+        projects: "Projects Delivered",
+        technology: "National Technology",
+        doors: "Doors Installed",
+      },
+    },
   },
   hero: {
     heading: "Secure and intelligent access engineering",

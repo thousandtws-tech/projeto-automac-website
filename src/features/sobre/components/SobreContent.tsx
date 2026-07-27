@@ -115,14 +115,14 @@ export function SobreContent({ content }: SobreContentProps) {
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
               <div className="flex flex-col items-start text-left">
-                <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-4">
+                <span className="text-1xl font-bold uppercase tracking-widest text-brand-red-600 mb-4">
                   {c.credibilityTitle}
                 </span>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[0.9] tracking-tighter text-black mb-6 uppercase">
+                <h2 className="text-4xl sm:text-5xl lg:text-5xl font-black leading-[0.9] tracking-tighter text-black mb-6 uppercase">
                   {c.historyTitle}
                 </h2>
                 <div className="border-l-2 border-brand-red-600 pl-6 mb-8">
-                  <p className="text-xl sm:text-2xl text-neutral-700 leading-relaxed mb-4 font-medium">
+                  <p className="text-xl sm:text-1xl text-neutral-700 leading-relaxed mb-4 font-medium">
                     {c.historySub}
                   </p>
                   <p className="text-lg text-neutral-600 leading-relaxed">
@@ -196,10 +196,10 @@ export function SobreContent({ content }: SobreContentProps) {
         <div className="py-20 md:py-32">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-20">
-              <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-4 block">
+              <span className="text-md font-bold uppercase tracking-widest text-brand-red-600 mb-4 block">
                 {c.diretrizesLabel}
               </span>
-              <h3 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black">
+              <h3 className="text-4xl sm:text-5xl lg:text-5xl font-black tracking-tighter text-black">
                 {c.pilaresTitle}
               </h3>
             </div>

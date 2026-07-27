@@ -1,7 +1,7 @@
 import { getDictionary } from "@/src/i18n/dictionaries";
 import { isLocale, type Locale } from "@/src/i18n/config";
 import { notFound } from "next/navigation";
-import { Hero } from "@/src/features/home/components/Hero";
+import { PinnedHeroSection } from "@/src/features/home/components/PinnedHeroSection";
 import { HomeClientSections } from "@/src/features/home/components/HomeClientSections";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -15,8 +15,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      <Hero locale={locale} dictionary={dictionary} />
-      <HomeClientSections dictionary={dictionary} locale={locale as Locale} />
+      <PinnedHeroSection locale={locale as Locale} dictionary={dictionary} />
+      <div className="relative z-10 bg-white">
+        <HomeClientSections dictionary={dictionary} locale={locale as Locale} />
+      </div>
     </div>
   );
 }

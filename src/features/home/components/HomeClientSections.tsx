@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { Gallery4Demo } from "@/components/ui/gallery4-demo";
 import { CtaBlock } from "@shared/components/CtaBlock";
+import { VideoSection } from "./VideoSection";
 import { useCountUp } from "@shared/hooks/useCountUp";
 import type { Locale } from "@/src/i18n/config";
 
@@ -63,6 +64,10 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
 
   return (
     <>
+      <FadeIn direction="up" delay={0.1}>
+        <VideoSection locale={locale} dictionary={dictionary} />
+      </FadeIn>
+
       <FadeIn direction="up" delay={0.15}>
         <Gallery4Demo dictionary={dictionary} locale={locale} />
       </FadeIn>

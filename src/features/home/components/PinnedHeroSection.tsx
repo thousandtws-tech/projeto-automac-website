@@ -1,0 +1,35 @@
+"use client";
+
+import React from "react";
+import type { Locale } from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
+import { HeroSwiper, type HeroSlide } from "./HeroSwiper";
+
+interface PinnedHeroSectionProps {
+  locale: Locale;
+  dictionary: Dictionary;
+}
+
+export function PinnedHeroSection({ locale, dictionary }: PinnedHeroSectionProps) {
+  const t = dictionary.hero;
+
+  const slides: HeroSlide[] = [
+    {
+      id: "slide-1",
+      image: "/hero-bg.png",
+      title: t.heading,
+      subtitle: t.subheading,
+      ctaText: t.ctaPrimary,
+      ctaHref: `/${locale}/contato`,
+      ctaSecondaryText: t.ctaSecondary,
+      ctaSecondaryHref: `/${locale}/sobre`,
+      metrics: t.metrics,
+    },
+  ];
+
+  return (
+    <div className="sticky top-0 h-screen z-0">
+      <HeroSwiper slides={slides} locale={locale} />
+    </div>
+  );
+}
