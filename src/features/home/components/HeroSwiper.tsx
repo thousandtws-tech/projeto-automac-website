@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useCountUp } from '@shared/hooks/useCountUp';
-import type { HeroSlide } from './Hero';
+import type { export export HeroSlide } from './Hero';
 
 import 'swiper/css';
 import 'swiper/css/pagination';

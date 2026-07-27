@@ -3,7 +3,8 @@
 import React from "react";
 import type { Locale } from "@/src/i18n/config";
 import type { Dictionary } from "@/src/i18n/dictionaries";
-import { HeroSwiper, type HeroSlide } from "./HeroSwiper";
+import { HeroSlide } from "./Hero";
+import { HeroSwiper } from "./HeroSwiper";
 
 interface PinnedHeroSectionProps {
   locale: Locale;
