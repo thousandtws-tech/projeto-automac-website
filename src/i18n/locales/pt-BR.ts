@@ -17,7 +17,7 @@ export const dictionary = {
     //{ name: "Simulador", href: "/simulador" },
     { name: "Acessórios", href: "/acessorios" },
     { name: "Sobre Nós", href: "/sobre" },
-    { name: "Clientes", href: "/clientes" },
+    //{ name: "Clientes", href: "/clientes" },
     { name: "Manutenção", href: "/manutencao" },
     { name: "Contato", href: "/contato" },
   ],
