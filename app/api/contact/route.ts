@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 function validate(data: Record<string, unknown>) {
   const errors: string[] = [];
   if (!data.nome || typeof data.nome !== "string" || data.nome.trim().length < 2)
@@ -87,6 +85,15 @@ function buildEmailHtml(data: {
 
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY is not configured.");
+      return NextResponse.json(
+        { error: "Serviço de e-mail indisponível." },
+        { status: 503 }
+      );
+    }
+
     const body = await request.json();
 
     const errors = validate(body);
@@ -105,6 +112,7 @@ export async function POST(request: Request) {
 
     const to = process.env.CONTACT_EMAIL_TO || "atendimento@automec.com.br";
     const from = process.env.CONTACT_EMAIL_FROM || "contato@automec.com.br";
+    const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
       from: `Contato Site <${from}>`,
