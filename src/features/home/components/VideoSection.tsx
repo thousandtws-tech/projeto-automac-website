@@ -43,7 +43,7 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
   } satisfies MuxPlayerCSSProperties;
 
   return (
-    <div className="border-b border-black bg-white">
+    <div id="home-video-section" className="border-b border-black bg-white">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 py-16 md:py-24 items-center">
           {/* Left side - Title and Description */}
@@ -113,6 +113,11 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
           </div>
         </div>
       </div>
+      <div
+        id="home-metrics-dock"
+        className="h-[158px] bg-black/70 md:h-[113px]"
+        aria-label="Indicadores Automec"
+      />
     </div>
   );
 }

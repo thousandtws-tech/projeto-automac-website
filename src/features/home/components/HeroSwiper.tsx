@@ -1,6 +1,7 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect, useState, useSyncExternalStore } from 'react';
+import { createPortal } from 'react-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useCountUp } from '@shared/hooks/useCountUp';
@@ -36,54 +37,103 @@ function MetricCounter({ value, label, locale }: { value: string; label: string;
 export function HeroSwiper({ slides, locale }: HeroSwiperProps) {
 
   return (
-    <Swiper
-      speed={800}
-      loop={true}
-      autoplay={{ delay: 5000, disableOnInteraction: false }}
-      pagination={{ clickable: true }}
-      navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
-      className="w-full h-dvh"
-      style={{
-        '--swiper-navigation-color': '#fff',
-        '--swiper-pagination-color': '#dc2626',
-        '--swiper-pagination-bullet-inactive-color': '#fff',
-        '--swiper-pagination-bullet-inactive-opacity': '0.4',
-        '--swiper-navigation-size': '28px',
-      } as React.CSSProperties}
-    >
-      {slides.map((slide) => (
-        <SwiperSlide key={slide.id}>
-          <div className="relative w-full h-full overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-ken-burns"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-            <div className="relative z-10 flex flex-col justify-center h-full container mx-auto px-6 sm:px-8 lg:px-12">
-              <div className="max-w-2xl">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
-                  {slide.title}
-                </h1>
-                <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed mb-8">
-                  {slide.subtitle}
-                </p>
-                
-              </div>
-            </div>
-
-            <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-black/40 backdrop-blur-sm">
-              <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-6">
-                  {slide.metrics.map((metric, idx) => (
-                    <MetricCounter key={idx} value={metric.value} label={metric.label} locale={locale} />
-                  ))}
+    <div className="relative h-dvh w-full">
+      <Swiper
+        speed={800}
+        loop={true}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="h-full w-full"
+        style={{
+          '--swiper-navigation-color': '#fff',
+          '--swiper-pagination-color': '#dc2626',
+          '--swiper-pagination-bullet-inactive-color': '#fff',
+          '--swiper-pagination-bullet-inactive-opacity': '0.4',
+          '--swiper-navigation-size': '28px',
+        } as React.CSSProperties}
+      >
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="relative h-full w-full overflow-hidden">
+              <div
+                className="absolute inset-0 animate-ken-burns bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+              <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 sm:px-8 lg:px-12">
+                <div className="max-w-2xl">
+                  <h1 className="mb-6 text-4xl font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-5xl lg:text-6xl">
+                    {slide.title}
+                  </h1>
+                  <p className="mb-8 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+                    {slide.subtitle}
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <HeroMetricsDock metrics={slides[0]?.metrics ?? []} locale={locale} />
+    </div>
+  );
+}
+
+const subscribe = () => () => undefined;
+
+function HeroMetricsDock({
+  metrics,
+  locale,
+}: {
+  metrics: readonly { value: string; label: string }[];
+  locale: string;
+}) {
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
+  const [docked, setDocked] = useState(false);
+
+  useEffect(() => {
+    const dock = document.getElementById("home-metrics-dock");
+    if (!dock) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setDocked(entry.isIntersecting || entry.boundingClientRect.top < 0);
+      },
+      { threshold: 0 },
+    );
+
+    observer.observe(dock);
+    return () => observer.disconnect();
+  }, []);
+
+  if (!mounted) return null;
+
+  const dock = document.getElementById("home-metrics-dock");
+  const portalTarget = docked && dock ? dock : document.body;
+
+  return createPortal(
+    <div
+      className={`inset-x-0 bottom-0 z-[45] border-t border-white/10 bg-black/70 backdrop-blur-md ${
+        docked
+          ? "animate-metrics-dock relative h-full w-full"
+          : "animate-metrics-undock fixed"
+      }`}
+    >
+      <div className="container mx-auto h-full px-6 sm:px-8 lg:px-12">
+        <div className="grid h-full grid-cols-2 content-center gap-4 py-4 md:grid-cols-4 md:gap-6 md:py-6">
+          {metrics.map((metric) => (
+            <MetricCounter
+              key={`${metric.value}-${metric.label}`}
+              value={metric.value}
+              label={metric.label}
+              locale={locale}
+            />
+          ))}
+        </div>
+      </div>
+    </div>,
+    portalTarget,
   );
 }
