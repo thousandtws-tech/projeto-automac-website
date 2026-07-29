@@ -5,7 +5,6 @@ import { Footer } from "@shared/components/Footer";
 import { Navbar } from "@shared/components/Navbar";
 import Whatsapp from "@shared/components/FloatingContactButton";
 import { ResponsiveWrapper } from "@/src/core/responsive/ResponsiveWrapper";
-import { LenisProvider } from "@/components/lenis-provider";
 import { CookieConsent } from "@shared/components/CookieConsent";
 import { getDictionary } from "@/src/i18n/dictionaries";
 import { isLocale, localeLabels, locales, type Locale } from "@/src/i18n/config";
@@ -47,16 +46,14 @@ export default async function LocaleLayout({
 
   return (
     <ResponsiveWrapper>
-      <LenisProvider>
-        <div lang={localeLabels[currentLocale].htmlLang} className="flex min-h-screen flex-col">
-          <Navbar locale={currentLocale} dictionary={dictionary} />
+      <div lang={localeLabels[currentLocale].htmlLang} className="flex min-h-screen flex-col">
+        <Navbar locale={currentLocale} dictionary={dictionary} />
 
-          <main className="grow">{children}</main>
-          <Footer locale={currentLocale} dictionary={dictionary} />
-          <Whatsapp />
-          <CookieConsent locale={currentLocale} />
-        </div>
-      </LenisProvider>
+        <main className="grow">{children}</main>
+        <Footer locale={currentLocale} dictionary={dictionary} />
+        <Whatsapp />
+        <CookieConsent locale={currentLocale} />
+      </div>
     </ResponsiveWrapper>
   );
 }

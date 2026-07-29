@@ -115,7 +115,7 @@ function HeroMetricsDock({
 
   return createPortal(
     <div
-      className={`inset-x-0 bottom-0 z-[45] border-t border-white/10 bg-black/70 backdrop-blur-md ${
+      className={`inset-x-0 bottom-0 z-[45] border-t border-white/10 bg-neutral-900/95 ${
         docked
           ? "animate-metrics-dock relative h-full w-full"
           : "animate-metrics-undock fixed"

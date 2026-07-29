@@ -23,7 +23,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
   const pathname = usePathname();
   const currentPath = pathname.replace(/^\/(pt-BR|en|es)/, "") || "/";
 
-  // Lenis-compatible scroll detection
+  // Passive native scroll detection
   useEffect(() => {
     let ticking = false;
 
