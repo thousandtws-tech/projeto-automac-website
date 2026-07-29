@@ -373,3 +373,20 @@
 .animate-ken-burns {
   animation: ken-burns 10s ease-in-out infinite;
 }
+
+@keyframes budget-blink {
+  0%, 100% {
+    opacity: 1;
+    background-color: #ef232a;
+    box-shadow: 0 0 0 0 rgb(239 35 42 / 70%);
+  }
+  50% {
+    opacity: 0.35;
+    background-color: #991b1b;
+    box-shadow: 0 0 0 10px rgb(239 35 42 / 0%);
+  }
+}
+
+.animate-budget-blink {
+  animation: budget-blink 0.9s ease-in-out infinite !important;
+}

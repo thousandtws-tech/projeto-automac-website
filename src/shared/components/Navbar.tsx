@@ -120,7 +120,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             ))}
             <Link
               href={withLocale(locale, "/contato")}
-              className="inline-flex h-10 items-center justify-center rounded-md bg-brand-red-500 px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
+              className="animate-budget-blink inline-flex h-10 items-center justify-center rounded-md bg-brand-red-500 px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
             >
               {dictionary.common.budget}
             </Link>

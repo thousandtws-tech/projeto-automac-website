@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
   Wrench,
   Shield,
-  Clock,
   PhoneCall,
   ClipboardCheck,
   CheckCircle,
   ShieldCheck,
-  HeartPulse,
   Building2,
   Factory,
   Stethoscope,
@@ -21,35 +19,32 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { CtaBlock } from "@shared/components/CtaBlock";
 import type { Locale } from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
+import { HistoryVideoSection } from "@features/sobre/components/HistoryVideoSection";
 
-function useCountUp(end: number, duration: number = 2000, suffix: string = "") {
+function useCountUp(end: number, duration: number = 2000) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          const startTime = performance.now();
-          const animate = (currentTime: number) => {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * end));
-            if (progress < 1) requestAnimationFrame(animate);
-          };
-          requestAnimationFrame(animate);
-        }
-      },
-      { threshold: 0.5 }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !hasAnimated.current) {
+        hasAnimated.current = true;
+        const startTime = performance.now();
+        const animate = (currentTime: number) => {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          setCount(Math.floor((1 - Math.pow(1 - progress, 3)) * end));
+          if (progress < 1) requestAnimationFrame(animate);
+        };
+        requestAnimationFrame(animate);
+      }
+    });
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [end, duration]);
 
-  return { count, ref, suffix };
+  return { count, ref };
 }
 
 const processSteps = [
@@ -102,19 +97,31 @@ const industries = [
   },
 ];
 
-export function ManutencaoContent({ dictionary, locale }: { dictionary: any; locale: Locale }) {
+export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; locale: Locale }) {
   const m = dictionary.manutencao;
-  const { count: countResponse, ref: refResponse } = useCountUp(4, 2000);
-  const { count: countUptime, ref: refUptime } = useCountUp(99, 2000);
-  const { count: countSLA, ref: refSLA } = useCountUp(100, 2000);
-  const { count: countEquip, ref: refEquip } = useCountUp(120, 2000);
+  const { count: countResponse, ref: refResponse } = useCountUp(4);
+  const { count: countUptime, ref: refUptime } = useCountUp(99);
+  const { count: countSLA, ref: refSLA } = useCountUp(100);
+  const { count: countEquip, ref: refEquip } = useCountUp(120);
 
   return (
     <div className="w-full">
+      <HistoryVideoSection
+        content={{
+          ...dictionary.sobre,
+          credibilityTitle: "Suporte especializado",
+          historyTitle: "Assistência técnica",
+          historySub:
+            "Contratos de manutenção preventiva e corretiva para shopping centers, hospitais e aeroportos com SLA garantido em contrato.",
+          historyButton: "Solicitar atendimento",
+          credibilityDesc: "",
+        }}
+        playbackId="Ek6MCiTRC02ajWs5yyGA5eDwOL02ZAn00SFCby3FVm201ig"
+      />
       {/* ═══════════════════════════════════════════════════════════════
           1. HEADER — Swiss grid pattern
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="relative border-b border-black bg-white pt-36 pb-16 md:pt-40 md:pb-20">
+      <section className="hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
           style={{ backgroundImage: "url('https://placehold.net/1920x600.png?text=Maintenance')" }}
@@ -143,7 +150,7 @@ export function ManutencaoContent({ dictionary, locale }: { dictionary: any; loc
           2. STATS — Counting animation on scroll
       ═══════════════════════════════════════════════════════════════ */}
       <FadeIn direction="up" delay={0.1}>
-        <div className="border-b border-black py-16 md:py-20">
+        <div className="hidden">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               <div ref={refResponse} className="text-center md:text-left">

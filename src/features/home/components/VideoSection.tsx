@@ -6,6 +6,9 @@ import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 import { Play } from "lucide-react";
 import type { Locale } from "@/src/i18n/config";
 
+const defaultHomePlaybackId =
+  "Se57ug001px3tdXw00quRrSUi004FYqlK1QoxD1Vks3lrI";
+
 interface VideoSectionProps {
   locale: Locale;
   dictionary: {
@@ -26,7 +29,9 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const muxPlaybackId =
     process.env.NEXT_PUBLIC_MUX_HOME_PLAYBACK_ID ||
-    process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID;
+    process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID ||
+    defaultHomePlaybackId;
+  const thumbnailUrl = `https://image.mux.com/${muxPlaybackId}/thumbnail.png?width=2560&height=1440&time=18&fit_mode=smartcrop`;
   const muxPlayerStyle = {
     width: "100%",
     height: "100%",
@@ -68,7 +73,10 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
                 loading="viewport"
                 preload="metadata"
                 autoPlay="muted"
-                poster=""
+                muted
+                loop
+                playsInline
+                poster={thumbnailUrl}
                 videoTitle={videoSection.videoLabel}
                 metadata={{
                   video_id: `automec-fabrica-${locale}`,
