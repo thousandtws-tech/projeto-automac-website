@@ -240,7 +240,7 @@ export const produtosMock: ProdutoItem[] = [
     slug: "sth-70",
     i18n: {
       "pt-BR": {
-        title: "Porta Automática Ambientes Controlados",
+        title: "Porta Automática para Ambientes Controlados",
         description: "Porta Automática Automec modelo STH-70, ideal para ambientes controlados como câmaras frias, laboratórios e salas limpas. Sistema hermético com vedação completa para manter a integridade do ambiente interno.",
         idealFor: ["Laboratórios", "Hospitais", "Indústrias", "Câmaras Frias", "Salas Limpas", "Farmacêuticas"],
         applications: [{ label: "Aplicação em ambientes controlados" }],
@@ -255,7 +255,7 @@ export const produtosMock: ProdutoItem[] = [
         ]}],
       },
       en: {
-        title: "Controlled Environment Automatic Door",
+        title: "Automatic Door for Controlled Environments",
         description: "Automec automatic door model STH-70, ideal for controlled environments such as cold rooms, laboratories and clean rooms. Hermetic system with complete sealing to maintain the integrity of the internal environment.",
         idealFor: ["Laboratories", "Hospitals", "Industries", "Cold Rooms", "Clean Rooms", "Pharmaceutical"],
         applications: [{ label: "Controlled environment application" }],
@@ -270,7 +270,7 @@ export const produtosMock: ProdutoItem[] = [
         ]}],
       },
       es: {
-        title: "Puerta Automática Ambientes Controlados",
+        title: "Puerta Automática para Ambientes Controlados",
         description: "Puerta Automática Automec modelo STH-70, ideal para ambientes controlados como cámaras frías, laboratorios y salas limpias. Sistema hermético con sellado completo para mantener la integridad del ambiente interno.",
         idealFor: ["Laboratorios", "Hospitales", "Industrias", "Cámaras Frías", "Salas Limpias", "Farmacéuticas"],
         applications: [{ label: "Aplicación en ambientes controlados" }],
@@ -349,7 +349,7 @@ export const produtosMock: ProdutoItem[] = [
     slug: "b-120t-b-300t",
     i18n: {
       "pt-BR": {
-        title: "Porta Automática Deslizante",
+        title: "Porta Automática de Batente",
         description: "Porta Automática Automec modelos B-120T e B-300T, soluções compactas para portas de vidro com menor peso. Sistema de tração por correia dentada com motor de alta durabilidade. Ideal para entradas comerciais e residenciais.",
         idealFor: ["Residências", "Lojas", "Escritórios", "Clínicas", "Farmácias", "Supermercados"],
         applications: [{ label: "Aplicação em portas de uma folha" }],
@@ -365,7 +365,7 @@ export const produtosMock: ProdutoItem[] = [
         ]}],
       },
       en: {
-        title: "Sliding Automatic Door",
+        title: "Swing Automatic Door",
         description: "Automec automatic door models B-120T and B-300T, compact solutions for lighter glass doors. Timing belt drive system with high-durability motor. Ideal for commercial and residential entrances.",
         idealFor: ["Residences", "Stores", "Offices", "Clinics", "Pharmacies", "Supermarkets"],
         applications: [{ label: "Single leaf door application" }],
@@ -381,7 +381,7 @@ export const produtosMock: ProdutoItem[] = [
         ]}],
       },
       es: {
-        title: "Puerta Automática Deslizante",
+        title: "Puerta Automática Batiente",
         description: "Puertas Automáticas Automec modelos B-120T y B-300T, soluciones compactas para puertas de vidro con menor peso. Sistema de tracción por correa dentada con motor de alta durabilidad. Ideal para entradas comerciales y residenciales.",
         idealFor: ["Residencias", "Tiendas", "Oficinas", "Clínicas", "Farmacias", "Supermercados"],
         applications: [{ label: "Aplicación en puertas de una hoja" }],

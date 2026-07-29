@@ -64,8 +64,9 @@ export const dictionary = {
       categories: {
         sliding: "Automatic Sliding Door",
         antipanic: "Automatic Anti-panic Door",
-        controlled: "Automatic Controlled Environment Door",
+        controlled: "Automatic Door for Controlled Environments",
         telescopic: "Automatic Telescopic Door",
+        swing: "Automatic Swing Door",
       },
       items: [
         { title: "K-200R®", description: "High-performance sliding door with continuous flow for various sectors." },

@@ -50,13 +50,11 @@ export function ProdutosCard({ locale, item, labels }: ProdutosCardProps) {
         </div>
 
         <div className="flex flex-1 flex-col p-5">
-          <div className="mb-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500">
-              {p.title}
-            </span>
-          </div>
-          <h3 className="text-2xl font-black tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500">
+          <span className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-red-500">
             <FormattedTrademark text={item.model} />
+          </span>
+          <h3 className="text-xl font-black uppercase leading-tight tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500 sm:text-2xl">
+            {p.title}
           </h3>
           {p.description && (
             <p className="mt-3 text-sm leading-relaxed text-gray-600 line-clamp-2">

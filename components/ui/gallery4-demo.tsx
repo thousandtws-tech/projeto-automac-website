@@ -1,7 +1,8 @@
 import { Gallery4, type Gallery4Props } from "@/components/ui/gallery4";
 import { Locale, withLocale } from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
 
-function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale }) {
+function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: Locale }) {
   const gallery = dictionary.home.gallery;
 
   const demoData: Gallery4Props = {
@@ -51,7 +52,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: any; locale: Locale 
       },
       {
         id: "b120-b300",
-        category: gallery.categories.sliding,
+        category: gallery.categories.swing,
         title: gallery.items[5].title,
         description: gallery.items[5].description,
         href: withLocale(locale, "/produtos/b-120t-b-300t"),

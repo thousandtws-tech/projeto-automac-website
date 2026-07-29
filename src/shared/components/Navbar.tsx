@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight, MapPin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 import Image from "next/image";
@@ -120,8 +121,9 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             ))}
             <Link
               href={withLocale(locale, "/contato")}
-              className="animate-budget-blink inline-flex h-10 items-center justify-center rounded-md bg-brand-red-500 px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
+              className="animate-budget-blink inline-flex h-10 items-center justify-center gap-2 rounded-md bg-brand-red-500 px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-brand-red-600"
             >
+              <FaWhatsapp className="h-4 w-4" aria-hidden="true" />
               {dictionary.common.budget}
             </Link>
           </div>

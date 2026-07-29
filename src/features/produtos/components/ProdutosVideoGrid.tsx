@@ -97,7 +97,14 @@ function ProdutoVideoCard({
               <Video className="h-3.5 w-3.5" />
               {labels.badge}
             </span>
-           
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/75 to-transparent px-5 pb-5 pt-24 text-white">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red-500">
+                {item.model}
+              </span>
+              <h3 className="mt-1 text-xl font-black uppercase leading-tight tracking-tight">
+                {content.title}
+              </h3>
+            </div>
           </>
         )}
       </div>

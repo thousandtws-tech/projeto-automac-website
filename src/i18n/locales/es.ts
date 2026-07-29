@@ -64,8 +64,9 @@ export const dictionary = {
       categories: {
         sliding: "Puerta Automática Deslizante",
         antipanic: "Puerta Automática Antipánico",
-        controlled: "Puerta Automática Ambientes Controlados",
+        controlled: "Puerta Automática para Ambientes Controlados",
         telescopic: "Puerta Automática Telescópica",
+        swing: "Puerta Automática Batiente",
       },
       items: [
         { title: "K-200R®", description: "Puerta deslizante de alto rendimiento y flujo continuo para diversos sectores." },

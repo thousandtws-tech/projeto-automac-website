@@ -6,6 +6,7 @@ import { Navbar } from "@shared/components/Navbar";
 import Whatsapp from "@shared/components/FloatingContactButton";
 import { ResponsiveWrapper } from "@/src/core/responsive/ResponsiveWrapper";
 import { LenisProvider } from "@/components/lenis-provider";
+import { CookieConsent } from "@shared/components/CookieConsent";
 import { getDictionary } from "@/src/i18n/dictionaries";
 import { isLocale, localeLabels, locales, type Locale } from "@/src/i18n/config";
 
@@ -53,6 +54,7 @@ export default async function LocaleLayout({
           <main className="grow">{children}</main>
           <Footer locale={currentLocale} dictionary={dictionary} />
           <Whatsapp />
+          <CookieConsent locale={currentLocale} />
         </div>
       </LenisProvider>
     </ResponsiveWrapper>
