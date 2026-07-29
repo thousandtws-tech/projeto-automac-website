@@ -18,7 +18,7 @@ export const dictionary = {
     { name: "Acessórios", href: "/acessorios" },
     { name: "Sobre Nós", href: "/sobre" },
     //{ name: "Clientes", href: "/clientes" },
-    { name: "Manutenção", href: "/manutencao" },
+    { name: "Assistência Técnica", href: "/assistencia-tecnica" },
     { name: "Contato", href: "/contato" },
   ],
   home: {

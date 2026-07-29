@@ -49,7 +49,7 @@ function ProdutoVideoCard({
   const [isPlaying, setIsPlaying] = useState(false);
   const content = item.i18n[locale] || item.i18n["pt-BR"];
   const thumbnailUrl = playbackId
-    ? `https://image.mux.com/${playbackId}/thumbnail.webp?time=1&width=850&fit_mode=smartcrop`
+    ? `https://image.mux.com/${playbackId}/thumbnail.webp?width=850&height=1426&time=18&fit_mode=smartcrop`
     : undefined;
 
   return (
