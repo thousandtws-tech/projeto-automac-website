@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -8,17 +7,17 @@ import {
   Wrench,
   Settings,
   Zap,
-  Award,
-  Globe2,
-  Cpu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { Gallery4Demo } from "@/components/ui/gallery4-demo";
 import { CtaBlock } from "@shared/components/CtaBlock";
 import { VideoSection } from "./VideoSection";
+import Lottie from "lottie-react";
 import { useCountUp } from "@shared/hooks/useCountUp";
 import type { Locale } from "@/src/i18n/config";
+import animationData from "@/public/lottie/Mapa Brasil V4.json";
+
 
 const featureIcons = [Settings, Shield, Wrench, Zap];
 
@@ -73,58 +72,56 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
       </FadeIn>
 
       <FadeIn direction="up" delay={0.2}>
-        <div className="border-b border-black bg-brand-red-600">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 py-16 md:py-24 items-center">
-              <div>
-                <span className="text-sm font-bold uppercase tracking-widest text-white mb-4 block">
-                  {home.about.badge}
-                </span>
-                <h2 className="text-4xl sm:text-5xl lg:text-4xl font-black tracking-tighter text-white uppercase leading-[0.9] mb-6">
-                  {home.about.titlePart1}
-                  <span className="underline decoration-white/30 underline-offset-4">
-                    {home.about.titleHighlight}
-                  </span>
-                </h2>
-                <p className="text-base text-white leading-relaxed max-w-lg mb-8">
-                  {home.about.description}
-                </p>
-                <Button className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-8 h-12 text-xs" asChild>
-                  <Link href="/sobre">
-                    {home.about.cta}
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
+      <section className="relative border-b border-black overflow-hidden">
+  {/* Fundos divididos no desktop */}
+  <div className="absolute inset-0 hidden lg:grid lg:grid-cols-2">
+    <div className="bg-brand-red-600" />
+    <div className="bg-white" />
+  </div>
 
-              <div className="grid grid-cols-1 gap-0">
-                {home.about.stats.map((stat: { value: string; description: string }, idx: number) => {
-                  const Icon = [Award, Globe2, Cpu][idx];
-                  return (
-                    <div
-                      key={stat.value}
-                      className={`flex items-center gap-6 p-8 ${
-                        idx < home.about.stats.length - 1 ? "border-b border-white" : ""
-                      }`}
-                    >
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-brand-red-600">
-                        <Icon className="h-7 w-7" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-black tracking-tighter text-white">
-                          {stat.value}
-                        </h3>
-                        <p className="text-sm font-bold uppercase tracking-widest text-white">
-                          {stat.description}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+  <div className="container relative z-10 mx-auto px-0 lg:px-12">
+    <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+      {/* Lado esquerdo vermelho */}
+      <div className="lg:col-span-6 bg-brand-red-600 lg:bg-transparent px-6 sm:px-8 lg:pr-16 py-16 md:py-24 flex flex-col justify-center">
+        <span className="text-xs font-bold uppercase tracking-widest text-white mb-4 inline-block px-4 py-1.5 bg-white/10 rounded-full w-fit border border-white/20">
+          {home.about.badge}
+        </span>
+
+        <h2 className="text-4xl sm:text-5xl font-black tracking-tighter text-white uppercase leading-[0.95] mb-6">
+          {home.about.titlePart1}{" "}
+          <span className="underline decoration-white/40 underline-offset-4">
+            {home.about.titleHighlight}
+          </span>
+        </h2>
+
+        <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-xl mb-8">
+          {home.about.description ||
+            "Com mais de 35 anos de atuação, a Automec oferece cobertura nacional completa com engenharia própria, estoque estratégico de peças e atendimento rápido em todo o Brasil."}
+        </p>
+
+        <Button
+          className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-8 h-12 text-xs shadow-md w-fit"
+          asChild
+        >
+          <Link href="/sobre">
+            {home.about.cta}
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Link>
+        </Button>
+      </div>
+
+      {/* Lado direito branco */}
+      <div className="lg:col-span-6 bg-white lg:bg-transparent px-6 sm:px-8 lg:pl-16 py-16 md:py-24 flex items-center justify-center">
+        <div className="w-full flex items-center justify-center">
+          <Lottie
+            animationData={animationData}
+            className="w-full h-auto max-h-[520px]"
+          />
         </div>
+      </div>
+    </div>
+  </div>
+</section>
       </FadeIn>
       <FadeIn direction="up" delay={0.25}>
         <div className="border-b border-black py-20 md:py-28">

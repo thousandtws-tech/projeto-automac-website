@@ -32,9 +32,9 @@ export const dictionary = {
     },
     about: {
       badge: "Tecnologia & Segurança",
-      titlePart1: "Manutenção e Instalação sem",
-      titleHighlight: " Fronteniras",
-      description: "",
+      titlePart1: "Manutenção e Instalação",
+      titleHighlight: " sem Fronteiras",
+      description: "Porque Confiança e Credibilidade São os nossos Princípios",
       cta: "Conheça a Automec",
       stats: [
         { value: "+ de 35 anos", description: "Fazendo História" },

@@ -246,10 +246,6 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
           </div>
         </div>
       </FadeIn>
-
-
-
-      {/* 6. CONTRACT SLA — Professional CTA */}
       <CtaBlock
         variant="bordered"
         title={m.contract.title}

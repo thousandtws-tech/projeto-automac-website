@@ -113,7 +113,7 @@ const Gallery4 = ({
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="mb-8 flex flex-col items-center text-center gap-6 md:mb-14 lg:mb-16">
           <div className="flex flex-col gap-4">
-            <h2 className="text-5xl font-black tracking-tighter text-slate-900 sm:text-6xl lg:text-5xl">
+            <h2 className="text-5xl font-medium tracking-tighter text-slate-900 sm:text-6xl lg:text-5xl">
               {title}
             </h2>
             <p className="max-w-2xl text-slate-500 font-medium text-lg md:text-md">{description}</p>
@@ -154,11 +154,11 @@ const Gallery4 = ({
 
                   <div className="flex flex-col p-6">
                     <div className="mb-2">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-brand-red-500">
+                      <span className="text-[10px] font-medium uppercase tracking-widest text-brand-red-500">
                         {item.category}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-black tracking-tighter text-slate-900 transition-colors duration-300 group-hover:text-brand-red-600 mb-2 line-clamp-1">
+                    <h3 className="text-2xl font-medium tracking-tighter text-slate-900 transition-colors duration-300 group-hover:text-brand-red-600 mb-2 line-clamp-1">
                       <FormattedTrademark text={item.title} />
                     </h3>
                     <p className="text-sm text-slate-500 line-clamp-2 mb-6 font-medium">
