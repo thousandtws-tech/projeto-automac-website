@@ -59,7 +59,7 @@ export const dictionary = {
     gallery: {
       title: "Modelos de Portas",
       viewDetails: "Saiba Mais",
-      description: "Conheça nossa gama completa de portas automáticas, desenvolvidas com tecnologia de ponta para atender aos mais diversos segmentos e necessidades arquitetônicas.",
+      description: "Conheça nossa gama completa de portas automáticas, desenvolvidas com tecnologia de ponta para atender aos mais diversos segmentos e necessidades.",
       categories: {
         sliding: "Porta Automática Deslizante",
         antipanic: "Porta Automática Antipânico",
