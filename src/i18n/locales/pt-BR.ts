@@ -32,9 +32,9 @@ export const dictionary = {
     },
     about: {
       badge: "Tecnologia & Segurança",
-      titlePart1: "Inovando acessos com ",
-      titleHighlight: "alta performance",
-      description: "Desde 1993, a Automec desenvolve soluções sob medida em portas automáticas deslizantes, telescópicas e herméticas. Combinamos mecânica de alta precisão e design premium para valorizar a arquitetura e otimizar fluxos corporativos.",
+      titlePart1: "Manutenção e Instalação sem",
+      titleHighlight: " Fronteniras",
+      description: "",
       cta: "Conheça a Automec",
       stats: [
         { value: "+ de 35 anos", description: "Fazendo História" },
@@ -53,8 +53,8 @@ export const dictionary = {
       ],
     },
     clients: {
-      badge: "Nossos Parceiros",
-      title: "Quem Confia na Automec",
+      badge: "Engenharia que conquista:",
+      title: "",
     },
     gallery: {
       title: "Modelos de Portas",
