@@ -83,11 +83,11 @@ export function Footer({ locale, dictionary }: FooterProps) {
     },
   ];
 
-return (
-  <footer className="border-t border-black bg-white">
-    <div className="border-b border-black bg-neutral-50">
-      <div
-        className="
+  return (
+    <footer className="border-t border-black bg-white">
+      <div className="border-b border-black bg-neutral-50">
+        <div
+          className="
           container mx-auto grid grid-cols-1 gap-10
           px-5 py-10 text-sm
           sm:px-6
@@ -95,241 +95,241 @@ return (
           lg:gap-8 lg:px-8 lg:py-14
           xl:gap-12
         "
-      >
-        {/* Contatos */}
-        <div
-          className="
+        >
+          {/* Contatos */}
+          <div
+            className="
             space-y-6 border-b border-black/20 pb-10
             lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8
             xl:pr-10
           "
-        >
-          <Link
-            href={withLocale(locale, "/")}
-            className="flex items-center"
           >
-            <Image
-              src={LogoMarca}
-              alt="Automec"
-              width={160}
-              height={40}
-              className="h-auto w-[140px] sm:w-[160px]"
-            />
-          </Link>
+            <Link
+              href={withLocale(locale, "/")}
+              className="flex items-center"
+            >
+              <Image
+                src={LogoMarca}
+                alt="Automec"
+                width={160}
+                height={40}
+                className="h-auto w-[140px] sm:w-[160px]"
+              />
+            </Link>
 
-          <div
-            className="
+            <div
+              className="
               grid grid-cols-1 items-center gap-8
               sm:grid-cols-2
               lg:grid-cols-1
               xl:grid-cols-2
             "
-          >
-            {/* Informações de contato */}
-            <div>
-              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-black">
-                {dictionary.footer.contactsTitle}
-              </h4>
+            >
+              {/* Informações de contato */}
+              <div>
+                <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-black">
+                  {dictionary.footer.contactsTitle}
+                </h4>
 
-              <p className="text-neutral-600">
-  <span className="block">
-    {dictionary.footer.contactsText}
-  </span>
+                <p className="text-neutral-600">
+                  <span className="block">
+                    {dictionary.footer.contactsText}
+                  </span>
 
-  <strong className="mt-1 block whitespace-nowrap text-sm text-black sm:text-base lg:text-sm xl:text-base">
-    {dictionary.common.email}
-  </strong>
-</p>
+                  <strong className="mt-1 block whitespace-nowrap text-sm text-black sm:text-base lg:text-sm xl:text-base">
+                    {dictionary.common.email}
+                  </strong>
+                </p>
 
-              <a
-                href="tel:08007717775"
-                className="
+                <a
+                  href="tel:08007717775"
+                  className="
                   mt-3 block text-lg font-black tracking-tight
                   text-brand-red-500 transition-colors
                   hover:text-brand-red-600
                 "
-              >
-                0800-771-77-75
-              </a>
+                >
+                  0800-771-77-75
+                </a>
 
-              <a
-                href="tel:1932138251"
-                className="
+                <a
+                  href="tel:1932138251"
+                  className="
                   mt-2 block text-lg font-black tracking-tight
                   text-brand-red-500 transition-colors
                   hover:text-brand-red-600
                 "
-              >
-                (19) 3213-8251
-              </a>
+                >
+                  (19) 3213-8251
+                </a>
 
-              <h4 className="mb-2 mt-5 text-xs font-bold uppercase tracking-widest text-black">
-                {dictionary.footer.hoursTitle}
-              </h4>
+                <h4 className="mb-2 mt-5 text-xs font-bold uppercase tracking-widest text-black">
+                  {dictionary.footer.hoursTitle}
+                </h4>
 
-              <p className="text-neutral-600">
-                {dictionary.footer.hoursText}{" "}
-                <strong className="text-black">
-                  {dictionary.footer.hoursValue}
-                </strong>
-              </p>
-            </div>
+                <p className="text-neutral-600">
+                  {dictionary.footer.hoursText}{" "}
+                  <strong className="text-black">
+                    {dictionary.footer.hoursValue}
+                  </strong>
+                </p>
+              </div>
 
-            {/* Imagem 35 anos reduzida */}
-            <div
-              className="
+              {/* Imagem 35 anos reduzida */}
+              <div
+                className="
                 mx-auto flex w-full max-w-[180px]
                 items-center justify-center
                 sm:max-w-[210px]
                 lg:max-w-[170px]
                 xl:max-w-[200px]
               "
-            >
-              <Image
-                src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785875468/35_anos_sz1i3y.webp"
-                alt="35 anos Automec"
-                width={420}
-                height={320}
-                sizes="
+              >
+                <Image
+                  src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785875468/35_anos_sz1i3y.webp"
+                  alt="35 anos Automec"
+                  width={420}
+                  height={320}
+                  sizes="
                   (max-width: 640px) 180px,
                   (max-width: 1024px) 210px,
                   200px
                 "
-                className="h-auto w-full object-contain"
-              />
+                  className="h-auto w-full object-contain"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Endereço e mapa */}
-        <div
-          className="
+          {/* Endereço e mapa */}
+          <div
+            className="
             space-y-5 border-b border-black/20 pb-10
             lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8
             xl:pr-10
           "
-        >
-          <div>
-            <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-black">
-              {dictionary.footer.addressTitle}
-            </h4>
+          >
+            <div>
+              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-black">
+                {dictionary.footer.addressTitle}
+              </h4>
 
-            <p className="text-neutral-600">
-              {dictionary.footer.addressLine1}
-              <br />
-              {dictionary.footer.addressLine2}
-            </p>
+              <p className="text-neutral-600">
+                {dictionary.footer.addressLine1}
+                <br />
+                {dictionary.footer.addressLine2}
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-xl border border-black/10 bg-white">
+              <iframe
+                title="Localização da Automec Portas Automáticas"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14706.809156150564!2d-47.090868564738926!3d-22.850501468143122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c703df8a0725%3A0xe3ff1d1ffa1bec7b!2sAutomec%20Portas%20Autom%C3%A1ticas!5e0!3m2!1spt-BR!2sbr!4v1785872348589!5m2!1spt-BR!2sbr"
+                className="h-[260px] w-full border-0 sm:h-[300px] lg:h-[230px]"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-black/10 bg-white">
-            <iframe
-              title="Localização da Automec Portas Automáticas"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14706.809156150564!2d-47.090868564738926!3d-22.850501468143122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c703df8a0725%3A0xe3ff1d1ffa1bec7b!2sAutomec%20Portas%20Autom%C3%A1ticas!5e0!3m2!1spt-BR!2sbr!4v1785872348589!5m2!1spt-BR!2sbr"
-              className="h-[260px] w-full border-0 sm:h-[300px] lg:h-[230px]"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
-        </div>
-
-        {/* Links rápidos e normas técnicas */}
-        <div
-          className="
+          {/* Links rápidos e normas técnicas */}
+          <div
+            className="
             grid grid-cols-1 items-center gap-8
             sm:grid-cols-2
             lg:grid-cols-1
             xl:-mt-10 xl:grid-cols-2
           "
-        >
-          {/* Links rápidos */}
-          <div>
-            <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-black">
-              {dictionary.footer.quickLinksTitle}
-            </h4>
+          >
+            {/* Links rápidos */}
+            <div>
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-black">
+                {dictionary.footer.quickLinksTitle}
+              </h4>
 
-            <ul className="space-y-3">
-              {dictionary.footer.quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={withLocale(locale, link.href)}
-                    className="
+              <ul className="space-y-3">
+                {dictionary.footer.quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={withLocale(locale, link.href)}
+                      className="
                       inline-block text-base text-neutral-600
                       transition-colors hover:text-brand-red-500
                     "
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              {socialLinks.map(({ icon: Icon, href }, index) => (
-                <Link
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Acessar rede social ${index + 1}`}
-                  className="
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                {socialLinks.map(({ icon: Icon, href }, index) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Acessar rede social ${index + 1}`}
+                    className="
                     flex h-10 w-10 items-center justify-center
                     rounded-lg bg-brand-red-500 text-white
                     transition-colors hover:bg-brand-red-600
                   "
-                >
-                  <Icon className="h-5 w-5" />
-                </Link>
-              ))}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Imagem normas técnicas reduzida */}
-          <div
-            className="
+            {/* Imagem normas técnicas reduzida */}
+            <div
+              className="
               relative mx-auto min-h-[150px] w-full
               max-w-[190px] overflow-hidden
               sm:min-h-[180px] sm:max-w-[220px]
               lg:min-h-[160px] lg:max-w-[200px]
               xl:min-h-[200px] xl:max-w-[230px]
             "
-          >
-            <Image
-              src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785876636/Normas_t%C3%A9cnicas_wvlkr7.webp"
-              alt="Normas técnicas para portas automáticas"
-              fill
-              sizes="
+            >
+              <Image
+                src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785876636/Normas_t%C3%A9cnicas_wvlkr7.webp"
+                alt="Normas técnicas para portas automáticas"
+                fill
+                sizes="
                 (max-width: 640px) 190px,
                 (max-width: 1024px) 220px,
                 230px
               "
-              className="object-contain object-center"
-            />
+                className="object-contain object-center"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    {/* Barra inferior */}
-    <div className="bg-black py-4">
-      <div
-        className="
+      {/* Barra inferior */}
+      <div className="bg-black py-4">
+        <div
+          className="
           container mx-auto flex flex-col items-center
           justify-between gap-2 px-5 text-center text-xs
           sm:px-6
           md:flex-row md:text-left
         "
-      >
-        <p className="text-white/70">
-          Automec Portas Automáticas © {currentYear} -{" "}
-          {dictionary.footer.rights}
-        </p>
+        >
+          <p className="text-white/70">
+            Automec Portas Automáticas © {currentYear} -{" "}
+            {dictionary.footer.rights}
+          </p>
 
-        <p className="text-white/50">
-          {dictionary.footer.developedBy}
-        </p>
+          <p className="text-white/50">
+            {dictionary.footer.developedBy}
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
 }
