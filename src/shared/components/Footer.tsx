@@ -99,7 +99,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                 {dictionary.footer.contactsText} <strong className="text-black">{dictionary.common.email}</strong>
               </p>
               <a href="tel:08007717775" className="mt-4 block text-xl font-black tracking-tight text-brand-red-500 hover:text-brand-red-600">
-                0800-771-77-75
+                (19) 3213-8251
               </a>
             </div>
           </div>
@@ -122,17 +122,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                 {dictionary.footer.hoursText} <strong className="text-black">{dictionary.footer.hoursValue}</strong>
               </p>
             </div>
-            <div>
-              <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-black">
-                {dictionary.footer.serviceTitle}
-              </h4>
-              <div className="flex flex-col gap-1 text-neutral-600">
-                <a href="tel:+551932138251" className="hover:text-brand-red-500">(19) 3213-8251</a>
-                <a href="tel:+551932437775" className="hover:text-brand-red-500">(19) 3243-7775</a>
-                <a href="tel:+551932137095" className="hover:text-brand-red-500">(19) 3213-7095</a>
-                <a href="tel:+551932138053" className="hover:text-brand-red-500">(19) 3213-8053</a>
-              </div>
-            </div>
+           
           </div>
 
           <div>
