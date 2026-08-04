@@ -244,11 +244,11 @@ export function HeroMetricsDock({
           />
 
           <div className="relative z-10 w-full px-6 py-6 sm:px-8 lg:px-12">
-          <div className="mx-auto w-fit overflow-hidden">
-  <h2 className="animate-metrics-title text-center text-3xl font-semibold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.25)] sm:text-4xl">
-    Excelência em Cada Projeto
-  </h2>
-</div>
+            <div className="mx-auto w-fit overflow-hidden">
+              <h2 className="animate-metrics-title text-center text-3xl font-semibold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.25)] sm:text-4xl">
+                Excelência em Cada Projeto
+              </h2>
+            </div>
 
             {metrics.length > 0 && (
               <div className="mx-auto mt-6 grid max-w-7xl grid-cols-2 gap-4 border-t border-white/15 pt-6 md:grid-cols-4">
