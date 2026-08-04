@@ -214,11 +214,11 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
 
                 <ul className="flex flex-col gap-3">
                   {[
-                    "Alinhamento e folga das folhas de vidro",
-                    "Calibração analítica de radares de presença",
-                    "Inspeção de correias e rolamentos",
-                    "Teste de baterias auxiliares de emergência",
-                    "Lubrificação preventiva de trilhos e engrenagens",
+                    "Alinhamento e Ajuste das folhas de vidro",
+                    "Parametrização e Regulagens de Sensores",
+                    "Inspeção de Peças Mecânicas",
+                    "Teste de baterias auxiliares de emergência (Quando necessário)",
+                    "Limpeza Tecnica",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white transition-colors">
                       <CheckCircle className="h-4 w-4 mt-0.5 shrink-0 text-brand-red-600 group-hover:text-brand-red-500 transition-colors" />
@@ -240,45 +240,6 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
               {/* ── Corretiva ── */}
               <div className="p-10 md:p-14 flex flex-col gap-8 group hover:bg-brand-red-600 transition-colors duration-300">
                 <div className="flex items-center gap-5">
-                  <div className="flex h-14 w-14 rounded-full items-center justify-center bg-brand-red-600 text-white group-hover:bg-white group-hover:text-brand-red-600 transition-colors">
-                    <Zap className="h-7 w-7"  />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-black uppercase tracking-tight text-black group-hover:text-white transition-colors">
-                      Corretiva 24h
-                    </h3>
-                    <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white transition-colors">
-                      Emergência imediata
-                    </p>
-                  </div>
-                </div>
-
-                <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white transition-colors">
-                  Atendimento de emergência imediato para correção de pane técnica ou travamento mecânico. Técnicos carregam estoques de peças originais para resolução na primeira visita.
-                </p>
-
-                <ul className="flex flex-col gap-3">
-                  {[
-                    "Plantão técnico de suporte 24h por dia",
-                    "Substituição de motores e placas de comando",
-                    "Peças de reposição originais e certificadas",
-                    "SLA rápido para hospitais e aeroportos",
-                    "Relatório técnico pós-atendimento incluído",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white transition-colors">
-                      <CheckCircle className="h-4 w-4 mt-0.5 shrink-0 text-brand-red-600 group-hover:text-white transition-colors" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-auto pt-4">
-                  <Button className="bg-brand-red-600 text-white hover:bg-brand-red-50 group-hover:bg-white group-hover:text-brand-red-800 font-bold uppercase tracking-widest px-8 h-12 text-xs transition-colors" asChild>
-                    <Link href="/contato">
-                      Chamar Emergência
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </Button>
                 </div>
               </div>
             </div>
@@ -286,108 +247,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
         </div>
       </FadeIn>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          4. PROCESS FLOW — Clean numbered steps
-      ═══════════════════════════════════════════════════════════════ */}
-      <FadeIn direction="up" delay={0.2}>
-        <div className="border-b border-black py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="text-center mb-16">
-              <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
-                Fluxo de Atendimento
-              </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black uppercase leading-[0.9]">
-                Do Chamado à Resolução
-              </h2>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border shadow">
-              {processSteps.map((step, idx) => {
-                const Icon = step.icon;
-                return (
-                  <div
-                    key={step.num}
-                    className={`p-8 md:p-10 flex flex-col gap-6 ${
-                      idx < processSteps.length - 1 ? "border-b md:border-b-0 md:border-r border-black/20" : ""
-                    }`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <span className="text-4xl font-black text-brand-red-600 tracking-tighter leading-none">
-                        {step.num}
-                      </span>
-                      <div className="flex h-10 w-10 items-center justify-center bg-black rounded-full text-white">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-black uppercase tracking-tight text-black mb-2">
-                        {step.title}
-                      </h4>
-                      <p className="text-sm text-neutral-600 leading-relaxed">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </FadeIn>
-
-      {/* ═══════════════════════════════════════════════════════════════
-          5. INDUSTRIES — Who we serve
-      ═══════════════════════════════════════════════════════════════ */}
-      <FadeIn direction="up" delay={0.25}>
-        <div className="border-b border-black  py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-stretch">
-                  {/* Left label */}
-                  <div className="flex flex-col justify-between">
-                    <div>
-                  <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
-                    Segmentos Atendidos
-                  </span>
-                      <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-black uppercase leading-[0.85] mb-8">
-                    Portas que<br />não podem<br />parar
-                  </h2>
-                </div>
-                <Button className="bg-brand-red-600 text-white hover:bg-neutral-800 font-bold uppercase tracking-widest px-8 h-12 text-xs self-start" asChild>
-                  <Link href="/contato">
-                    Ver Todos os Segmentos
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-
-              {/* Right grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-black shadow-sm">
-                {industries.map((ind, idx) => {
-                  const Icon = ind.icon;
-                  return (
-                    <div
-                      key={ind.title}
-                      className={`p-8 flex flex-col gap-4 ${
-                        idx < industries.length - 2 ? "border-b sm:border-b-0 sm:border-r " : ""
-                      } ${idx === industries.length - 2 ? "border-b border-black/20 sm:border-b-0" : ""} ${idx % 2 === 0 ? "sm:border-r border-black/20" : ""}`}
-                    >
-                      <div className="flex h-12 w-12 items-center justify-center bg-black rounded-full text-white">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <h4 className="text-lg font-black uppercase tracking-tight text-black">
-                        {ind.title}
-                      </h4>
-                      <p className="text-sm text-neutral-600 leading-relaxed">
-                        {ind.desc}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </FadeIn>
 
       {/* 6. CONTRACT SLA — Professional CTA */}
       <CtaBlock
