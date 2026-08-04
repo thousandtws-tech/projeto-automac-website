@@ -29,7 +29,7 @@ export function CtaBlock({
   return (
     <section className={`${bgClass} py-20 md:py-24 px-6 border-t border-black`}>
       <div className="mx-auto max-w-4xl w-full text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter uppercase leading-[0.9] max-w-3xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tighter uppercase leading-[0.9] max-w-3xl mx-auto">
           <span className={variant === "red" ? "text-white" : "text-black"}>{title}</span>
           {highlight && (
             <span className={variant === "red" ? "text-white/80" : "text-brand-red-500"}>

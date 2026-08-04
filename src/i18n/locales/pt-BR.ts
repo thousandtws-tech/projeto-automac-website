@@ -234,7 +234,7 @@ export const dictionary = {
   },
   footer: {
     contactsTitle: "Contatos",
-    contactsText: "Se você tiver alguma dúvida, entre em contato conosco em",
+    contactsText: "Entre em contato conosco",
     addressTitle: "Endereço",
     addressLine1: "R. Estácio de Sá, 976 – JD. Santa Genebra Campinas – SP",
     addressLine2: "CEP: 13080-010",

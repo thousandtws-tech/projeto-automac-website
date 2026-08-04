@@ -17,13 +17,13 @@ export const acessoriosMock: Acessorio[] = [
         title: "Sensor de Presença AT-1",
         description: "Sensor de detecção de movimento com tecnologia por micro-ondas e hiperfrequência. Altura de montagem 2500mm.",
         category: "Sensores",
-        image: "/acessorios/Sensor de Presenca AT1.webp"
+        image: "https://res.cloudinary.com/dpgslwy15/image/upload/v1785868066/SENSOR_DE_PRESEN%C3%87A_AT-1_kfkine.webp"
     },
     {
         title: "Sensor de Dupla Detecção AT-2",
         description: "Sensor de detecção de movimento e presença com tecnologia por micro-ondas com duplo radar e infravermelho analítico.",
         category: "Sensores",
-        image: "/acessorios/Sensor de Dupla Detecção AT-2.webp"
+        image: "https://res.cloudinary.com/dpgslwy15/image/upload/v1785868066/SENSOR_DE_DUPLA_DETEC%C3%87%C3%83O_AT-2_z7doz8.webp"
     },
     {
         title: "Seletor de Funções AT-7",
@@ -35,7 +35,7 @@ export const acessoriosMock: Acessorio[] = [
         title: "Trinco e Manípulo AS-3",
         description: "O trinco eletromecânico é necessário para a segurança de ambientes que precisam manter o fechamento da porta.",
         category: "Segurança",
-        image: "/acessorios/Trinco e Manipulo de Seguranca AS3.webp"
+        image: "https://res.cloudinary.com/dpgslwy15/image/upload/v1785868066/TRINCO_E_MAN%C3%8DPULO_DE_SEGURAN%C3%87A_AS-3_lrn29o.webp"
     },
     {
         title: "Controle Transmissor AT-6",
@@ -65,7 +65,7 @@ export const acessoriosMock: Acessorio[] = [
         title: "Controle de Acesso Biométrico AT-4\n",
         description: "O Controlador de Acesso Biométrico é capaz controlar com eficiência e rapidez a entrada e saída de pessoas. Cada um de seus recursos foi concebido com as mais modernas tecnologias para tornar a sua operação mais fácil e intuitiva.\n" + "\n",
         category: "Segurança",
-        image: "/acessorios/Controle de Acesso Biométrico AT-4.webp"
+        image: "https://res.cloudinary.com/dpgslwy15/image/upload/v1785868065/CONTROLE_DE_ACESSO_BIOM%C3%89TRICO_AT-4_wish5o.webp"
     },
     {
         title: "Bateria - Dispositivo Antipânico\n",

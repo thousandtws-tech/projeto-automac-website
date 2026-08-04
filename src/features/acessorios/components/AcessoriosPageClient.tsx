@@ -1,11 +1,11 @@
 "use client";
 
-import {AcessoriosGrid} from "./AcessoriosGrid";
-import {AcessoriosToolbar} from "./AcessoriosToolbar";
-import {Acessorio} from "../types/acessorio";
-import {useAcessorios} from "../hooks/useAcessorios";
-import {FadeIn} from "@/components/fade-in";
-import {CtaBlock} from "@shared/components/CtaBlock";
+import { AcessoriosGrid } from "./AcessoriosGrid";
+import { AcessoriosToolbar } from "./AcessoriosToolbar";
+import { Acessorio } from "../types/acessorio";
+import { useAcessorios } from "../hooks/useAcessorios";
+import { FadeIn } from "@/components/fade-in";
+import { CtaBlock } from "@shared/components/CtaBlock";
 
 interface AcessoriosPageClientProps {
     items: Acessorio[];
@@ -27,13 +27,13 @@ interface AcessoriosPageClientProps {
     };
 }
 
-export function AcessoriosPageClient({items, toolbarLabels, cardItems, viewDetails, ctaContent}: AcessoriosPageClientProps) {
+export function AcessoriosPageClient({ items, toolbarLabels, cardItems, viewDetails, ctaContent }: AcessoriosPageClientProps) {
     const translatedItems = items.map((item, index) => ({
         ...item,
         title: cardItems[index]?.title ?? item.title,
         description: cardItems[index]?.description ?? item.description,
     }));
-    const {filteredAcessorios, categories, setSearchQuery, setSelectedCategory} = useAcessorios(translatedItems);
+    const { filteredAcessorios, categories, setSearchQuery, setSelectedCategory } = useAcessorios(translatedItems);
     const translatedCategories = categories.map((category) => ({
         value: category,
         label: toolbarLabels.categories[category] ?? category,
@@ -42,11 +42,11 @@ export function AcessoriosPageClient({items, toolbarLabels, cardItems, viewDetai
     return (
         <>
             <AcessoriosToolbar categories={translatedCategories} onSearch={setSearchQuery}
-                               onFilter={setSelectedCategory} labels={toolbarLabels}/>
+                onFilter={setSelectedCategory} labels={toolbarLabels} />
             <section className="py-20">
                 <div className="container mx-auto px-6">
                     <FadeIn direction="up" delay={0.1}>
-                        <AcessoriosGrid items={filteredAcessorios} categoryLabels={toolbarLabels.categories} viewDetails={viewDetails}/>
+                        <AcessoriosGrid items={filteredAcessorios} categoryLabels={toolbarLabels.categories} viewDetails={viewDetails} />
                     </FadeIn>
                 </div>
             </section>

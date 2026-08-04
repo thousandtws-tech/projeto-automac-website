@@ -83,11 +83,11 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               {/* Lado esquerdo vermelho */}
               <div className="lg:col-span-6 bg-brand-red-600 lg:bg-transparent px-6 sm:px-8 lg:pr-16 py-16 md:py-24 flex flex-col justify-center">
-                <span className="text-xs font-bold uppercase tracking-widest text-white mb-4 inline-block px-4 py-1.5 bg-white/10 rounded-full w-fit border border-white/20">
+                <span className="text-xs font-medium uppercase tracking-widest text-white mb-4 inline-block px-4 py-1.5 bg-white/10 rounded-full w-fit border border-white/20">
                   {home.about.badge}
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-black tracking-tighter text-white uppercase leading-[0.95] mb-6">
+                <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-white uppercase leading-[0.95] mb-6">
                   {home.about.titlePart1}{" "}
                   <span className="underline decoration-white/40 underline-offset-4">
                     {home.about.titleHighlight}

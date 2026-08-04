@@ -50,10 +50,10 @@ export function HistoryVideoSection({
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
             <div className="flex flex-col items-start text-left">
-              <span className="mb-3 text-sm font-bold uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
+              <span className="mb-3 text-sm font- uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
                 {content.credibilityTitle}
               </span>
-              <h2 className="mb-5 whitespace-nowrap text-[clamp(1.75rem,8.5vw,2.25rem)] font-black uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 sm:text-5xl lg:text-5xl">
+              <h2 className="mb-5 whitespace-nowrap text-[clamp(1.75rem,8.5vw,2.25rem)] font-medium uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 sm:text-5xl lg:text-5xl">
                 {content.historyTitle}
               </h2>
               <div className="mb-7 border-l-2 border-brand-red-600 pl-4 sm:mb-8 sm:pl-6">
