@@ -82,9 +82,9 @@ export const dictionary = {
     },
     videoSection: {
       badge: "Conheça a Automec",
-      titlePart1: "Tecnologia e",
-      titleHighlight: "Inovação",
-      description: "Mais de três décadas desenvolvendo soluções de acesso com engenharia de precisão. Conheça nossa história e descubra como transformamos ambientes com portas automáticas de alta performance.",
+      titlePart1: "Uma Historia Contruida",
+      titleHighlight: "com trabalho Inovação e Confiança",
+      description: "São mais de 35 anos Desenvolvendo Soluções que fazem parte de Hospitais, Industrias, comércios, e grandes Empreendimentos em todo o Brasil, Mas do que fabricar portas automáticas, construímos relações duradoras baseadas em qualidade e compromisso",
       videoLabel: "Conheça nossa fábrica",
       metrics: {
         years: "Anos de Experiência",
