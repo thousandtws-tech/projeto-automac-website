@@ -24,7 +24,7 @@ export function PinnedHeroSection({ locale, dictionary }: PinnedHeroSectionProps
       ctaHref: `/${locale}/contato`,
       ctaSecondaryText: t.ctaSecondary,
       ctaSecondaryHref: `/${locale}/sobre`,
-      metrics: t.metrics,
+      metrics: [],
     },
   ];
   

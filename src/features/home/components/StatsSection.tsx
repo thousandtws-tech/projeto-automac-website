@@ -1,4 +1,3 @@
-import React from "react";
 import { Award, Globe2, Cpu } from "lucide-react";
 
 export function StatsSection() {

@@ -101,12 +101,6 @@ export const dictionary = {
       "Projetamos, fabricamos e instalamos portas automáticas com tecnologia proprietária, atendimento técnico especializado e suporte em todo o Brasil.",
     ctaPrimary: "Falar com Especialista",
     ctaSecondary: "Ver Vídeo",
-    metrics: [
-        { value: "35+", label: "Anos de\nexperiência" },
-        { value: "15.000+", label: "Projetos\nentregues" },
-        { value: "100%", label: "Tecnologia\nnacional" },
-        { value: "30k", label: "Portas Instaladas" },
-      ],
   },
   produtos: {
     header: {

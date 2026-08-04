@@ -115,8 +115,7 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
       </div>
       <div
         id="home-metrics-dock"
-        className="h-[158px] bg-black/70 md:h-[113px]"
-        aria-label="Indicadores Automec"
+        className="relative "
       />
     </div>
   );

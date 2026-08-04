@@ -427,3 +427,28 @@
     animation: none;
   }
 }
+@keyframes metrics-title-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+.animate-metrics-title {
+  animation: metrics-title-enter 900ms
+    cubic-bezier(0.22, 1, 0.36, 1) 150ms both;
+  will-change: transform, opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-metrics-title {
+    animation: none;
+  }
+}
