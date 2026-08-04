@@ -32,7 +32,7 @@ export function Hero({ locale, dictionary }: HeroProps) {
       ctaHref: withLocale(locale, "/contato"),
       ctaSecondaryText: t.ctaSecondary,
       ctaSecondaryHref: withLocale(locale, "/sobre"),
-      metrics: t.metrics,
+      metrics: [],
     },
 
   ];
