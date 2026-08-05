@@ -123,47 +123,6 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
           </div>
         </section>
       </FadeIn>
-      <FadeIn direction="up" delay={0.25}>
-        <div className="border-b border-black py-20 md:py-28">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="text-center mb-16">
-              <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
-                {home.features.badge}
-              </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9]">
-                {home.features.title}
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-black shadow-sm">
-              {home.features.items.map((feat: { title: string; description: string }, idx: number) => {
-                const Icon = featureIcons[idx];
-                return (
-                  <div
-                    key={feat.title}
-                    className={`p-8 md:p-10 flex flex-col gap-6 ${idx < home.features.items.length - 1
-                        ? "border-b md:border-b-0 md:border-r border-black"
-                        : ""
-                      }`}
-                  >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white">
-                      <Icon className="h-7 w-7" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-black uppercase tracking-tight text-black mb-2">
-                        {feat.title}
-                      </h4>
-                      <p className="text-sm text-neutral-600 leading-relaxed">
-                        {feat.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </FadeIn>
 
       <FadeIn direction="up" delay={0.3}>
         <div className="border-b border-black py-16 md:py-20">
