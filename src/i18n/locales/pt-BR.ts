@@ -383,8 +383,8 @@ export const dictionary = {
     },
     contract: {
       label: "Contrato Corporativo",
-      title: "SLA garantido em contrato e ",
-      highlight: "peças originais",
+      title: "SLA garantido em contrato",
+      highlight: "e peças originais",
       description: "Grandes redes necessitam de confiabilidade contínua. Solicite uma visita comercial para elaborarmos um contrato de manutenção personalizada com tempos de resposta garantidos.",
       cta: "Orçar Contrato",
     },

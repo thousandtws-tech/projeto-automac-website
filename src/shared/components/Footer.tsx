@@ -136,7 +136,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                     {dictionary.footer.contactsText}
                   </span>
 
-                    <strong className="mt-1 block break-words text-xs text-black sm:text-sm lg:text-xs xl:text-sm">
+                    <strong className="mt-1 block whitespace-nowrap text-[clamp(0.7rem,3.8vw,0.875rem)] text-black">
                     {dictionary.common.email}
                   </strong>
                 </p>
@@ -214,10 +214,9 @@ export function Footer({ locale, dictionary }: FooterProps) {
                 {dictionary.footer.addressTitle}
               </h4>
 
-              <p className="text-neutral-600">
-                {dictionary.footer.addressLine1}
-                <br />
-                {dictionary.footer.addressLine2}
+              <p className="max-w-[30ch] text-neutral-600 leading-relaxed">
+                <span className="block">{dictionary.footer.addressLine1}</span>
+                <span className="block">{dictionary.footer.addressLine2}</span>
               </p>
             </div>
 

@@ -250,6 +250,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
         variant="bordered"
         title={m.contract.title}
         highlight={m.contract.highlight}
+        highlightOnNewLine
         description={m.contract.description}
         buttonText={m.contract.cta}
       />

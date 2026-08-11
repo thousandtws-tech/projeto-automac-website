@@ -9,6 +9,7 @@ interface CtaBlockProps {
   buttonText: string;
   buttonHref?: string;
   variant?: "red" | "white" | "bordered";
+  highlightOnNewLine?: boolean;
 }
 
 export function CtaBlock({
@@ -18,6 +19,7 @@ export function CtaBlock({
   buttonText,
   buttonHref = "/contato",
   variant = "red",
+  highlightOnNewLine = false,
 }: CtaBlockProps) {
   const bgClass =
     variant === "red"
@@ -32,7 +34,7 @@ export function CtaBlock({
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tighter uppercase leading-[0.9] max-w-3xl mx-auto">
           <span className={variant === "red" ? "text-white" : "text-black"}>{title}</span>
           {highlight && (
-            <span className={variant === "red" ? "text-white/80" : "text-brand-red-500"}>
+            <span className={`${highlightOnNewLine ? "block" : ""} ${variant === "red" ? "text-white/80" : "text-brand-red-500"}`}>
               {" "}{highlight}
             </span>
           )}
