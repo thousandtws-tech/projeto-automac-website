@@ -88,31 +88,19 @@ export function HeroMetricsDock({
   locale,
 }: HeroMetricsDockProps) {
   const [mounted, setMounted] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [docked, setDocked] = useState(false);
   const [dockElement, setDockElement] =
     useState<HTMLElement | null>(null);
 
   const parallaxRef = useRef<HTMLDivElement>(null);
   const dockContentRef = useRef<HTMLDivElement>(null);
+  const dockedRef = useRef(false);
 
   useEffect(() => {
     const element = document.getElementById("home-metrics-dock");
-    const mediaQuery = window.matchMedia("(max-width: 639px)");
 
     setDockElement(element);
-    setIsMobile(mediaQuery.matches);
     setMounted(true);
-
-    const handleMediaChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleMediaChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaChange);
-    };
   }, []);
 
   useEffect(() => {
@@ -122,39 +110,30 @@ export function HeroMetricsDock({
 
     const updateDockState = () => {
       const dockRect = dockElement.getBoundingClientRect();
-
-      const contentHeight =
-        dockContentRef.current?.offsetHeight ?? 0;
-
+      const contentHeight = dockContentRef.current?.offsetHeight ?? 0;
       const stopLine = window.innerHeight - contentHeight;
       const shouldDock = dockRect.top <= stopLine;
 
-      setDocked((current) =>
-        current === shouldDock ? current : shouldDock,
-      );
+      if (dockedRef.current !== shouldDock) {
+        dockedRef.current = shouldDock;
+        setDocked(shouldDock);
+      }
 
       animationFrameId = null;
     };
 
     const handleUpdate = () => {
       if (animationFrameId !== null) return;
-
-      animationFrameId =
-        window.requestAnimationFrame(updateDockState);
+      animationFrameId = window.requestAnimationFrame(updateDockState);
     };
 
     updateDockState();
-
-    window.addEventListener("scroll", handleUpdate, {
-      passive: true,
-    });
-
+    window.addEventListener("scroll", handleUpdate, { passive: true });
     window.addEventListener("resize", handleUpdate);
 
     return () => {
       window.removeEventListener("scroll", handleUpdate);
       window.removeEventListener("resize", handleUpdate);
-
       if (animationFrameId !== null) {
         window.cancelAnimationFrame(animationFrameId);
       }
@@ -174,35 +153,23 @@ export function HeroMetricsDock({
         return;
       }
 
-      const progress = Math.min(
-        1,
-        window.scrollY / window.innerHeight,
-      );
-
+      const progress = Math.min(1, window.scrollY / window.innerHeight);
       const offset = progress * 12;
 
-      element.style.transform =
-        `translate3d(0, ${offset}px, 0)`;
-
+      element.style.transform = `translate3d(0, ${offset}px, 0)`;
       animationFrameId = null;
     };
 
     const handleScroll = () => {
       if (animationFrameId !== null) return;
-
-      animationFrameId =
-        window.requestAnimationFrame(updateParallax);
+      animationFrameId = window.requestAnimationFrame(updateParallax);
     };
 
     updateParallax();
-
-    window.addEventListener("scroll", handleScroll, {
-      passive: true,
-    });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-
       if (animationFrameId !== null) {
         window.cancelAnimationFrame(animationFrameId);
       }
@@ -211,9 +178,7 @@ export function HeroMetricsDock({
 
   useEffect(() => {
     if (!docked || !parallaxRef.current) return;
-
-    parallaxRef.current.style.transform =
-      "translate3d(0, 0, 0)";
+    parallaxRef.current.style.transform = "translate3d(0, 0, 0)";
   }, [docked]);
 
   if (!mounted) {
@@ -221,20 +186,14 @@ export function HeroMetricsDock({
   }
 
   const portalTarget =
-    isMobile && dockElement
-      ? dockElement
-      : docked && dockElement
-      ? dockElement
-      : document.body;
+    docked && dockElement ? dockElement : document.body;
 
   return createPortal(
     <div
       ref={dockContentRef}
       className={[
-        "z-[45] w-full",
-        isMobile
-          ? "relative -mt-3"
-          : docked
+        "inset-x-0 z-[45] w-full",
+        docked
           ? "absolute bottom-0"
           : "fixed bottom-0",
       ].join(" ")}

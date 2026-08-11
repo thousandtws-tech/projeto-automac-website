@@ -281,7 +281,7 @@
 
   html {
     min-height: 100%;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
     @apply font-sans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
