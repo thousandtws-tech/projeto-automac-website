@@ -201,6 +201,20 @@
     object-fit: cover;
   }
 
+  mux-player.automec-map-video::part(control-bar) {
+    display: none;
+  }
+
+  mux-player.automec-map-video::part(bottom),
+  mux-player.automec-map-video::part(chrome),
+  mux-player.automec-map-video::part(range),
+  mux-player.automec-map-video::part(time),
+  mux-player.automec-map-video::part(track),
+  mux-player.automec-map-video::part(buffered),
+  mux-player.automec-map-video::part(progress) {
+    display: none;
+  }
+
   mux-player.automec-mux-player::part(center play button) {
     width: 5rem;
     height: 5rem;
