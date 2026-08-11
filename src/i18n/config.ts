@@ -4,10 +4,13 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "pt-BR";
 
-export const localeLabels: Record<Locale, { label: string; flag: string; htmlLang: string }> = {
-  "pt-BR": { label: "Português", flag: "PT", htmlLang: "pt-BR" },
-  en: { label: "English", flag: "EN", htmlLang: "en" },
-  es: { label: "Español", flag: "ES", htmlLang: "es" },
+export const localeLabels: Record<
+  Locale,
+  { label: string; flag: string; htmlLang: string }
+> = {
+  "pt-BR": { label: "Português", flag: "🇧🇷", htmlLang: "pt-BR" },
+  en: { label: "English", flag: "🇺🇸", htmlLang: "en" },
+  es: { label: "Español", flag: "🇪🇸", htmlLang: "es" },
 };
 
 export function isLocale(value: string): value is Locale {
@@ -15,7 +18,12 @@ export function isLocale(value: string): value is Locale {
 }
 
 export function withLocale(locale: Locale, href: string) {
-  if (href === "#" || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+  if (
+    href === "#" ||
+    href.startsWith("http") ||
+    href.startsWith("mailto:") ||
+    href.startsWith("tel:")
+  ) {
     return href;
   }
 

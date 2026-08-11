@@ -59,7 +59,7 @@ export function HeroSwiper({
 
               <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 sm:px-8 lg:px-12">
                 <div className="max-w-2xl">
-                  <h1 className="mb-6 text-4xl font-medium uppercase leading-[0.9] tracking-tighter text-white sm:text-5xl lg:text-6xl">
+                  <h1 className="mb-6 text-4xl font-medium uppercase leading-[1.15] tracking-tighter text-white sm:text-5xl lg:text-6xl">
                     {slide.title}
                   </h1>
 

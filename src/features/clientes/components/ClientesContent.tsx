@@ -123,7 +123,7 @@ export function ClientesContent() {
         <div className="relative container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-12 gap-8 items-end">
             <div className="col-span-12 md:col-span-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.85] text-black uppercase">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] text-black uppercase">
                 Grandes Marcas,
                 <br />
                 <span className="text-brand-red-600">Grandes Parceiros</span>

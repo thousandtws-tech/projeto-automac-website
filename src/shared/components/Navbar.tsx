@@ -12,6 +12,12 @@ import LogoMarca from "@/public/logo-png/Artboard-1.png";
 import { Dictionary } from "@/src/i18n/dictionaries";
 import { localeLabels, locales, type Locale, withLocale } from "@/src/i18n/config";
 
+const localeFlagCodes: Record<Locale, string> = {
+  "pt-BR": "br",
+  en: "us",
+  es: "es",
+};
+
 interface NavbarProps {
   locale: Locale;
   dictionary: Dictionary;
@@ -86,9 +92,17 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
                 <Link
                   key={l}
                   href={withLocale(l, currentPath)}
-                  className={cn("text-[10px] font-bold uppercase tracking-widest leading-none px-1.5 py-0.5 border", l === locale ? "text-white border-white" : "text-white/60 border-white/20 hover:text-white/80 hover:border-white/40")}
+                  aria-label={localeLabels[l].label}
+                  className={cn(
+                    "flex h-5 w-7 items-center justify-center border-0 p-0.5 transition-opacity",
+                    l === locale ? "opacity-100" : "opacity-70 hover:opacity-100",
+                  )}
                 >
-                  {localeLabels[l].flag}
+                  <img
+                    src={`https://flagcdn.com/w40/${localeFlagCodes[l]}.png`}
+                    alt={localeLabels[l].label}
+                    className="h-full w-full object-cover"
+                  />
                 </Link>
               ))}
             </div>

@@ -13,10 +13,10 @@ import { FadeIn } from "@/components/fade-in";
 import { Gallery4Demo } from "@/components/ui/gallery4-demo";
 import { CtaBlock } from "@shared/components/CtaBlock";
 import { VideoSection } from "./VideoSection";
-import Lottie from "lottie-react";
+import MuxPlayer from "@mux/mux-player-react";
+import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 import { useCountUp } from "@shared/hooks/useCountUp";
 import type { Locale } from "@/src/i18n/config";
-import animationData from "@/public/lottie/Mapa Brasil V4.json";
 
 
 const featureIcons = [Settings, Shield, Wrench, Zap];
@@ -61,6 +61,14 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
     { ref: refHours, value: `${hoursDisplay}h`, label: home.counters.technicalSupport },
   ];
 
+  const mapVideoStyle = {
+    width: "100%",
+    height: "100%",
+    aspectRatio: "auto",
+    "--media-object-fit": "cover",
+    "--media-object-position": "center",
+  } satisfies MuxPlayerCSSProperties;
+
   return (
     <>
       <FadeIn direction="up" delay={0.1}>
@@ -79,7 +87,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
             <div className="bg-white" />
           </div>
 
-          <div className="container relative z-10 mx-auto px-0 lg:px-12">
+          <div className="relative z-10 mx-auto w-full max-w-none px-0">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               {/* Lado esquerdo vermelho */}
               <div className="lg:col-span-6 bg-brand-red-600 lg:bg-transparent px-6 sm:px-8 lg:pr-16 py-16 md:py-24 flex flex-col justify-center">
@@ -87,7 +95,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {home.about.badge}
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-white uppercase leading-[0.95] mb-6">
+                <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-white uppercase leading-[1.35] mb-12">
                   {home.about.titlePart1}{" "}
                   <span className="underline decoration-white/40 underline-offset-4">
                     {home.about.titleHighlight}
@@ -111,11 +119,18 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
               </div>
 
               {/* Lado direito branco */}
-              <div className="lg:col-span-6 bg-white lg:bg-transparent px-6 sm:px-8 lg:pl-16 py-16 md:py-24 flex items-center justify-center">
-                <div className="w-full flex items-center justify-center">
-                  <Lottie
-                    animationData={animationData}
-                    className="w-full h-auto max-h-[520px]"
+              <div className="lg:col-span-6 min-h-[280px] w-full bg-white lg:min-h-0 lg:bg-transparent p-0 flex items-stretch justify-center">
+                <div className="h-full min-h-[280px] w-full overflow-hidden border border-black bg-neutral-950 shadow-lg lg:min-h-0">
+                  <MuxPlayer
+                    className="automec-map-video block h-full w-full"
+                    playbackId="fqQI595jgub7G9N00NNa1iZjBryDxgBGEZWlDLlHBJ2o"
+                    streamType="on-demand"
+                    autoPlay="muted"
+                    muted
+                    loop
+                    playsInline
+                    videoTitle="Portas automáticas Automec com segurança garantida"
+                    style={mapVideoStyle}
                   />
                 </div>
               </div>

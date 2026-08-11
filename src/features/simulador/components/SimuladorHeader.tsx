@@ -32,7 +32,7 @@ export function SimuladorHeader({ content }: SimuladorHeaderProps) {
               <Box className="h-3 w-3" />
               {headerContent.badge}
             </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.85] text-black uppercase">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] text-black uppercase">
               {headerContent.titleLine1}
               <br />
               <span className="text-brand-red-600">{headerContent.titleLine2}</span>
