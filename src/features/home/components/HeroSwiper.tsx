@@ -88,6 +88,7 @@ export function HeroMetricsDock({
   locale,
 }: HeroMetricsDockProps) {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [docked, setDocked] = useState(false);
   const [dockElement, setDockElement] =
     useState<HTMLElement | null>(null);
@@ -97,9 +98,21 @@ export function HeroMetricsDock({
 
   useEffect(() => {
     const element = document.getElementById("home-metrics-dock");
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
 
     setDockElement(element);
+    setIsMobile(mediaQuery.matches);
     setMounted(true);
+
+    const handleMediaChange = (event: MediaQueryListEvent) => {
+      setIsMobile(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaChange);
+    };
   }, []);
 
   useEffect(() => {
@@ -208,7 +221,9 @@ export function HeroMetricsDock({
   }
 
   const portalTarget =
-    docked && dockElement
+    isMobile && dockElement
+      ? dockElement
+      : docked && dockElement
       ? dockElement
       : document.body;
 
@@ -216,8 +231,10 @@ export function HeroMetricsDock({
     <div
       ref={dockContentRef}
       className={[
-        "inset-x-0 z-[45] w-full",
-        docked
+        "z-[45] w-full",
+        isMobile
+          ? "relative -mt-3"
+          : docked
           ? "absolute bottom-0"
           : "fixed bottom-0",
       ].join(" ")}
