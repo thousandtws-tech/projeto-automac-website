@@ -54,11 +54,11 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
 
   return (
     <div className="w-full">
-      <section className="bg-brand-red-600 min-h-dvh">
+      <section className="mt-[98px] min-h-dvh bg-brand-red-600 lg:mt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-dvh items-stretch">
 
           <FadeIn direction="left" delay={0.1} className="flex">
-            <div className="flex flex-col justify-center px-8 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-24 w-full">
+            <div className="flex w-full flex-col justify-start px-5 pb-28 pt-8 sm:px-12 lg:justify-center lg:px-16 lg:py-24 xl:px-24">
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-black tracking-tighter leading-[1] text-white uppercase mb-10">
                 {c.headline}
