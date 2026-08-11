@@ -88,20 +88,20 @@ export function Footer({ locale, dictionary }: FooterProps) {
       <div className="border-b border-black bg-neutral-50">
         <div
           className="
-          container mx-auto grid grid-cols-1 gap-10
-          px-5 py-10 text-sm
+          container mx-auto grid min-w-0 grid-cols-1 gap-8
+          px-4 py-8 text-sm
           sm:px-6
           lg:grid-cols-[1.15fr_1fr_1.15fr]
-          lg:gap-8 lg:px-8 lg:py-14
-          xl:gap-12
+          lg:gap-6 lg:px-8 lg:py-10
+          xl:gap-8
         "
         >
           {/* Contatos */}
           <div
             className="
-            space-y-6 border-b border-black/20 pb-10
-            lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8
-            xl:pr-10
+            min-w-0 space-y-5 border-b border-black/20 pb-8
+            lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6
+            xl:pr-8
           "
           >
             <Link
@@ -113,7 +113,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                 alt="Automec"
                 width={160}
                 height={40}
-                className="h-auto w-[140px] sm:w-[160px]"
+                className="h-auto w-[120px] sm:w-[140px]"
               />
             </Link>
 
@@ -136,7 +136,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                     {dictionary.footer.contactsText}
                   </span>
 
-                  <strong className="mt-1 block whitespace-nowrap text-sm text-black sm:text-base lg:text-sm xl:text-base">
+                    <strong className="mt-1 block break-words text-xs text-black sm:text-sm lg:text-xs xl:text-sm">
                     {dictionary.common.email}
                   </strong>
                 </p>
@@ -178,11 +178,11 @@ export function Footer({ locale, dictionary }: FooterProps) {
               {/* Imagem 35 anos reduzida */}
               <div
                 className="
-                mx-auto flex w-full max-w-[180px]
+                 mx-auto flex w-full max-w-[140px]
                 items-center justify-center
-                sm:max-w-[210px]
-                lg:max-w-[170px]
-                xl:max-w-[200px]
+                 sm:max-w-[160px]
+                 lg:max-w-[140px]
+                 xl:max-w-[160px]
               "
               >
                 <Image
@@ -204,7 +204,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           {/* Endereço e mapa */}
           <div
             className="
-            space-y-5 border-b border-black/20 pb-10
+            min-w-0 space-y-5 border-b border-black/20 pb-8
             lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8
             xl:pr-10
           "
@@ -225,7 +225,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               <iframe
                 title="Localização da Automec Portas Automáticas"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14706.809156150564!2d-47.090868564738926!3d-22.850501468143122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c703df8a0725%3A0xe3ff1d1ffa1bec7b!2sAutomec%20Portas%20Autom%C3%A1ticas!5e0!3m2!1spt-BR!2sbr!4v1785872348589!5m2!1spt-BR!2sbr"
-                className="h-[260px] w-full border-0 sm:h-[300px] lg:h-[230px]"
+                 className="h-[200px] w-full border-0 sm:h-[230px] lg:h-[210px]"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -236,7 +236,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           {/* Links rápidos e normas técnicas */}
           <div
             className="
-            grid grid-cols-1 items-center gap-8
+            min-w-0 grid grid-cols-1 items-center gap-8
             sm:grid-cols-2
             lg:grid-cols-1
             xl:-mt-10 xl:grid-cols-2
@@ -273,12 +273,12 @@ export function Footer({ locale, dictionary }: FooterProps) {
                     rel="noopener noreferrer"
                     aria-label={`Acessar rede social ${index + 1}`}
                     className="
-                    flex h-10 w-10 items-center justify-center
+                     flex h-9 w-9 items-center justify-center
                     rounded-lg bg-brand-red-500 text-white
                     transition-colors hover:bg-brand-red-600
                   "
                   >
-                    <Icon className="h-5 w-5" />
+                     <Icon className="h-4 w-4" />
                   </Link>
                 ))}
               </div>
@@ -287,11 +287,11 @@ export function Footer({ locale, dictionary }: FooterProps) {
             {/* Imagem normas técnicas reduzida */}
             <div
               className="
-              relative mx-auto min-h-[150px] w-full
-              max-w-[190px] overflow-hidden
-              sm:min-h-[180px] sm:max-w-[220px]
-              lg:min-h-[160px] lg:max-w-[200px]
-              xl:min-h-[200px] xl:max-w-[230px]
+               relative mx-auto min-h-[120px] w-full
+               max-w-[160px] overflow-hidden
+               sm:min-h-[150px] sm:max-w-[180px]
+               lg:min-h-[140px] lg:max-w-[160px]
+               xl:min-h-[170px] xl:max-w-[180px]
             "
             >
               <Image

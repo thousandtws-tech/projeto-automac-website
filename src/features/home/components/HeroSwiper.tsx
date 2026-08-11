@@ -59,13 +59,7 @@ export function HeroSwiper({
 
               <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 sm:px-8 lg:px-12">
                 <div className="max-w-2xl">
-                  <h1 className="mb-6 text-4xl font-medium uppercase leading-[1.15] tracking-tighter text-white sm:text-5xl lg:text-6xl">
-                    {slide.title}
-                  </h1>
 
-                  <p className="mb-8 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-                    {slide.subtitle}
-                  </p>
                 </div>
               </div>
             </div>
@@ -245,7 +239,7 @@ export function HeroMetricsDock({
 
           <div className="relative z-10 w-full px-6 py-6 sm:px-8 lg:px-12">
             <div className="mx-auto w-fit overflow-hidden">
-              <h2 className="animate-metrics-title text-center text-3xl font-semibold tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.25)] sm:text-4xl">
+                <h2 className="animate-metrics-title text-center text-3xl font-light tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-4xl">
                 Excelência em Cada Projeto
               </h2>
             </div>
