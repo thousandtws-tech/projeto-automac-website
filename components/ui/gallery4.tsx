@@ -136,7 +136,7 @@ const Gallery4 = ({
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
+              className="flex h-full max-w-[320px] pl-[20px] lg:max-w-[360px]"
               >
                 <a
                   href={item.href}
@@ -152,16 +152,16 @@ const Gallery4 = ({
                     />
                   </div>
 
-                  <div className="flex flex-col p-6">
-                    <div className="mb-2">
-                      <span className="text-[10px] font-medium uppercase tracking-widest text-brand-red-500">
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="mb-2 min-h-8">
+                      <span className="line-clamp-2 text-[10px] font-medium uppercase tracking-widest text-brand-red-500">
                         {item.category}
                       </span>
                     </div>
                     <h3 className="text-2xl font-medium tracking-tighter text-slate-900 transition-colors duration-300 group-hover:text-brand-red-600 mb-2 line-clamp-1">
                       <FormattedTrademark text={item.title} />
                     </h3>
-                    <p className="text-sm text-slate-500 line-clamp-2 mb-6 font-medium">
+                    <p className="min-h-[2.75rem] text-sm text-slate-500 line-clamp-2 mb-6 font-medium">
                       {item.description}
                     </p>
 

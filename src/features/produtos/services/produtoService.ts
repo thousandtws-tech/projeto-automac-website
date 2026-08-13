@@ -7,6 +7,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "K-200R®",
     href: "/produtos/k-200r",
     slug: "k-200r",
+    videoPlaybackId: "FcYHH5Z6FiXTkhO2DHNZuTrVTTDjk5KQ9SC8ChvhOJ8",
     i18n: {
       "pt-BR": {
         title: "Porta Automática Deslizante",
@@ -120,6 +121,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "K-500R®",
     href: "/produtos/k-500r",
     slug: "k-500r",
+    videoPlaybackId: process.env.NEXT_PUBLIC_MUX_PRODUCT_2_PLAYBACK_ID,
     i18n: {
       "pt-BR": {
         title: "Porta Automática Deslizante",
@@ -182,6 +184,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "STS-20®",
     href: "/produtos/sts-20",
     slug: "sts-20",
+    videoPlaybackId: "01qnSkueaczskw66X7G4lgE9I5dIdlz018kGorkfVDpbk",
     i18n: {
       "pt-BR": {
         title: "Porta Automática Antipânico",
@@ -238,6 +241,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "STH-70®",
     href: "/produtos/sth-70",
     slug: "sth-70",
+    videoPlaybackId: "GhnI63p56YkTqPM7C8AZ7Z481qQn6eu98M5SThYiZ5Y",
     i18n: {
       "pt-BR": {
         title: "Porta Automática para Ambientes Controlados",
@@ -294,6 +298,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "STC-40®",
     href: "/produtos/stc-40",
     slug: "stc-40",
+    videoPlaybackId: "zLtdeJhJfo4CUzEAkSanu01jeLdVYcwG0181pOB2m02x2w",
     i18n: {
       "pt-BR": {
         title: "Porta Automática Telescópica",

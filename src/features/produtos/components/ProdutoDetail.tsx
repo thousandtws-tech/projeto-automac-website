@@ -11,6 +11,8 @@ import {ProdutosIdealFor} from "./ProdutosIdealFor";
 import {ProdutosRelatedModels} from "./ProdutosRelatedModels";
 import {ProdutosAccessories} from "./ProdutosAccessories";
 import { FormattedTrademark } from "@shared/components/FormattedTrademark";
+import MuxPlayer from "@mux/mux-player-react/lazy";
+import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 
 interface ProdutoDetailProps {
     locale: Locale;
@@ -21,6 +23,12 @@ interface ProdutoDetailProps {
 export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps) {
     const t = dictionary.produtos.detail;
     const p = produto.i18n[locale] || produto.i18n["pt-BR"];
+    const productVideoStyle = {
+        width: "100%",
+        aspectRatio: "16 / 9",
+        "--media-object-fit": "cover",
+        "--media-object-position": "center",
+    } satisfies MuxPlayerCSSProperties;
 
     return (
         <main className="min-h-screen bg-white">
@@ -75,6 +83,32 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
                     </div>
                 </section>
             </FadeIn>
+
+            {produto.videoPlaybackId && (
+                <FadeIn direction="up" delay={0.12}>
+                    <section className="border-b border-black bg-white">
+                        <div className="w-full">
+                            <div className="w-full overflow-hidden bg-black">
+                                <MuxPlayer
+                                    className="block aspect-video h-full w-full"
+                                    playbackId={produto.videoPlaybackId}
+                                    streamType="on-demand"
+                                    maxResolution="1080p"
+                                    maxAutoResolution="1080p"
+                                    loading="viewport"
+                                    preload="metadata"
+                                    videoTitle={`${p.title} ${produto.model}`}
+                                    metadata={{
+                                        video_id: `produto-${produto.id}`,
+                                        video_title: `${p.title} ${produto.model}`,
+                                    }}
+                                    style={productVideoStyle}
+                                />
+                            </div>
+                        </div>
+                    </section>
+                </FadeIn>
+            )}
 
             {/* Especificação */}
             <FadeIn direction="up" delay={0.15}>

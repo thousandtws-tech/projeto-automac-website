@@ -39,6 +39,7 @@ export interface ProdutoItem {
   model: string;
   href: string;
   slug: string;
+  videoPlaybackId?: string;
   i18n: Record<string, ProdutoI18n>;
   applications?: ProdutoApplication[];
   relatedCategoryHref?: string;
