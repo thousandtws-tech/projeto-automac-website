@@ -23,9 +23,9 @@ const fallbackLabels = {
 export function AcessoriosToolbar({ categories, onSearch, onFilter, labels }: AcessoriosToolbarProps) {
   const toolbarLabels = labels ?? fallbackLabels;
   return (
-    <div className="sticky top-29 z-40 border-b border-neutral-200 bg-white shadow-[0_4px_14px_rgba(0,0,0,0.04)]">
-      <div className="container mx-auto px-6 flex items-center justify-between gap-6 py-3">
-        <div className="flex items-center gap-4">
+    <div className="sticky top-28 z-30 border-b border-neutral-200 bg-white shadow-[0_4px_14px_rgba(0,0,0,0.04)]">
+      <div className="container mx-auto flex flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="flex w-full items-center gap-4 sm:w-auto">
           <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brand-red-500 hover:text-brand-red-500 transition-colors">
             <Filter className="h-4 w-4" />
             {toolbarLabels.filter}
@@ -43,7 +43,7 @@ export function AcessoriosToolbar({ categories, onSearch, onFilter, labels }: Ac
             ))}
           </div>
         </div>
-        <div className="relative flex-1 max-w-xs">
+        <div className="relative w-full sm:max-w-xs sm:flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-300" />
           <input 
             type="text" 

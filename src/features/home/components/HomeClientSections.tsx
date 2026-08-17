@@ -95,7 +95,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {home.about.badge}
                 </span>
 
-                <h2 className="text-4xl sm:text-5xl font-medium tracking-tighter text-white uppercase leading-[1.35] mb-12">
+                <h2 className="mb-8 text-[clamp(2rem,9vw,3rem)] font-medium uppercase leading-tight tracking-tighter text-white sm:mb-12">
                   {home.about.titlePart1}{" "}
                   <span className="underline decoration-white/40 underline-offset-4">
                     {home.about.titleHighlight}
@@ -108,7 +108,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                 </p>
 
                 <Button
-                  className="bg-white text-brand-red-600 hover:bg-white/90 font-bold uppercase tracking-widest px-8 h-12 text-xs shadow-md w-fit"
+                  className="h-12 w-full bg-white px-5 text-xs font-bold uppercase tracking-widest text-brand-red-600 shadow-md hover:bg-white/90 sm:w-fit sm:px-8"
                   asChild
                 >
                   <Link href="/sobre">
@@ -157,7 +157,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow1, ...marqueeRow1].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex shrink-0 items-center justify-center p-4 bg-white shadow border-black w-70 h-40"
+                      className="flex h-28 w-48 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-40 sm:w-70"
                     >
                       <img
                         src={logo.src}
@@ -175,7 +175,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow2, ...marqueeRow2].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex shrink-0 items-center justify-center p-4 bg-white shadow border-black w-80 h-40"
+                      className="flex h-28 w-52 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-40 sm:w-80"
                     >
                       <img
                         src={logo.src}

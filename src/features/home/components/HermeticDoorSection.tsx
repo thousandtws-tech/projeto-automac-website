@@ -40,7 +40,7 @@ export function HermeticDoorSection() {
               ))}
             </ul>
 
-            <button className="inline-flex h-12 items-center justify-center rounded-md gap-2 bg-black px-6 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800">
+            <button className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-black px-5 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-neutral-800 sm:w-auto sm:px-6">
               <span>Solicitar Orçamento</span>
               <ArrowRight className="h-4 w-4" />
             </button>
@@ -58,7 +58,7 @@ export function HermeticDoorSection() {
               />
             </div>
             
-            <div className="absolute -bottom-4 -left-4 bg-white border-2 border-black p-4">
+            <div className="absolute bottom-2 left-2 border-2 border-black bg-white p-3 sm:-bottom-4 sm:-left-4 sm:p-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white">
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

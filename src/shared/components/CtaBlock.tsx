@@ -29,7 +29,7 @@ export function CtaBlock({
         : "bg-white";
 
   return (
-    <section className={`${bgClass} border-y border-neutral-200 px-6 py-20 shadow-[0_4px_16px_rgba(0,0,0,0.025)] md:py-24`}>
+    <section className={`${bgClass} border-y border-neutral-200 px-4 py-14 shadow-[0_4px_16px_rgba(0,0,0,0.025)] sm:px-6 sm:py-20 md:py-24`}>
       <div className="mx-auto max-w-4xl w-full text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tighter uppercase leading-[0.9] max-w-3xl mx-auto">
           <span className={variant === "red" ? "text-white" : "text-black"}>{title}</span>
@@ -58,7 +58,7 @@ export function CtaBlock({
 
         <Button
           asChild
-          className={`mt-8 font-bold uppercase tracking-widest px-10 h-14 text-sm rounded-md hover:scale-105 transition-all duration-300 ${
+          className={`mt-8 h-14 w-full rounded-md px-5 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] sm:w-auto sm:px-10 sm:text-sm ${
             variant === "red"
               ? "bg-white text-brand-red-600 hover:bg-white/90"
               : "bg-brand-red-500 text-white hover:bg-brand-red-600"

@@ -115,7 +115,7 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
       </div>
       <div
         id="home-metrics-dock"
-        className="relative "
+        className="relative h-16 sm:h-24"
       />
     </div>
   );

@@ -308,6 +308,20 @@
     @apply bg-background text-foreground;
   }
 
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display-token);
     text-transform: uppercase;
@@ -523,6 +537,19 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
   .animate-metrics-dock,
   .animate-metrics-undock {
     animation: none;

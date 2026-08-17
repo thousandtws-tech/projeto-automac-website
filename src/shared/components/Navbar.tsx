@@ -118,7 +118,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-5 2xl:gap-8">
             {dictionary.nav.map((item) => (
               <Link
                 key={item.name}
@@ -144,7 +144,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 text-slate-900 hover:text-brand-red-500"
+            className="flex min-h-11 min-w-11 items-center justify-center p-2 text-slate-900 hover:text-brand-red-500 xl:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           >
@@ -156,7 +156,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
       {/* Mobile menu */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-white md:hidden overflow-y-auto transition-transform duration-300 ease-in-out",
+          "fixed inset-x-0 bottom-0 z-40 overflow-y-auto bg-white transition-transform duration-300 ease-in-out xl:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
         style={{ top: "112px" }}

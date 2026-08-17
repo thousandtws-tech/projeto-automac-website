@@ -153,28 +153,28 @@ export function CookieConsent({ locale }: { locale: Locale }) {
       {!consent && !preferencesOpen && (
         <section
           aria-label={text.settings}
-          className="fixed inset-x-3 bottom-3 z-[100] overflow-hidden border border-black bg-white shadow-[0_14px_45px_rgba(0,0,0,0.24)] sm:inset-x-6 sm:bottom-5 lg:left-1/2 lg:right-auto lg:w-[min(920px,calc(100%-3rem))] lg:-translate-x-1/2"
+          className="fixed inset-x-2 bottom-2 z-[100] max-h-[calc(100dvh-1rem)] overflow-y-auto border border-black bg-white shadow-[0_14px_45px_rgba(0,0,0,0.24)] sm:inset-x-6 sm:bottom-5 sm:max-h-[calc(100dvh-2.5rem)] lg:left-1/2 lg:right-auto lg:w-[min(920px,calc(100%-3rem))] lg:-translate-x-1/2"
         >
           <div className="h-1 bg-brand-red-600" />
-          <div className="grid gap-4 p-4 sm:p-5 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-6">
+          <div className="grid gap-3 p-3 sm:gap-4 sm:p-5 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-6">
             <div className="max-w-3xl">
-              <div className="mb-2 flex items-center gap-2.5">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white">
+              <div className="mb-1.5 flex items-center gap-2.5 sm:mb-2">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black text-white sm:h-8 sm:w-8">
                   <Cookie className="h-4 w-4" aria-hidden="true" />
                 </span>
                 <span className="text-[10px] font-black uppercase tracking-[0.18em] text-brand-red-600">
                   {text.eyebrow}
                 </span>
               </div>
-              <h2 className="text-xl font-black uppercase tracking-tight text-black sm:text-2xl">
+              <h2 className="text-lg font-black uppercase tracking-tight text-black sm:text-2xl">
                 {text.title}
               </h2>
-              <p className="mt-2 max-w-2xl text-xs leading-relaxed text-neutral-600 sm:text-sm">
+              <p className="mt-1 max-w-2xl text-[11px] leading-relaxed text-neutral-600 sm:mt-2 sm:text-sm">
                 {text.description}
               </p>
             </div>
 
-            <div className="grid gap-2 sm:grid-cols-3 lg:w-[420px]">
+            <div className="grid grid-cols-1 gap-1.5 min-[420px]:grid-cols-3 sm:gap-2 lg:w-[420px]">
               <button
                 type="button"
                 onClick={() =>
