@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { ProdutosHeader } from "@features/produtos/components/ProdutosHeader";
-import { ProdutosGrid } from "@features/produtos/components/ProdutosGrid";
 import { ProdutosClient } from "@features/produtos/components/ProdutosClient";
-import { produtosMock } from "@features/produtos/services/produtoService";
 import { getDictionary } from "@/src/i18n/dictionaries";
 import { isLocale } from "@/src/i18n/config";
 

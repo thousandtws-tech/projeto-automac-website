@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 
 import { SobreContent } from "@features/sobre/components/SobreContent";
-import { SobreHeader } from "@features/sobre/components/SobreHeader";
 import { getDictionary } from "@/src/i18n/dictionaries";
 import { isLocale } from "@/src/i18n/config";
 
