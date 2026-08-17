@@ -16,7 +16,7 @@ const fallbackContent = {
 export function ProdutosHeader({ content }: ProdutosHeaderProps) {
   const headerContent = content ?? fallbackContent;
   return (
-    <section className="relative border-b border-black bg-white pt-36 pb-16 md:pt-40 md:pb-20">
+    <section className="relative border-b border-neutral-200 bg-white pt-36 pb-16 shadow-[0_4px_16px_rgba(0,0,0,0.025)] md:pt-40 md:pb-20">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
         style={{ backgroundImage: "url('https://placehold.net/1920x600.png?text=Automec')" }}
@@ -31,7 +31,7 @@ export function ProdutosHeader({ content }: ProdutosHeaderProps) {
             </h1>
           </div>
           <div className="col-span-12 md:col-span-4 md:pb-4">
-            <div className="border-l-2 border-black pl-6">
+            <div className="border-l-2 border-neutral-300 pl-6">
               <p className="text-base md:text-lg leading-relaxed text-neutral-600 font-medium">
                 {headerContent.description}
               </p>

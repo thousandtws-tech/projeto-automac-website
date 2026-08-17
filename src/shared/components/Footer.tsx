@@ -84,8 +84,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
   ];
 
   return (
-    <footer className="border-t border-black bg-white">
-      <div className="border-b border-black bg-neutral-50">
+    <footer className="border-t border-neutral-200 bg-white shadow-[0_-3px_12px_rgba(0,0,0,0.025)]">
+      <div className="border-b border-neutral-200 bg-neutral-50">
         <div
           className="
           container mx-auto grid min-w-0 grid-cols-1 gap-8

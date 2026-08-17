@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import { Dictionary } from "@/src/i18n/dictionaries";
 
 interface ProdutosAccessoriesProps {
@@ -21,16 +19,9 @@ export function ProdutosAccessories({ dictionary }: ProdutosAccessoriesProps) {
           </div>
           {/* Content */}
           <div className="col-span-12 md:col-span-8 p-8 md:p-12">
-            <p className="text-sm leading-relaxed text-neutral-600 mb-8">
+            <p className="text-sm leading-relaxed text-neutral-600">
               {t.accessoriesDescription}
             </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-3 rounded-md bg-brand-red-500 hover:bg-brand-red-600 text-white px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] transition-colors"
-            >
-              {t.viewAccessories}
-              <ChevronRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </div>

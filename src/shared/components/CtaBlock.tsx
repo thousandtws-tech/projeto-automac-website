@@ -25,11 +25,11 @@ export function CtaBlock({
     variant === "red"
       ? "bg-brand-red-600"
       : variant === "bordered"
-        ? "border-2 border-black bg-white"
+        ? "border-2 border-neutral-200 bg-white"
         : "bg-white";
 
   return (
-    <section className={`${bgClass} py-20 md:py-24 px-6 border-t border-black`}>
+    <section className={`${bgClass} border-y border-neutral-200 px-6 py-20 shadow-[0_4px_16px_rgba(0,0,0,0.025)] md:py-24`}>
       <div className="mx-auto max-w-4xl w-full text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tighter uppercase leading-[0.9] max-w-3xl mx-auto">
           <span className={variant === "red" ? "text-white" : "text-black"}>{title}</span>

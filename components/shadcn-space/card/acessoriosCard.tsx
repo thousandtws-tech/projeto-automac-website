@@ -25,11 +25,11 @@ export function AcessoriosCard({
       <Link
         href={href}
         className={cn(
-          "relative flex flex-col h-full border border-black bg-white transition-colors duration-300 hover:bg-neutral-50",
+          "relative flex flex-col h-full border border-neutral-200 bg-white shadow-[0_4px_16px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-neutral-300 hover:bg-neutral-50 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]",
           "after:absolute after:inset-0 after:from-brand-red-500/5 after:to-transparent after:opacity-0 group-hover:after:opacity-100 after:transition-opacity"
         )}
       >
-        <div className="relative aspect-square w-full border-b border-black bg-white">
+        <div className="relative aspect-square w-full border-b border-neutral-200 bg-white">
           <Image
             src={image}
             alt={title}

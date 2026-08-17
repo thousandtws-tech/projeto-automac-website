@@ -6,7 +6,6 @@ import {Locale, withLocale} from "@/src/i18n/config";
 import {Dictionary} from "@/src/i18n/dictionaries";
 import {ProdutoItem} from "../types";
 import {ProdutosTechnicalSpecs} from "./ProdutosTechnicalSpecs";
-import {ProdutosApplications} from "./ProdutosApplications";
 import {ProdutosIdealFor} from "./ProdutosIdealFor";
 import {ProdutosRelatedModels} from "./ProdutosRelatedModels";
 import {ProdutosAccessories} from "./ProdutosAccessories";
@@ -67,7 +66,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
                                     <div className="mb-8">
                                         <span
                                             className="inline-block bg-brand-red-500 text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 mb-6">{t.automec}</span>
-                                        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] leading-[0.85] text-black uppercase mb-4"><FormattedTrademark text={produto.model} /></h1>
+                                        <h1 className="mb-4 text-5xl font-black uppercase leading-[0.9] tracking-[-0.04em] text-black sm:text-6xl lg:text-7xl"><FormattedTrademark text={produto.model} /></h1>
                                         <p className="text-sm font-bold uppercase tracking-[0.15em] text-neutral-400">{p.title}</p>
                                     </div>
                                     <div className="border-t border-black pt-8">
@@ -87,10 +86,10 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
             {produto.videoPlaybackId && (
                 <FadeIn direction="up" delay={0.12}>
                     <section className="border-b border-black bg-white">
-                        <div className="w-full">
-                            <div className="w-full overflow-hidden bg-black">
+                        <div className="w-full px-5 py-8 sm:px-8 sm:py-12">
+                            <div className="mx-auto aspect-video w-full max-w-[850px] overflow-hidden rounded-lg border border-neutral-300 bg-black shadow-[0_6px_20px_rgba(0,0,0,0.10)]">
                                 <MuxPlayer
-                                    className="block aspect-video h-full w-full"
+                                    className="block h-full w-full"
                                     playbackId={produto.videoPlaybackId}
                                     streamType="on-demand"
                                     maxResolution="1080p"

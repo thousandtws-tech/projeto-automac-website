@@ -266,7 +266,7 @@ export const dictionary = {
       { label: "Suporte Técnico" },
     ],
     historyTitle: "Nossa História",
-    historySub: "Veja neste vídeo o que a Automec consolidou nestes 35 anos de história",
+    historySub: "Veja neste vídeo o que a Automec consolidou\nnestes 35 anos de história",
     historyButton: "Conheça Nossa História",
     credibilityTitle: "Credibilidade",
     credibilityDesc: "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",

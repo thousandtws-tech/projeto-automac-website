@@ -17,7 +17,7 @@ interface SobreContentProps {
 const fallbackContent = {
   historyTitle: "Nossa História",
   historySub:
-    "Veja neste vídeo o que a Automec consolidou nestes 35 anos de história",
+    "Veja neste vídeo o que a Automec consolidou\nnestes 35 anos de história",
   historyButton: "Conheça Nossa História",
   credibilityTitle: "Credibilidade",
   credibilityDesc:

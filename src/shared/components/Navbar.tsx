@@ -111,7 +111,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
       </div>
 
       {/* Main nav */}
-      <div className="border-b border-black">
+      <div className="border-b border-neutral-200 shadow-[0_3px_12px_rgba(0,0,0,0.025)]">
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           <Link href={withLocale(locale, "/")} className="flex items-center">
             <Image src={LogoMarca} alt="Automec" width={160} height={40} style={{ width: "auto", height: "45px" }} loading="eager" />

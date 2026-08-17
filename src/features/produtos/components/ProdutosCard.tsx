@@ -29,11 +29,11 @@ export function ProdutosCard({ locale, item, labels }: ProdutosCardProps) {
       <Link
         href={withLocale(locale, item.href)}
         className={cn(
-          "relative flex flex-col h-full border border-black bg-white transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
+          "relative flex flex-col h-full border border-neutral-200 bg-white shadow-[0_4px_16px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]",
           "after:absolute after:inset-0 after:from-brand-red-500/5 after:to-transparent after:opacity-0 group-hover:after:opacity-100 after:transition-opacity"
         )}
       >
-        <div className="relative aspect-video w-full border-b border-black bg-white">
+        <div className="relative aspect-video w-full border-b border-neutral-200 bg-white">
           <Image
             src={item.image}
             alt={p.title}

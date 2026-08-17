@@ -49,15 +49,15 @@ export function HistoryVideoSection({
       <div className="mt-0 border-b border-black pb-14 pt-[calc(7rem+3rem)] sm:pb-16 sm:pt-[calc(7rem+4rem)] md:mt-10 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
-            <div className="flex flex-col items-start text-left">
+            <div className="min-w-0 flex flex-col items-start text-left">
               <span className="mb-3 text-sm font- uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
                 {content.credibilityTitle}
               </span>
-              <h2 className="mb-5 whitespace-nowrap text-[clamp(1.75rem,8.5vw,2.25rem)] font-medium uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 sm:text-5xl lg:text-5xl">
+              <h2 className="mb-5 max-w-full text-balance text-[clamp(1.75rem,5vw,3rem)] font-medium uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 2xl:whitespace-nowrap">
                 {content.historyTitle}
               </h2>
               <div className="mb-7 border-l-2 border-brand-red-600 pl-4 sm:mb-8 sm:pl-6">
-                <p className="mb-4 text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
+                <p className="mb-4 whitespace-pre-line text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
                   {content.historySub}
                 </p>
                 {content.credibilityDesc && (
@@ -72,7 +72,7 @@ export function HistoryVideoSection({
               </Button>
             </div>
 
-            <div className="relative aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg">
+            <div className="relative min-w-0 aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg">
               <MuxPlayer
                 className="automec-mux-player"
                 playbackId={playbackId}

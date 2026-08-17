@@ -41,7 +41,7 @@
   --automec-info-800: #184081;
   --surface: var(--automec-ink-50);
   --surface-raised: #ffffff;
-  --border-subtle: var(--automec-ink-200);
+  --border-subtle: #dedede;
   --focus-ring: var(--automec-red-500);
 
   --font-display-token: var(--font-poppins, "Poppins"), "Helvetica", "Arial Narrow",
@@ -56,6 +56,10 @@
   --shadow-automec-sm: 0 1px 2px rgba(29, 24, 22, 0.08);
   --shadow-automec-md: 0 14px 34px rgba(29, 24, 22, 0.1);
   --shadow-automec-lg: 0 22px 70px rgba(29, 24, 22, 0.15);
+  --shadow-section: 0 5px 18px rgba(29, 24, 22, 0.035);
+  --shadow-card: 0 6px 20px rgba(29, 24, 22, 0.06);
+  --shadow-card-hover: 0 12px 32px rgba(29, 24, 22, 0.1);
+  --shadow-elevated: 0 10px 30px rgba(29, 24, 22, 0.09);
   --shadow-red-glow: 0 16px 42px rgba(228, 30, 38, 0.28);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -70,8 +74,8 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
+  --border: oklch(0.93 0 0);
+  --input: oklch(0.93 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -188,6 +192,12 @@
 }
 
 @layer utilities {
+  /* Mantém divisores e contornos leves em todo o site, inclusive em
+     componentes legados que ainda usam as classes border-black. */
+  :where([class*="border-black"]) {
+    border-color: var(--border-subtle);
+  }
+
   mux-player.automec-map-video {
     display: block;
     width: 100% !important;
@@ -410,6 +420,26 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Sistema global de profundidade
+   Seções ganham separação sutil; cards recebem volume e reforço no hover. */
+:where(section[class*="border-"]) {
+  box-shadow: var(--shadow-section);
+}
+
+:where(article[class*="border-"], a[class*="border-"]) {
+  box-shadow: var(--shadow-card);
+  transition-property: box-shadow, border-color, background-color, transform;
+  transition-duration: 300ms;
+}
+
+:where(article[class*="border-"]:hover, a[class*="border-"]:hover) {
+  box-shadow: var(--shadow-card-hover);
+}
+
+:where(header[class*="border-"], footer[class*="border-"], [class*="sticky"][class*="border-"]) {
+  box-shadow: var(--shadow-elevated);
 }
 
 /* Marquee animations */

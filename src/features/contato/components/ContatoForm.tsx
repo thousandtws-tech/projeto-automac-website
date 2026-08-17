@@ -5,9 +5,9 @@ import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import {CtaBlock} from "@shared/components/CtaBlock";
-import {locales} from "@/src/i18n/config";
+import type { Dictionary } from "@/src/i18n/dictionaries";
 
-export function ContatoForm({ dictionary }: { dictionary: any }) {
+export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
   const c = dictionary.contato;
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,50 +54,10 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
 
   return (
     <div className="w-full">
-      <section className="mt-[98px] min-h-dvh bg-brand-red-600 lg:mt-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-dvh items-stretch">
-
-          <FadeIn direction="left" delay={0.1} className="flex">
-            <div className="flex w-full flex-col justify-start px-5 pb-28 pt-8 sm:px-12 lg:justify-center lg:px-16 lg:py-24 xl:px-24">
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-black tracking-tighter leading-[1] text-white uppercase mb-10">
-                {c.headline}
-              </h1>
-
-              <p className="text-base sm:text-lg text-white leading-relaxed max-w-xl mb-14">
-                {c.subheadline}
-              </p>
-
-              <div className="flex flex-col gap-8 mb-14">
-                <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">{c.emailLabel}</span>
-                  <a href="mailto:contato@automec.com.br" className="text-white font-bold hover:text-white/80 transition-colors">
-                    contato@automec.com.br
-                  </a>
-                </div>
-                <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">{c.phoneLabel}</span>
-                  <a href="tel:+551932138251" className="text-white font-bold hover:text-white/80 transition-colors">
-                    +55 19 3213-8251
-                  </a>
-                </div>
-                <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-white w-20">{c.factoryLabel}</span>
-                  <span className="text-white font-bold">{c.factoryLocation}</span>
-                </div>
-              </div>
-
-              <div className="border-l-2 border-white pl-6">
-                <p className="text-sm text-white italic leading-relaxed">
-                  {c.ps}
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn direction="right" delay={0.2} className="flex">
-            <div className="bg-white flex items-center justify-center px-8 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-24 w-full">
-              <div className="w-full max-w-xl">
+      <section className="mt-[98px] min-h-dvh bg-white lg:mt-0">
+        <FadeIn direction="up" delay={0.2} className="flex min-h-dvh">
+          <div className="flex w-full items-center justify-center px-5 py-16 sm:px-12 lg:px-16 lg:py-24">
+            <div className="w-full max-w-3xl">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center text-center py-16">
                   <CheckCircle className="h-16 w-2xl text-[#25D366] mb-6" />
@@ -127,7 +87,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
                       value={formData.nome}
                       onChange={handleChange}
                       placeholder={c.placeholders.name}
-                      className="h-14 px-5 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
+                      className="h-14 border border-neutral-300 bg-white px-5 text-sm text-black shadow-[0_3px_12px_rgba(0,0,0,0.04)] placeholder:text-neutral-400 focus:border-brand-red-600 focus:outline-none focus:shadow-[0_4px_16px_rgba(0,0,0,0.07)]"
                     />
                   </div>
 
@@ -140,7 +100,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
                       value={formData.empresa}
                       onChange={handleChange}
                       placeholder={c.placeholders.company}
-                      className="h-14 px-5 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
+                      className="h-14 border border-neutral-300 bg-white px-5 text-sm text-black shadow-[0_3px_12px_rgba(0,0,0,0.04)] placeholder:text-neutral-400 focus:border-brand-red-600 focus:outline-none focus:shadow-[0_4px_16px_rgba(0,0,0,0.07)]"
                     />
                   </div>
 
@@ -155,7 +115,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder={c.placeholders.email}
-                        className="h-14 px-5 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
+                        className="h-14 border border-neutral-300 bg-white px-5 text-sm text-black shadow-[0_3px_12px_rgba(0,0,0,0.04)] placeholder:text-neutral-400 focus:border-brand-red-600 focus:outline-none focus:shadow-[0_4px_16px_rgba(0,0,0,0.07)]"
                       />
                     </div>
 
@@ -169,7 +129,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
                         value={formData.telefone}
                         onChange={handleChange}
                         placeholder={c.placeholders.phone}
-                        className="h-14 px-5 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600"
+                        className="h-14 border border-neutral-300 bg-white px-5 text-sm text-black shadow-[0_3px_12px_rgba(0,0,0,0.04)] placeholder:text-neutral-400 focus:border-brand-red-600 focus:outline-none focus:shadow-[0_4px_16px_rgba(0,0,0,0.07)]"
                       />
                     </div>
                   </div>
@@ -181,7 +141,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
                       name="segmento"
                       value={formData.segmento}
                       onChange={handleChange}
-                      className="h-14 px-5 border border-black bg-white text-sm text-black focus:outline-none focus:border-brand-red-600 cursor-pointer"
+                      className="h-14 cursor-pointer border border-neutral-300 bg-white px-5 text-sm text-black shadow-[0_3px_12px_rgba(0,0,0,0.04)] focus:border-brand-red-600 focus:outline-none focus:shadow-[0_4px_16px_rgba(0,0,0,0.07)]"
                     >
                       {c.segments.map((seg: { value: string; label: string }) => (
                         <option key={seg.value} value={seg.value}>{seg.label}</option>
@@ -199,7 +159,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
                       value={formData.mensagem}
                       onChange={handleChange}
                       placeholder={c.placeholders.message}
-                      className="p-5 border border-black bg-white text-sm text-black placeholder:text-neutral-400 focus:outline-none focus:border-brand-red-600 resize-none"
+                      className="resize-none border border-neutral-300 bg-white p-5 text-sm text-black shadow-[0_3px_12px_rgba(0,0,0,0.04)] placeholder:text-neutral-400 focus:border-brand-red-600 focus:outline-none focus:shadow-[0_4px_16px_rgba(0,0,0,0.07)]"
                     />
                   </div>
 
@@ -223,9 +183,7 @@ export function ContatoForm({ dictionary }: { dictionary: any }) {
               )}
             </div>
           </div>
-          </FadeIn>
-
-        </div>
+        </FadeIn>
       </section>
       <CtaBlock
           variant="white"
