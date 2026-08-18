@@ -54,9 +54,7 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
             <h2 className="text-4xl sm:text-5xl lg:text-4xl font-medium tracking-tighter text-black uppercase leading-[1.2]">
               {videoSection.titlePart1}
               <br />
-              <span className="underline decoration-brand-red-600/80 underline-offset-5">
-                {videoSection.titleHighlight}
-              </span>
+              <span>{videoSection.titleHighlight}</span>
             </h2>
             <p className="text-base text-neutral-600 leading-relaxed max-w-lg">
               {videoSection.description}

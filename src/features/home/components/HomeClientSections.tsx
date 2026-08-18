@@ -11,7 +11,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { Gallery4Demo } from "@/components/ui/gallery4-demo";
-import { CtaBlock } from "@shared/components/CtaBlock";
 import { VideoSection } from "./VideoSection";
 import MuxPlayer from "@mux/mux-player-react";
 import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
@@ -97,9 +96,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
 
                 <h2 className="mb-8 text-[clamp(2rem,9vw,3rem)] font-medium uppercase leading-tight tracking-tighter text-white sm:mb-12">
                   {home.about.titlePart1}{" "}
-                  <span className="underline decoration-white/40 underline-offset-4">
-                    {home.about.titleHighlight}
-                  </span>
+                  <span>{home.about.titleHighlight}</span>
                 </h2>
 
                 <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-xl mb-8">
@@ -191,12 +188,6 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
           </div>
         </div>
       </FadeIn>
-      <CtaBlock
-        variant="red"
-        title={home.cta.titlePart1}
-        highlight={home.cta.titleHighlight}
-        buttonText={dictionary.common.requestBudget}
-      />
     </>
   );
 }
