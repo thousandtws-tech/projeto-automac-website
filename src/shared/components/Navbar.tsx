@@ -162,14 +162,14 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
         style={{ top: "112px" }}
       >
         <div className="flex flex-col p-6">
-          <nav className="flex flex-col gap-0">
-            {dictionary.nav.map((item) => (
-              <Link
-                key={item.name}
-                href={withLocale(locale, item.href)}
-                onClick={() => setIsOpen(false)}
-                className={cn(
-                  "flex items-center justify-between border-b border-neutral-100 py-4 text-sm font-bold uppercase tracking-widest transition-colors",
+            <nav className="flex flex-col divide-y divide-neutral-100 border-b border-neutral-100">
+              {dictionary.nav.map((item) => (
+                <Link
+                  key={item.name}
+                  href={withLocale(locale, item.href)}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "flex items-center justify-between py-4 text-sm font-bold uppercase tracking-widest transition-colors",
                   currentPath === item.href
                     ? "text-brand-red-500"
                     : "text-slate-800 hover:text-brand-red-500"

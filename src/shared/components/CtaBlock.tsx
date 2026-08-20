@@ -40,15 +40,9 @@ export function CtaBlock({
           )}
         </h2>
 
-        <div
-          className={`h-[3px] w-24 mx-auto my-6 bg-gradient-to-l from-transparent ${
-            variant === "red" ? "to-white/60" : "to-brand-red-500"
-          }`}
-        />
-
         {description && (
           <p
-            className={`text-base max-w-2xl mx-auto leading-relaxed ${
+            className={`mt-6 text-base max-w-2xl mx-auto leading-relaxed ${
               variant === "red" ? "text-white/80" : "text-neutral-600"
             }`}
           >

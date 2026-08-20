@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   Wrench,
@@ -13,7 +14,6 @@ import {
   Building2,
   Factory,
   Stethoscope,
-  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
@@ -191,7 +191,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
             </div>
 
             {/* Two columns */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 border-t  shadow ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 border-t shadow">
               {/* ── Preventiva ── */}
               <div className="border-b lg:border-b-0 lg:border-r border-black/20 p-10 md:p-14 flex flex-col gap-8 group hover:bg-black transition-colors duration-300">
                 <div className="flex items-center gap-5">
@@ -237,10 +237,16 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                 </div>
               </div>
 
-              {/* ── Corretiva ── */}
-              <div className="p-10 md:p-14 flex flex-col gap-8 group hover:bg-brand-red-600 transition-colors duration-300">
-                <div className="flex items-center gap-5">
-                </div>
+              {/* ── Image Column (Quadrado de Assistência Técnica) ── */}
+              <div className="relative min-h-[350px] sm:min-h-[450px] lg:min-h-full w-full overflow-hidden bg-neutral-900">
+                <Image
+                  src="https://res.cloudinary.com/lz9vero5/image/upload/v1787244162/05-85mm-detalhe-tecnico-master_bweaoa.png"
+                  alt="Assistência Técnica Automec"
+                  fill
+                  quality={95}
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
