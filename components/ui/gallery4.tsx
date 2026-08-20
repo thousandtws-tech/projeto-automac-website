@@ -132,45 +132,46 @@ const Gallery4 = ({
             },
           }}
         >
-          <CarouselContent className="ml-0">
+          <CarouselContent className="ml-0 py-6 -my-3">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-              className="flex h-full max-w-[320px] pl-[20px] lg:max-w-[360px]"
+                className="flex h-full max-w-[320px] pl-[20px] lg:max-w-[360px]"
               >
                 <a
                   href={item.href}
                   className={cn(
-                    "relative flex flex-col h-full overflow-hidden border border-black bg-white p-2 transition-all duration-300 hover:border-brand-red-500 group"
+                    "relative flex flex-col h-full border border-neutral-200 bg-white shadow-[0_4px_16px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] group",
+                    "after:absolute after:inset-0 after:from-brand-red-500/5 after:to-transparent after:opacity-0 group-hover:after:opacity-100 after:transition-opacity"
                   )}
                 >
-                  <div className="relative aspect-video w-full overflow-hidden bg-white border border-black">
+                  <div className="relative aspect-video w-full border-b border-neutral-200 bg-white">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="absolute h-full w-full object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-105"
+                      className="absolute h-full w-full object-contain p-6 transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                   </div>
 
-                  <div className="flex flex-1 flex-col p-6">
+                  <div className="flex flex-1 flex-col p-5">
                     <div className="mb-2 min-h-8">
-                      <span className="line-clamp-2 text-[10px] font-medium uppercase tracking-widest text-brand-red-500">
+                      <span className="line-clamp-2 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-red-500">
                         {item.category}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-medium tracking-tighter text-slate-900 transition-colors duration-300 group-hover:text-brand-red-600 mb-2 line-clamp-1">
+                    <h3 className="text-xl font-black uppercase leading-tight tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500 sm:text-2xl mb-2 line-clamp-1">
                       <FormattedTrademark text={item.title} />
                     </h3>
-                    <p className="min-h-[2.75rem] text-sm text-slate-500 line-clamp-2 mb-6 font-medium">
+                    <p className="min-h-[2.75rem] text-sm leading-relaxed text-gray-600 line-clamp-2 mb-6">
                       {item.description}
                     </p>
 
-                    <div className="mt-auto pt-4 flex items-center justify-between">
-                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-red-500 opacity-0 transition-all duration-300 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
+                    <div className="mt-auto pt-6 flex items-center justify-between">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500 opacity-0 transition-all duration-500 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
                         {viewDetails}
                       </span>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-red-500 text-white transition-all duration-300 group-hover:bg-brand-red-600">
-                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-brand-red-500">
+                        <ArrowRight className="h-5 w-5" />
                       </div>
                     </div>
                   </div>
