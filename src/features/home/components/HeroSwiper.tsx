@@ -214,7 +214,7 @@ export function HeroMetricsDock({
           />
 
           <div className="relative z-10 w-full px-4 py-4 sm:px-8 sm:py-6 lg:px-12">
-              <h2 className="animate-metrics-title text-center text-lg font-light leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-2xl md:text-3xl lg:text-4xl">
+              <h2 className="animate-metrics-title text-center text-[23px] font-light leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-2xl md:text-3xl lg:text-4xl">
                 <span className="block sm:inline">Excelência em</span>{" "}
                 <span className="block sm:inline">Cada Projeto</span>
               </h2>
