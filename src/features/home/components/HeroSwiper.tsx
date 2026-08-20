@@ -213,25 +213,24 @@ export function HeroMetricsDock({
             className="absolute inset-0 bg-neutral-950/25 backdrop-blur-xl"
           />
 
-          <div className="relative z-10 w-full px-6 py-6 sm:px-8 lg:px-12">
-            <div className="mx-auto w-fit overflow-hidden">
-                <h2 className="animate-metrics-title text-center text-3xl font-light tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-4xl">
-                Excelência em Cada Projeto
+          <div className="relative z-10 w-full px-4 py-4 sm:px-8 sm:py-6 lg:px-12">
+              <h2 className="animate-metrics-title text-center text-lg font-light leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-2xl md:text-3xl lg:text-4xl">
+                <span className="block sm:inline">Excelência em</span>{" "}
+                <span className="block sm:inline">Cada Projeto</span>
               </h2>
-            </div>
 
             {metrics.length > 0 && (
-              <div className="mx-auto mt-6 grid max-w-7xl grid-cols-2 gap-4 border-t border-white/15 pt-6 md:grid-cols-4">
+              <div className="mx-auto mt-4 grid max-w-7xl grid-cols-2 gap-3 border-t border-white/15 pt-4 sm:mt-6 sm:gap-4 sm:pt-6 md:grid-cols-4">
                 {metrics.map((metric) => (
                   <div
                     key={`${locale}-${metric.label}`}
                     className="text-center"
                   >
-                    <strong className="block text-2xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.85)] md:text-3xl">
+                    <strong className="block text-xl font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.85)] sm:text-2xl md:text-3xl">
                       {metric.value}
                     </strong>
 
-                    <span className="mt-1 block text-xs uppercase tracking-widest text-white/75 [text-shadow:0_1px_5px_rgba(0,0,0,0.9)]">
+                    <span className="mt-0.5 block text-[10px] uppercase tracking-widest text-white/75 [text-shadow:0_1px_5px_rgba(0,0,0,0.9)] sm:mt-1 sm:text-xs">
                       {metric.label}
                     </span>
                   </div>
