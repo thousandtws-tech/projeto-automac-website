@@ -45,6 +45,9 @@ const clientLogos = [
   {id: "unimed", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323942/unimed_fp7npm.svg", alt: "" },
   {id: "good-year", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/goodyear_djhjt6.svg", alt: "" },
   {id: "natura", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/natura_ulldkj.svg", alt: "" },
+  {id: "Aeroport", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/Aeroport_Intermacional_Gale%C3%A3o_bglqvk.svg", alt: "" },
+  {id: "walmart", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/walmart_qp53r1.svg", alt: "" },
+  {id: "albert-einstein", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323940/albert-einstein_miqvqm.svg", alt: "" }
 ];
 
 const marqueeRow1 = clientLogos.slice(0, 10);
