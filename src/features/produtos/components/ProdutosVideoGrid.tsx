@@ -124,8 +124,12 @@ export function ProdutosVideoGrid({
           key={item.id}
           item={item}
           locale={locale}
-          playbackId={productPlaybackIds[index]}
-          envKey={productPlaybackIds[index] ? muxEnvironmentKey : undefined}
+          playbackId={item.videoPlaybackId || productPlaybackIds[index]}
+          envKey={
+            item.videoPlaybackId || productPlaybackIds[index]
+              ? muxEnvironmentKey
+              : undefined
+          }
           labels={labels}
         />
       ))}

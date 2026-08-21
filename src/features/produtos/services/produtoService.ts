@@ -22,7 +22,6 @@ export const produtosMock: ProdutoItem[] = [
         ],
         technicalSpecs: [
           { tabLabel: "Modelo K-200®", specs: [
-            { label: "Modo de funcionamento", value: "Deslizante / Telescópica / STS-20 Antipânico" },
             { label: "Fluxo", value: "Table Contínuo – Alto / 2.000.000 de ciclos" },
             { label: "Peso máximo", value: "150 kg (1 folha) / 250 kg (2 folhas)" },
             { label: "Deslizamento", value: "Roldanas injetadas em Nylon" },
@@ -103,7 +102,7 @@ export const produtosMock: ProdutoItem[] = [
             { label: "Alimentación – Automatizador", value: "220vca / 50-60hz / 2,5A" },
             { label: "Alimentación – Accesorios", value: "24vcc / 2,5A" },
             { label: "Funciones ajustables", value: "Temporizador de cierre, apertura parcial, velocidad de apertura, velocidad de cierre y torque del motor." },
-            { label: "Funcionamiento de emergencia", value: "Sistema de serie estándar – Para mantener la puerta abierta en caso de falta de energía" },
+            { label: "Funcionamiento de emergencia", value: "Sistema de serie estándar – Para mantener a porta aberta em caso de falta de energia" },
           ]},
           { tabLabel: "Dibujo Técnico", specs: [] },
         ],
@@ -121,7 +120,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "K-500R®",
     href: "/produtos/k-500r",
     slug: "k-500r",
-    videoPlaybackId: process.env.NEXT_PUBLIC_MUX_PRODUCT_2_PLAYBACK_ID,
+    videoPlaybackId: "Se57ug001px3tdXw00quRrSUi004FYqlK1QoxD1Vks3lrI",
     i18n: {
       "pt-BR": {
         title: "Porta Automática Deslizante",
@@ -218,7 +217,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       es: {
         title: "Puerta Automática Antipánico",
-        description: "Sistema antipánico Automec modelo STS-20, diseñado para garantizar la seguridad y evacuación de emergencia. Activación automática en caso de incendio, abriendo las puertas para facilitar la salida de personas. Conforme a normas ABNT NBR 15202, NBR 16025 y NBR 9077.",
+        description: "Sistema antipánico Automec modelo STS-20, diseñado para garantizar la seguridad y evacuación de emergencia. Activación automática en caso de incendio, abriendo las portas para facilitar la salida de personas. Conforme a normas ABNT NBR 15202, NBR 16025 y NBR 9077.",
         idealFor: ["Hospitales", "Industrias", "Centros Comerciales", "Centros Comerciales", "Bancos", "Hoteles"],
         applications: [{ label: "Aplicación en puertas de una hoja" }],
         relatedCategoryLabel: "Puertas antipánico",
@@ -330,7 +329,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       es: {
         title: "Puerta Automática Telescópica",
-        description: "Puerta Automática Automec modelo STC-40, sistema telescópico que permite la apertura de hojas móveis en dimensiones reducidas. Ideal para pasillos estrechos y ambientes con espacio limitado de apertura.",
+        description: "Puerta Automática Automec modelo STC-40, sistema telescópico que permite la apertura de hojas móveis en dimensiones reduzidas. Ideal para pasillos estrechos y ambientes con espacio limitado de apertura.",
         idealFor: ["Hoteles", "Hospitales", "Residencias", "Centros Comerciales", "Centros Comerciales"],
         applications: [{ label: "Aplicación telescópica en pasillos" }],
         relatedCategoryLabel: "Puertas telescópicas",
@@ -352,6 +351,7 @@ export const produtosMock: ProdutoItem[] = [
     model: "B-120T® / B-300T®",
     href: "/produtos/b-120t-b-300t",
     slug: "b-120t-b-300t",
+    videoPlaybackId: "lDmfWAGTp012uP5gENhUMklmFaRKCQPuH02V9ZRa4O2w8",
     i18n: {
       "pt-BR": {
         title: "Porta Automática de Batente",
