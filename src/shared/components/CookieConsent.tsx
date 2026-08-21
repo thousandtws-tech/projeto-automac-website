@@ -221,7 +221,7 @@ export function CookieConsent({ locale }: { locale: Locale }) {
           onClick={openPreferences}
           aria-label={text.settings}
           title={text.settings}
-          className="fixed bottom-4 left-4 z-[90] flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black text-white shadow-lg transition-transform hover:scale-105 hover:bg-brand-red-600"
+          className="fixed bottom-4 left-4 z-[90] hidden h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black text-white shadow-lg transition-transform hover:scale-105 hover:bg-brand-red-600 lg:flex"
         >
           <Cookie className="h-5 w-5" aria-hidden="true" />
         </button>
