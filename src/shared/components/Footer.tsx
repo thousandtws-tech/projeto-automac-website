@@ -5,6 +5,7 @@ import Image from "next/image";
 import LogoMarca from "@/public/logo-png/Artboard-1.png";
 import { Dictionary } from "@/src/i18n/dictionaries";
 import { type Locale, withLocale } from "@/src/i18n/config";
+import { LazyMap } from "./LazyMap";
 
 const Facebook = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -221,13 +222,10 @@ export function Footer({ locale, dictionary }: FooterProps) {
             </div>
 
             <div className="overflow-hidden rounded-xl border border-black/10 bg-white">
-              <iframe
+              <LazyMap
                 title="Localização da Automec Portas Automáticas"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14706.809156150564!2d-47.090868564738926!3d-22.850501468143122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c703df8a0725%3A0xe3ff1d1ffa1bec7b!2sAutomec%20Portas%20Autom%C3%A1ticas!5e0!3m2!1spt-BR!2sbr!4v1785872348589!5m2!1spt-BR!2sbr"
-                 className="h-[200px] w-full border-0 sm:h-[230px] lg:h-[210px]"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
+                className="h-[200px] w-full sm:h-[230px] lg:h-[210px]"
               />
             </div>
           </div>

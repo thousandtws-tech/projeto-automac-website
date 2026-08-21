@@ -1,9 +1,9 @@
-import { ProdutoItem } from "../types";
+﻿import { ProdutoItem } from "../types";
 
 export const produtosMock: ProdutoItem[] = [
   {
     id: "k-200r",
-    image: "/produtos/K-200R®.png",
+    image: "/produtos/k-200r.png",
     model: "K-200R®",
     href: "/produtos/k-200r",
     slug: "k-200r",
@@ -116,7 +116,7 @@ export const produtosMock: ProdutoItem[] = [
   },
   {
     id: "k-500r",
-    image: "/produtos/K-500R®.png",
+    image: "/produtos/k-500r.png",
     model: "K-500R®",
     href: "/produtos/k-500r",
     slug: "k-500r",
@@ -179,7 +179,7 @@ export const produtosMock: ProdutoItem[] = [
   },
   {
     id: "sts-20",
-    image: "/produtos/STS-20®.png",
+    image: "/produtos/sts-20.png",
     model: "STS-20®",
     href: "/produtos/sts-20",
     slug: "sts-20",
@@ -236,7 +236,7 @@ export const produtosMock: ProdutoItem[] = [
   },
   {
     id: "sth-70",
-    image: "/produtos/STH-70®.png",
+    image: "/produtos/sth-70.png",
     model: "STH-70®",
     href: "/produtos/sth-70",
     slug: "sth-70",
@@ -293,7 +293,7 @@ export const produtosMock: ProdutoItem[] = [
   },
   {
     id: "stc-40",
-    image: "/produtos/STC-40®.png",
+    image: "/produtos/stc-40.png",
     model: "STC-40®",
     href: "/produtos/stc-40",
     slug: "stc-40",
@@ -347,7 +347,7 @@ export const produtosMock: ProdutoItem[] = [
   },
   {
     id: "b120-b300",
-    image: "/produtos/B-120T®  B-300T®.png",
+    image: "/produtos/b-120t-b-300t.png",
     model: "B-120T® / B-300T®",
     href: "/produtos/b-120t-b-300t",
     slug: "b-120t-b-300t",

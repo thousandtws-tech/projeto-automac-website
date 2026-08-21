@@ -1,4 +1,4 @@
-import { Gallery4, type Gallery4Props } from "@/components/ui/gallery4";
+﻿import { Gallery4, type Gallery4Props } from "@/components/ui/gallery4";
 import { Locale, withLocale } from "@/src/i18n/config";
 import type { Dictionary } from "@/src/i18n/dictionaries";
 
@@ -16,7 +16,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: 
         title: gallery.items[0].title,
         description: gallery.items[0].description,
         href: withLocale(locale, "/produtos/k-200r"),
-        image: "/produtos/K-200R®.png",
+        image: "/produtos/k-200r.png",
       },
       {
         id: "k-500r",
@@ -24,7 +24,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: 
         title: gallery.items[1].title,
         description: gallery.items[1].description,
         href: withLocale(locale, "/produtos/k-500r"),
-        image: "/produtos/K-500R®.png",
+        image: "/produtos/k-500r.png",
       },
       {
         id: "sts-20",
@@ -32,7 +32,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: 
         title: gallery.items[2].title,
         description: gallery.items[2].description,
         href: withLocale(locale, "/produtos/sts-20"),
-        image: "/produtos/STS-20®.png",
+        image: "/produtos/sts-20.png",
       },
       {
         id: "sth-70",
@@ -40,7 +40,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: 
         title: gallery.items[3].title,
         description: gallery.items[3].description,
         href: withLocale(locale, "/produtos/sth-70"),
-        image: "/produtos/STH-70®.png",
+        image: "/produtos/sth-70.png",
       },
       {
         id: "stc-40",
@@ -48,7 +48,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: 
         title: gallery.items[4].title,
         description: gallery.items[4].description,
         href: withLocale(locale, "/produtos/stc-40"),
-        image: "/produtos/STC-40®.png",
+        image: "/produtos/stc-40.png",
       },
       {
         id: "b120-b300",
@@ -56,7 +56,7 @@ function Gallery4Demo({ dictionary, locale }: { dictionary: Dictionary; locale: 
         title: gallery.items[5].title,
         description: gallery.items[5].description,
         href: withLocale(locale, "/produtos/b-120t-b-300t"),
-        image: "/produtos/B-120T®  B-300T®.png",
+        image: "/produtos/b-120t-b-300t.png",
       },
     ],
   };

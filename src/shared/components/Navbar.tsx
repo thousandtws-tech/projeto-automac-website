@@ -101,6 +101,10 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
                   <img
                     src={`https://flagcdn.com/w40/${localeFlagCodes[l]}.png`}
                     alt={localeLabels[l].label}
+                    width={28}
+                    height={20}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover"
                   />
                 </Link>

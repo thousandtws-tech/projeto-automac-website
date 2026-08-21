@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { Gallery4Demo } from "@/components/ui/gallery4-demo";
 import { VideoSection } from "./VideoSection";
-import MuxPlayer from "@mux/mux-player-react";
+import MuxPlayer from "@mux/mux-player-react/lazy";
 import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 import { useCountUp } from "@shared/hooks/useCountUp";
 import type { Locale } from "@/src/i18n/config";
@@ -129,6 +129,8 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                     className="automec-map-video block h-full w-full"
                     playbackId="fqQI595jgub7G9N00NNa1iZjBryDxgBGEZWlDLlHBJ2o"
                     streamType="on-demand"
+                    loading="viewport"
+                    preload="none"
                     autoPlay="muted"
                     muted
                     loop
@@ -167,6 +169,9 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                         src={logo.src}
                         alt={logo.alt}
                         width={200}
+                        height={100}
+                        loading="lazy"
+                        decoding="async"
                         className="max-h-full max-w-full object-contain hover:scale-105 transition-all duration-300"
                       />
                     </div>
@@ -185,6 +190,9 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                         src={logo.src}
                         alt={logo.alt}
                         width={200}
+                        height={100}
+                        loading="lazy"
+                        decoding="async"
                         className="max-h-full max-w-full object-contain hover:scale-105 transition-all duration-300"
                       />
                     </div>

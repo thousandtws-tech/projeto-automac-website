@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -35,7 +35,7 @@ const data: Gallery4Item[] = [
     title: "K-200R®",
     description: "Porta deslizante de alta performance e fluxo contínuo.",
     href: "#",
-    image: "/produtos/K-200R®.png",
+    image: "/produtos/k-200r.png",
   },
   {
     id: "k-500r",
@@ -43,7 +43,7 @@ const data: Gallery4Item[] = [
     title: "K-500R®",
     description: "Porta deslizante para alto fluxo e cargas pesadas.",
     href: "#",
-    image: "/produtos/K-500R®.png",
+    image: "/produtos/k-500r.png",
   },
   {
     id: "sts-20",
@@ -51,7 +51,7 @@ const data: Gallery4Item[] = [
     title: "STS-20®",
     description: "Sistema antipânico com abertura integral das folhas.",
     href: "#",
-    image: "/produtos/STS-20®.png",
+    image: "/produtos/sts-20.png",
   },
   {
     id: "sth-70",
@@ -59,7 +59,7 @@ const data: Gallery4Item[] = [
     title: "STH-70®",
     description: "Porta hermética especial para ambientes cirúrgicos e laboratoriais.",
     href: "#",
-    image: "/produtos/STH-70®.png",
+    image: "/produtos/sth-70.png",
   },
   {
     id: "stc-40",
@@ -67,7 +67,7 @@ const data: Gallery4Item[] = [
     title: "STC-40®",
     description: "Abertura telescópica para vãos com espaço reduzido.",
     href: "#",
-    image: "/produtos/STC-40®.png",
+    image: "/produtos/stc-40.png",
   },
   {
     id: "b120-b300",
@@ -75,7 +75,7 @@ const data: Gallery4Item[] = [
     title: "B-120T® / B-300T®",
     description: "Mecanismo deslizante clássico de alta durabilidade.",
     href: "#",
-    image: "/produtos/B-120T®  B-300T®.png",
+    image: "/produtos/b-120t-b-300t.png",
   },
 ];
 

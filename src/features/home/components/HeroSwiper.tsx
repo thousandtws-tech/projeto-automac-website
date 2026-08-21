@@ -2,75 +2,58 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import type { HeroSlide } from "./Hero";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// Swiper só entra no bundle quando existe mais de um slide.
+const HeroCarousel = dynamic(
+  () => import("./HeroCarousel").then((mod) => mod.HeroCarousel),
+  { ssr: false },
+);
 
 interface HeroSwiperProps {
   slides: HeroSlide[];
   locale: string;
 }
 
-export function HeroSwiper({
-  slides,
-  locale,
-}: HeroSwiperProps) {
+export function HeroSlideBackground({
+  slide,
+  priority = false,
+}: {
+  slide: HeroSlide;
+  priority?: boolean;
+}) {
+  return (
+    <div className="relative h-full w-full overflow-hidden">
+      <Image
+        src={slide.image}
+        alt={slide.title ?? ""}
+        fill
+        priority={priority}
+        fetchPriority={priority ? "high" : "auto"}
+        loading={priority ? "eager" : "lazy"}
+        sizes="100vw"
+        quality={70}
+        className="animate-ken-burns object-cover object-center"
+      />
+    </div>
+  );
+}
+
+export function HeroSwiper({ slides, locale }: HeroSwiperProps) {
+  const firstSlide = slides[0];
+
   return (
     <div className="relative h-dvh w-full">
-      <Swiper
-        speed={800}
-        loop
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation
-        modules={[Autoplay, Pagination, Navigation]}
-        className="h-full w-full"
-        style={
-          {
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#dc2626",
-            "--swiper-pagination-bullet-inactive-color": "#fff",
-            "--swiper-pagination-bullet-inactive-opacity": "0.4",
-            "--swiper-navigation-size": "28px",
-          } as React.CSSProperties
-        }
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <div className="relative h-full w-full overflow-hidden">
-              <div
-                className="absolute inset-0 animate-ken-burns bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                }}
-              />
+      {slides.length > 1 ? (
+        <HeroCarousel slides={slides} />
+      ) : (
+        firstSlide && <HeroSlideBackground slide={firstSlide} priority />
+      )}
 
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-
-              <div className="container relative z-10 mx-auto flex h-full flex-col justify-center px-6 sm:px-8 lg:px-12">
-                <div className="max-w-2xl">
-
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      <HeroMetricsDock
-        metrics={slides[0]?.metrics ?? []}
-        locale={locale}
-      />
+      <HeroMetricsDock metrics={firstSlide?.metrics ?? []} locale={locale} />
     </div>
   );
 }
