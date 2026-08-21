@@ -10,8 +10,8 @@ export default function Whatsapp() {
     const message = encodeURIComponent('Olá! gostaria de receber um orçamento de portas automáticas. Pode me ajudar?')
 
     return (
-        <div className="fixed right-5 bottom-5 z-50">
-            <div className="pointer-events-none absolute right-0 bottom-0 h-16 w-16">
+        <div className="fixed right-4 bottom-4 z-50 sm:right-5 sm:bottom-5">
+            <div className="pointer-events-none absolute right-0 bottom-0 h-12 w-12 sm:h-16 sm:w-16">
         <span
             className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
             style={{backgroundColor: '#25D366'}}
@@ -31,11 +31,11 @@ export default function Whatsapp() {
                 rel="noopener noreferrer"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                className="animate-slow-pulse relative flex h-16 w-16 items-center justify-center rounded-full text-white shadow-xl transition-transform hover:scale-105"
+                className="animate-slow-pulse relative flex h-12 w-12 items-center justify-center rounded-full text-white shadow-xl transition-transform hover:scale-105 sm:h-16 sm:w-16"
                 style={{backgroundColor: '#25D366'}}
                 aria-label="Fale com a Thousand TWS no WhatsApp"
             >
-                <FaWhatsapp className="h-10 w-10"/>
+                <FaWhatsapp className="h-7 w-7 sm:h-10 sm:w-10"/>
             </Link>
         </div>
     )
