@@ -141,44 +141,91 @@ export function HeroMetricsDock({
   }, [dockElement]);
 
   useEffect(() => {
-    if (!mounted || docked) return;
+    if (!mounted) return;
 
-    let animationFrameId: number | null = null;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
-    const updateParallax = () => {
+    if (reduceMotion) {
+      if (parallaxRef.current) {
+        parallaxRef.current.style.transform = "translate3d(0, 0, 0)";
+      }
+      return;
+    }
+
+    const maxOffset = 26;
+    const easing = 0.085;
+
+    let current = 0;
+    let target = 0;
+    let lastScrollY = window.scrollY;
+    let frameId: number | null = null;
+
+    const computeTarget = () => {
+      if (dockedRef.current) return 0;
+
+      const scrollY = window.scrollY;
+      const delta = scrollY - lastScrollY;
+      lastScrollY = scrollY;
+
+      const progress = Math.min(1, Math.max(0, scrollY / window.innerHeight));
+      const directionBias = delta > 0 ? 1 : 0;
+
+      return Math.min(maxOffset, progress * 16 + directionBias * 10);
+    };
+
+    const render = () => {
       const element = parallaxRef.current;
+      const next = current + (target - current) * easing;
+      const settled = Math.abs(target - next) < 0.05;
 
-      if (!element) {
-        animationFrameId = null;
-        return;
+      current = settled ? target : next;
+
+      if (element) {
+        element.style.transform = `translate3d(0, ${current}px, 0)`;
       }
 
-      const progress = Math.min(1, window.scrollY / window.innerHeight);
-      const offset = progress * 12;
+      frameId = settled ? null : window.requestAnimationFrame(render);
+    };
 
-      element.style.transform = `translate3d(0, ${offset}px, 0)`;
-      animationFrameId = null;
+    const start = () => {
+      if (frameId === null) frameId = window.requestAnimationFrame(render);
     };
 
     const handleScroll = () => {
-      if (animationFrameId !== null) return;
-      animationFrameId = window.requestAnimationFrame(updateParallax);
+      target = computeTarget();
+      start();
     };
 
-    updateParallax();
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    const settleTimer = window.setInterval(() => {
+      const idle = dockedRef.current ? 0 : Math.min(
+        maxOffset,
+        Math.min(1, Math.max(0, window.scrollY / window.innerHeight)) * 16,
+      );
+
+      if (Math.abs(idle - target) > 0.5) {
+        target = idle;
+        start();
+      }
+    }, 160);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      if (animationFrameId !== null) {
-        window.cancelAnimationFrame(animationFrameId);
-      }
+      window.removeEventListener("resize", handleScroll);
+      window.clearInterval(settleTimer);
+      if (frameId !== null) window.cancelAnimationFrame(frameId);
     };
-  }, [mounted, docked]);
+  }, [mounted]);
 
   useEffect(() => {
-    if (!docked || !parallaxRef.current) return;
-    parallaxRef.current.style.transform = "translate3d(0, 0, 0)";
+    const element = parallaxRef.current;
+    if (!docked || !element) return;
+    element.style.transform = "translate3d(0, 0, 0)";
   }, [docked]);
 
   if (!mounted) {
