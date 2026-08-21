@@ -42,6 +42,9 @@ const clientLogos = [
   { id: "royal-palm-v2", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323945/drogasil_ragsda.svg", alt: "" },
   { id: "viracopos", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323944/saint_gobain_dpai7b.svg", alt: "" },
   {id: "carrefour", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323943/carrefour_ncyzjl.svg", alt: "" },
+  {id: "unimed", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323942/unimed_fp7npm.svg", alt: "" },
+  {id: "good-year", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/goodyear_djhjt6.svg", alt: "" },
+  {id: "natura", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/natura_ulldkj.svg", alt: "" },
 ];
 
 const marqueeRow1 = clientLogos.slice(0, 10);
