@@ -16,6 +16,7 @@ export interface Gallery4Item {
   id: string;
   title: string;
   category: string;
+  acronymMeaning?: string;
   description: string;
   href: string;
   image: string;
@@ -113,7 +114,7 @@ const Gallery4 = ({
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="mb-8 flex flex-col items-center text-center gap-6 md:mb-14 lg:mb-16">
           <div className="flex flex-col gap-4">
-            <h2 className="text-5xl font-medium tracking-tighter text-slate-900 sm:text-6xl lg:text-5xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-4xl">
               {title}
             </h2>
             <p className="max-w-2xl text-slate-500 font-medium text-lg md:text-md">{description}</p>
@@ -162,6 +163,11 @@ const Gallery4 = ({
                     <h3 className="text-xl font-black uppercase leading-tight tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500 sm:text-2xl mb-2 line-clamp-1">
                       <FormattedTrademark text={item.title} />
                     </h3>
+                    {item.acronymMeaning && (
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                        {item.acronymMeaning}
+                      </p>
+                    )}
                     <p className="min-h-[2.75rem] text-sm leading-relaxed text-gray-600 line-clamp-2 mb-6">
                       {item.description}
                     </p>

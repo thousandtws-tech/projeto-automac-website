@@ -16,12 +16,21 @@ interface SobreContentProps {
 
 const fallbackContent = {
   historyTitle: "Nossa História",
-  historySub:
-    "Veja neste vídeo o que a Automec consolidou\nnestes 35 anos de história",
+  historySub: `Desde 1991, fomos construindo uma empresa sólida, sempre com o propósito de atender projetos mais elaborados e mais exigentes — hospitais, indústrias, shoppings, hotéis e empresas de todo o Brasil.
+
+Chegamos até aqui acreditando em nosso maior patrimônio: PESSOAS.
+
+Agradecemos profundamente a todos os profissionais que fizeram parte da nossa história e, especialmente, àqueles que permanecem conosco ao longo desses anos.
+
+Hoje, contamos com uma equipe de 70 técnicos especializados, presente em todas as capitais do Brasil, com forte atuação no Estado de São Paulo.
+
+São 35 anos de experiência, aprendizado e confiança construída dia após dia.
+
+Nosso eterno agradecimento a todos os nossos colaboradores.
+Vocês são, e sempre serão, o nosso maior patrimônio.`,
   historyButton: "Conheça Nossa História",
   credibilityTitle: "Credibilidade",
-  credibilityDesc:
-    "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",
+  credibilityDesc: "",
   videoLabel: "Conheça nossa fábrica",
   ctaTitle: "Faça parte da história de mais de 30 mil portas instaladas",
   ctaButton: "Solicitar Orçamento",

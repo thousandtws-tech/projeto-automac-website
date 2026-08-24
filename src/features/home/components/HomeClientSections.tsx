@@ -101,7 +101,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {home.about.badge}
                 </span>
 
-                <h2 className="mb-8 text-[clamp(2rem,9vw,3rem)] font-medium uppercase leading-tight tracking-tighter text-white sm:mb-12">
+                <h2 className="mb-8 text-[clamp(1.75rem,7vw,2.5rem)] font-semibold uppercase leading-[1.2] tracking-tight text-white sm:mb-12">
                   {home.about.titlePart1}{" "}
                   <span>{home.about.titleHighlight}</span>
                 </h2>

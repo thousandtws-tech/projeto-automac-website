@@ -25,6 +25,7 @@ export interface ProdutoApplication {
 
 export interface ProdutoI18n {
   title: string;
+  acronymMeaning?: string;
   description: string;
   idealFor: string[];
   applications: { label: string }[];

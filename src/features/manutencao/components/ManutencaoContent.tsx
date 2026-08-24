@@ -209,12 +209,12 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                 </div>
 
                 <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white transition-colors">
-                  Inspeções periódicas programadas para calibrar sensores, lubrificar engrenagens e testar barreiras de segurança. Reduz o índice de falhas em até 85%, estendendo a vida útil do automatizador.
+                  Inspeções periódicas por programas para calibragem de sensores, lubrificação de engrenagens e teste de sensores e barreiras de segurança. Redução do índice de falhas em até 85%, prolongando a vida útil do automatizador.
                 </p>
 
                 <ul className="flex flex-col gap-3">
                   {[
-                    "Alinhamento e Ajuste das folhas de vidro",
+                    "Alinhamento e ajuste das folhas móveis e fixas",
                     "Parametrização e Regulagens de Sensores",
                     "Inspeção de Peças Mecânicas",
                     "Teste de baterias auxiliares de emergência (Quando necessário)",

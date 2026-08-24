@@ -51,7 +51,7 @@ export function VideoSection({ locale, dictionary }: VideoSectionProps) {
             <span className="text-sm font-bold uppercase tracking-widest text-brand-red-600">
               {videoSection.badge}
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-4xl font-medium tracking-tighter text-black uppercase leading-[1.2]">
+            <h2 className="text-3xl font-semibold uppercase leading-[1.2] tracking-tight text-black sm:text-4xl lg:text-4xl">
               {videoSection.titlePart1}
               <br />
               <span>{videoSection.titleHighlight}</span>

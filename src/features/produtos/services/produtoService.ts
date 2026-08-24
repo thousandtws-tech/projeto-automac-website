@@ -187,6 +187,7 @@ export const produtosMock: ProdutoItem[] = [
     i18n: {
       "pt-BR": {
         title: "Porta Automática Antipânico",
+        acronymMeaning: "Sistema de Tração Simultâneo",
         description: "Sistema antipânico Automec modelo STS-20, projetado para garantir a segurança e evacuação de emergência. Ativação automática em caso de incêndio, abrindo as portas para facilitar a saída de pessoas. Conforme normas ABNT NBR 15202, NBR 16025 e NBR 9077.",
         idealFor: ["Hospitais", "Indústrias", "Shoppings", "Centros Comerciais", "Bancos", "Hotéis"],
         applications: [{ label: "Aplicação em portas de uma folha" }],
@@ -202,6 +203,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       en: {
         title: "Panic Automatic Door",
+        acronymMeaning: "Simultaneous Traction System",
         description: "Automec panic system model STS-20, designed to ensure safety and emergency evacuation. Automatic activation in case of fire, opening doors to facilitate people exit. Compliant with ABNT standards NBR 15202, NBR 16025 and NBR 9077.",
         idealFor: ["Hospitals", "Industries", "Shopping Malls", "Commercial Centers", "Banks", "Hotels"],
         applications: [{ label: "Single leaf door application" }],
@@ -217,6 +219,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       es: {
         title: "Puerta Automática Antipánico",
+        acronymMeaning: "Sistema de Tracción Simultánea",
         description: "Sistema antipánico Automec modelo STS-20, diseñado para garantizar la seguridad y evacuación de emergencia. Activación automática en caso de incendio, abriendo las portas para facilitar la salida de personas. Conforme a normas ABNT NBR 15202, NBR 16025 y NBR 9077.",
         idealFor: ["Hospitales", "Industrias", "Centros Comerciales", "Centros Comerciales", "Bancos", "Hoteles"],
         applications: [{ label: "Aplicación en puertas de una hoja" }],
@@ -244,6 +247,7 @@ export const produtosMock: ProdutoItem[] = [
     i18n: {
       "pt-BR": {
         title: "Porta Automática para Ambientes Controlados",
+        acronymMeaning: "Sistema de Tração Hermética",
         description: "Porta Automática Automec modelo STH-70, ideal para ambientes controlados como câmaras frias, laboratórios e salas limpas. Sistema hermético com vedação completa para manter a integridade do ambiente interno.",
         idealFor: ["Laboratórios", "Hospitais", "Indústrias", "Câmaras Frias", "Salas Limpas", "Farmacêuticas"],
         applications: [{ label: "Aplicação em ambientes controlados" }],
@@ -259,6 +263,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       en: {
         title: "Automatic Door for Controlled Environments",
+        acronymMeaning: "Hermetic Traction System",
         description: "Automec automatic door model STH-70, ideal for controlled environments such as cold rooms, laboratories and clean rooms. Hermetic system with complete sealing to maintain the integrity of the internal environment.",
         idealFor: ["Laboratories", "Hospitals", "Industries", "Cold Rooms", "Clean Rooms", "Pharmaceutical"],
         applications: [{ label: "Controlled environment application" }],
@@ -274,6 +279,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       es: {
         title: "Puerta Automática para Ambientes Controlados",
+        acronymMeaning: "Sistema de Tracción Hermética",
         description: "Puerta Automática Automec modelo STH-70, ideal para ambientes controlados como cámaras frías, laboratorios y salas limpias. Sistema hermético con sellado completo para mantener la integridad del ambiente interno.",
         idealFor: ["Laboratorios", "Hospitales", "Industrias", "Cámaras Frías", "Salas Limpias", "Farmacéuticas"],
         applications: [{ label: "Aplicación en ambientes controlados" }],
@@ -301,6 +307,7 @@ export const produtosMock: ProdutoItem[] = [
     i18n: {
       "pt-BR": {
         title: "Porta Automática Telescópica",
+        acronymMeaning: "Sistema de Tração Telescópica",
         description: "Porta Automática Automec modelo STC-40, sistema telescópico que permite a abertura de folhas móveis em dimensões reduzidas. Ideal para corredores estreitos e ambientes com espaço limitado de abertura.",
         idealFor: ["Hotéis", "Hospitais", "Residências", "Shoppings", "Centros Comerciais"],
         applications: [{ label: "Aplicação telescópica em corredores" }],
@@ -315,6 +322,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       en: {
         title: "Telescopic Automatic Door",
+        acronymMeaning: "Telescopic Traction System",
         description: "Automec automatic door model STC-40, telescopic system that allows opening of movable leaves in reduced dimensions. Ideal for narrow corridors and environments with limited opening space.",
         idealFor: ["Hotels", "Hospitals", "Residences", "Shopping Malls", "Commercial Centers"],
         applications: [{ label: "Telescopic application in corridors" }],
@@ -329,6 +337,7 @@ export const produtosMock: ProdutoItem[] = [
       },
       es: {
         title: "Puerta Automática Telescópica",
+        acronymMeaning: "Sistema de Tracción Telescópica",
         description: "Puerta Automática Automec modelo STC-40, sistema telescópico que permite la apertura de hojas móveis en dimensiones reduzidas. Ideal para pasillos estrechos y ambientes con espacio limitado de apertura.",
         idealFor: ["Hoteles", "Hospitales", "Residencias", "Centros Comerciales", "Centros Comerciales"],
         applications: [{ label: "Aplicación telescópica en pasillos" }],

@@ -48,7 +48,7 @@ export function HistoryVideoSection({
     <FadeIn direction="up" delay={0.2}>
       <div className="mt-0 border-b border-black pb-14 pt-[calc(7rem+3rem)] sm:pb-16 sm:pt-[calc(7rem+4rem)] md:mt-10 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
             <div className="min-w-0 flex flex-col items-start text-left">
               <span className="mb-3 text-sm font- uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
                 {content.credibilityTitle}
@@ -72,7 +72,7 @@ export function HistoryVideoSection({
               </Button>
             </div>
 
-            <div className="relative min-w-0 aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg">
+            <div className="relative min-w-0 aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg lg:mt-[6.875rem]">
               <MuxPlayer
                 className="automec-mux-player"
                 playbackId={playbackId}

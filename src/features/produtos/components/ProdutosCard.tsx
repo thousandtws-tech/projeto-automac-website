@@ -56,6 +56,11 @@ export function ProdutosCard({ locale, item, labels }: ProdutosCardProps) {
           <h3 className="text-xl font-black uppercase leading-tight tracking-tighter text-black transition-colors duration-300 group-hover:text-brand-red-500 sm:text-2xl">
             {p.title}
           </h3>
+          {p.acronymMeaning && (
+            <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-neutral-500">
+              {p.acronymMeaning}
+            </p>
+          )}
           {p.description && (
             <p className="mt-3 text-sm leading-relaxed text-gray-600 line-clamp-2">
               {p.description}

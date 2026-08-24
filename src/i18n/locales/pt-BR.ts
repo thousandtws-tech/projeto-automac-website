@@ -122,7 +122,7 @@ export const dictionary = {
       viewFullSpec: "Ver especificação completa",
       specification: "Especificação",
       accessories: "Acessórios",
-      accessoriesDescription: "Acessórios opcionais para o modelo: Sensor de Detecção por Micro-ondas, Sensor de Detecção por Micro-ondas e Infravermelho, Sensor de Acesso No-Touch, Barreira Infravermelha com 94 feixes de segurança, Seletor de Funções com 4 posições, Trinco Eletromecânico, Controle de Acesso Biométrico com Display Touchscreen, Teclado de Senha, Controle Transmissor para acionamento, Botoeiras com ou sem retenção.",
+      accessoriesDescription: "Acessórios opcionais para o modelo: Sensor de Detecção por Micro-ondas, Sensor de Detecção por Infravermelho, Sensor de Acesso No-Touch, Barreira Infravermelha com 94 feixes de segurança, Seletor de Funções com 4 posições, Trinco Eletromecânico, Controle de Acesso Biométrico com Display Touchscreen, Teclado de Senha, Controle Transmissor para acionamento, Botoeiras com ou sem retenção.",
       viewAccessories: "Ver catálogo de acessórios",
       idealFor: "Ideal para",
       resources: "Recursos",
@@ -266,10 +266,21 @@ export const dictionary = {
       { label: "Suporte Técnico" },
     ],
     historyTitle: "Nossa História",
-    historySub: "Veja neste vídeo o que a Automec consolidou\nnestes 35 anos de história",
+    historySub: `Desde 1991, fomos construindo uma empresa sólida, sempre com o propósito de atender projetos mais elaborados e mais exigentes — hospitais, indústrias, shoppings, hotéis e empresas de todo o Brasil.
+
+  Chegamos até aqui acreditando em nosso maior patrimônio: PESSOAS.
+
+  Agradecemos profundamente a todos os profissionais que fizeram parte da nossa história e, especialmente, àqueles que permanecem conosco ao longo desses anos.
+
+  Hoje, contamos com uma equipe de 70 técnicos especializados, presente em todas as capitais do Brasil, com forte atuação no Estado de São Paulo.
+
+  São 35 anos de experiência, aprendizado e confiança construída dia após dia.
+
+  Nosso eterno agradecimento a todos os nossos colaboradores.
+  Vocês são, e sempre serão, o nosso maior patrimônio.`,
     historyButton: "Conheça Nossa História",
     credibilityTitle: "Credibilidade",
-    credibilityDesc: "A empresa é reconhecida por sua sólida credibilidade e pelo compromisso inequívoco em satisfazer plenamente seus clientes.",
+    credibilityDesc: "",
     videoLabel: "Conheça nossa fábrica",
     videoDuration: "02:45",
     diretrizesLabel: "DIRETRIZES",
@@ -336,9 +347,9 @@ export const dictionary = {
       preventive: {
         title: "Preventiva",
         subtitle: "Programa recorrente",
-        description: "Inspeções periódicas programadas para calibrar sensores, lubrificar engrenagens e testar barreiras de segurança. Reduz o índice de falhas em até 85%, estendendo a vida útil do automatizador.",
+        description: "Inspeções periódicas por programas para calibragem de sensores, lubrificação de engrenagens e teste de sensores e barreiras de segurança. Redução do índice de falhas em até 85%, prolongando a vida útil do automatizador.",
         items: [
-          "Alinhamento e Ajuste das folhas de vidro",
+          "Alinhamento e ajuste das folhas móveis e fixas",
           "Parametrização e Regulagens de Sensores",
           "Inspeção de Peças Mecânicas",
           "Teste de baterias auxiliares de emergência (Quando necessário)",
