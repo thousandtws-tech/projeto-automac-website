@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle, Loader2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import {CtaBlock} from "@shared/components/CtaBlock";
 import type { Dictionary } from "@/src/i18n/dictionaries";
+import { executeReCaptcha } from "@shared/components/ReCaptcha";
 
 export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
   const c = dictionary.contato;
@@ -32,10 +33,15 @@ export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
     setError("");
 
     try {
+      const recaptchaToken = await executeReCaptcha("contact_form_submit");
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       });
 
       const json = await res.json();
@@ -179,6 +185,30 @@ export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
                     )}
                     {isSubmitting ? "Enviando…" : c.submitButton}
                   </Button>
+
+                  <div className="flex items-center justify-center gap-2 pt-2 text-[11px] text-neutral-500 font-medium">
+                    <ShieldCheck className="h-4 w-4 shrink-0 text-neutral-700" />
+                    <span>
+                      Protegido por reCAPTCHA —{" "}
+                      <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-black font-semibold"
+                      >
+                        Privacidade
+                      </a>{" "}
+                      e{" "}
+                      <a
+                        href="https://policies.google.com/terms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-black font-semibold"
+                      >
+                        Termos
+                      </a>
+                    </span>
+                  </div>
                 </form>
               )}
             </div>

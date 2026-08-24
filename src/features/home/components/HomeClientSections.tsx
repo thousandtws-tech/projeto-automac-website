@@ -16,6 +16,7 @@ import MuxPlayer from "@mux/mux-player-react/lazy";
 import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 import { useCountUp } from "@shared/hooks/useCountUp";
 import type { Locale } from "@/src/i18n/config";
+import { HomeScrollReveal } from "./HomeScrollReveal";
 
 
 const featureIcons = [Settings, Shield, Wrench, Zap];
@@ -77,16 +78,21 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
 
   return (
     <>
-      <FadeIn direction="up" delay={0.1}>
-        <VideoSection locale={locale} dictionary={dictionary} />
-      </FadeIn>
+      <HomeScrollReveal>
+        <FadeIn direction="up" delay={0.1}>
+          <VideoSection locale={locale} dictionary={dictionary} />
+        </FadeIn>
+      </HomeScrollReveal>
 
-      <FadeIn direction="up" delay={0.15}>
-        <Gallery4Demo dictionary={dictionary} locale={locale} />
-      </FadeIn>
+      <HomeScrollReveal>
+        <FadeIn direction="up" delay={0.15}>
+          <Gallery4Demo dictionary={dictionary} locale={locale} />
+        </FadeIn>
+      </HomeScrollReveal>
 
-      <FadeIn direction="up" delay={0.2}>
-        <section className="relative border-b border-black overflow-hidden">
+      <HomeScrollReveal>
+        <FadeIn direction="up" delay={0.2}>
+          <section className="relative border-b border-black overflow-hidden">
           {/* Fundos divididos no desktop */}
           <div className="absolute inset-0 hidden lg:grid lg:grid-cols-2">
             <div className="bg-brand-red-600" />
@@ -142,11 +148,13 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
               </div>
             </div>
           </div>
-        </section>
-      </FadeIn>
+          </section>
+        </FadeIn>
+      </HomeScrollReveal>
 
-      <FadeIn direction="up" delay={0.3}>
-        <div className="border-b border-black py-16 md:py-20">
+      <HomeScrollReveal>
+        <FadeIn direction="up" delay={0.3}>
+          <div className="border-b border-black py-16 md:py-20">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-12">
               <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
@@ -201,8 +209,9 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
               </div>
             </div>
           </div>
-        </div>
-      </FadeIn>
+          </div>
+        </FadeIn>
+      </HomeScrollReveal>
     </>
   );
 }

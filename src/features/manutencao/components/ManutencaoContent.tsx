@@ -117,6 +117,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
           credibilityDesc: "",
         }}
         playbackId="fqQI595jgub7G9N00NNa1iZjBryDxgBGEZWlDLlHBJ2o"
+        centeredContent
       />
       {/* ═══════════════════════════════════════════════════════════════
           1. HEADER — Swiss grid pattern
@@ -129,10 +130,10 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
         <div className="relative container mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-12 gap-8 items-end">
             <div className="col-span-12 md:col-span-8">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-[0.9] text-black uppercase">
+              <h1 className="text-4xl font-bold uppercase leading-[1.2] tracking-tight text-black sm:text-5xl lg:text-5xl">
                 Manutenção
                 <br />
-                <span className="text-brand-red-600">Especializada</span>
+                <span>Especializada</span>
               </h1>
             </div>
             <div className="col-span-12 md:col-span-4 md:pb-4">

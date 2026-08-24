@@ -14,6 +14,34 @@ function validate(data: Record<string, unknown>) {
   return errors;
 }
 
+async function verifyReCaptcha(token?: string): Promise<boolean> {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secretKey) {
+    return true;
+  }
+
+  if (!token) {
+    return false;
+  }
+
+  try {
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: secretKey,
+        response: token,
+      }),
+    });
+
+    const json = await res.json();
+    return Boolean(json.success && typeof json.score === "number" && json.score >= 0.5);
+  } catch (err) {
+    console.error("Erro na verificação do reCAPTCHA v3:", err);
+    return false;
+  }
+}
+
 function buildEmailHtml(data: {
   nome: string;
   email: string;
@@ -95,6 +123,14 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
+
+    const isHuman = await verifyReCaptcha(body.recaptchaToken as string | undefined);
+    if (!isHuman) {
+      return NextResponse.json(
+        { error: "Falha na verificação de segurança (reCAPTCHA)." },
+        { status: 400 }
+      );
+    }
 
     const errors = validate(body);
     if (errors.length > 0) {

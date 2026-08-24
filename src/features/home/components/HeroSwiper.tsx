@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "motion/react";
 
 import type { HeroSlide } from "./Hero";
 
@@ -16,33 +17,55 @@ const HeroCarousel = dynamic(
 interface HeroSwiperProps {
   slides: HeroSlide[];
   locale: string;
+  parallax?: boolean;
 }
 
 export function HeroSlideBackground({
   slide,
   priority = false,
+  parallax = false,
 }: {
   slide: HeroSlide;
   priority?: boolean;
+  parallax?: boolean;
 }) {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 45,
+    damping: 30,
+    mass: 0.9,
+  });
+  const y = useTransform(smoothProgress, [0, 1], ["-5%", "7%"]);
+  const scale = useTransform(smoothProgress, [0, 1], [1.06, 1.1]);
+
   return (
-    <div className="relative h-full w-full overflow-hidden">
-      <Image
-        src={slide.image}
-        alt={slide.title ?? ""}
-        fill
-        priority={priority}
-        fetchPriority={priority ? "high" : "auto"}
-        loading={priority ? "eager" : "lazy"}
-        sizes="100vw"
-        quality={70}
-        className="animate-ken-burns object-cover object-center"
-      />
+    <div ref={sectionRef} className="relative h-full w-full overflow-hidden">
+      <motion.div
+        className="absolute -inset-y-[8%] inset-x-0 transform-gpu will-change-transform"
+        style={parallax && !prefersReducedMotion ? { y, scale } : undefined}
+      >
+        <Image
+          src={slide.image}
+          alt={slide.title ?? ""}
+          fill
+          priority={priority}
+          fetchPriority={priority ? "high" : "auto"}
+          loading={priority ? "eager" : "lazy"}
+          sizes="100vw"
+          quality={70}
+          className={`${parallax ? "" : "animate-ken-burns"} object-cover object-center`}
+        />
+      </motion.div>
     </div>
   );
 }
 
-export function HeroSwiper({ slides, locale }: HeroSwiperProps) {
+export function HeroSwiper({ slides, locale, parallax = false }: HeroSwiperProps) {
   const firstSlide = slides[0];
 
   return (
@@ -50,7 +73,7 @@ export function HeroSwiper({ slides, locale }: HeroSwiperProps) {
       {slides.length > 1 ? (
         <HeroCarousel slides={slides} />
       ) : (
-        firstSlide && <HeroSlideBackground slide={firstSlide} priority />
+        firstSlide && <HeroSlideBackground slide={firstSlide} priority parallax={parallax} />
       )}
 
       <HeroMetricsDock metrics={firstSlide?.metrics ?? []} locale={locale} />
@@ -244,7 +267,7 @@ export function HeroMetricsDock({
           />
 
           <div className="relative z-10 w-full px-4 py-4 sm:px-8 sm:py-6 lg:px-12">
-              <h2 className="animate-metrics-title text-center text-[23px] font-light leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-2xl md:text-3xl lg:text-4xl">
+              <h2 className="animate-metrics-title text-center text-[23px] font-semibold leading-tight tracking-tight text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35),0_0_8px_rgba(0,0,0,0.18)] sm:text-2xl md:text-3xl lg:text-4xl">
                 <span className="block sm:inline">Excelência em</span>{" "}
                 <span className="block sm:inline">Cada Projeto</span>
               </h2>

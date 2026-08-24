@@ -30,7 +30,7 @@ export function PinnedHeroSection({ locale, dictionary }: PinnedHeroSectionProps
   
   return (
     <div className="sticky top-0 z-0 h-dvh overflow-hidden">
-      <HeroSwiper slides={slides} locale={locale} />
+      <HeroSwiper slides={slides} locale={locale} parallax />
     </div>
   );
 }

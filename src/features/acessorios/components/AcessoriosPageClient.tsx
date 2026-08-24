@@ -18,7 +18,6 @@ interface AcessoriosPageClientProps {
         title: string;
         description: string;
     }>;
-    viewDetails?: string;
     ctaContent: {
         title: string;
         highlight: string;
@@ -27,7 +26,7 @@ interface AcessoriosPageClientProps {
     };
 }
 
-export function AcessoriosPageClient({ items, toolbarLabels, cardItems, viewDetails, ctaContent }: AcessoriosPageClientProps) {
+export function AcessoriosPageClient({ items, toolbarLabels, cardItems, ctaContent }: AcessoriosPageClientProps) {
     const translatedItems = items.map((item, index) => ({
         ...item,
         title: cardItems[index]?.title ?? item.title,
@@ -46,7 +45,7 @@ export function AcessoriosPageClient({ items, toolbarLabels, cardItems, viewDeta
             <section className="py-20">
                 <div className="container mx-auto px-6">
                     <FadeIn direction="up" delay={0.1}>
-                        <AcessoriosGrid items={filteredAcessorios} categoryLabels={toolbarLabels.categories} viewDetails={viewDetails} />
+                        <AcessoriosGrid items={filteredAcessorios} categoryLabels={toolbarLabels.categories} />
                     </FadeIn>
                 </div>
             </section>

@@ -34,11 +34,13 @@ export function HistoryVideoSection({
   playbackId: playbackIdOverride,
   storyBelowVideo = false,
   splitStory = false,
+  centeredContent = false,
 }: {
   content: HistoryVideoContent;
   playbackId?: string;
   storyBelowVideo?: boolean;
   splitStory?: boolean;
+  centeredContent?: boolean;
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const playbackId =
@@ -56,7 +58,7 @@ export function HistoryVideoSection({
       <div className="mt-0 border-b border-black pb-14 pt-[calc(7rem+3rem)] sm:pb-16 sm:pt-[calc(7rem+4rem)] md:mt-10 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className={`grid grid-cols-1 items-start lg:grid-cols-2 ${splitStory ? "gap-5 lg:gap-6" : "gap-10 lg:gap-12 xl:gap-20"}`}>
-            <div className={`min-w-0 flex flex-col ${splitStory ? "items-center text-center lg:col-span-2" : "items-start text-left"}`}>
+            <div className={`min-w-0 flex flex-col ${splitStory || centeredContent ? "items-center text-center" : "items-start text-left"} ${splitStory ? "lg:col-span-2" : ""} ${centeredContent ? "justify-center self-stretch" : ""}`}>
               <span className="mb-3 text-sm font- uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
                 {content.credibilityTitle}
               </span>
@@ -65,7 +67,7 @@ export function HistoryVideoSection({
               </h2>
               {!storyBelowVideo && !splitStory && (
                 <>
-                  <div className="mb-7 border-l-2 border-brand-red-600 pl-4 sm:mb-8 sm:pl-6">
+                  <div className={`mb-7 sm:mb-8 ${centeredContent ? "border-t-2 border-brand-red-600 pt-5" : "border-l-2 border-brand-red-600 pl-4 sm:pl-6"}`}>
                     <div className="mb-4 flex flex-col gap-2 text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
                       {upperStoryParagraphs.map((paragraph) => (
                         <p key={paragraph} className="whitespace-pre-line">

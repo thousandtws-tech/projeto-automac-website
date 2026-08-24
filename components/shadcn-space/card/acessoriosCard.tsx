@@ -1,4 +1,4 @@
-import { ArrowRight, Box } from "lucide-react";
+import { Box } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -9,7 +9,6 @@ interface ProductCardProps {
   description: string;
   href: string;
   category?: string;
-  viewDetails?: string;
 }
 
 export function AcessoriosCard({
@@ -18,7 +17,6 @@ export function AcessoriosCard({
   description,
   href,
   category = "Acessórios",
-  viewDetails = "Ver Detalhes",
 }: ProductCardProps) {
   return (
     <div className="h-full group">
@@ -53,14 +51,6 @@ export function AcessoriosCard({
             {description}
           </p>
 
-          <div className="mt-auto pt-6 flex items-center justify-between">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-brand-red-500 opacity-0 transition-all duration-500 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0">
-              {viewDetails}
-            </span>
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-colors duration-300 group-hover:bg-brand-red-500">
-              <ArrowRight className="h-5 w-5" />
-            </div>
-          </div>
         </div>
       </Link>
     </div>

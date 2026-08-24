@@ -489,6 +489,12 @@
   animation: ken-burns 10s ease-in-out infinite;
 }
 
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 @keyframes budget-blink {
   0%, 100% {
     opacity: 1;

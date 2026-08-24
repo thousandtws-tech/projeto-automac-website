@@ -31,10 +31,10 @@ export function CtaBlock({
   return (
     <section className={`${bgClass} border-y border-neutral-200 px-4 py-14 shadow-[0_4px_16px_rgba(0,0,0,0.025)] sm:px-6 sm:py-20 md:py-24`}>
       <div className="mx-auto max-w-4xl w-full text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tighter uppercase leading-[0.9] max-w-3xl mx-auto">
+        <h2 className="mx-auto max-w-3xl text-3xl font-bold uppercase leading-[0.95] tracking-tight sm:text-4xl lg:text-5xl">
           <span className={variant === "red" ? "text-white" : "text-black"}>{title}</span>
           {highlight && (
-            <span className={`${highlightOnNewLine ? "block" : ""} ${variant === "red" ? "text-white/80" : "text-brand-red-500"}`}>
+            <span className={`${highlightOnNewLine ? "block" : ""} ${variant === "red" ? "text-white" : "text-black"}`}>
               {" "}{highlight}
             </span>
           )}
@@ -42,7 +42,7 @@ export function CtaBlock({
 
         {description && (
           <p
-            className={`mt-6 text-base max-w-2xl mx-auto leading-relaxed ${
+            className={`mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed sm:text-xl ${
               variant === "red" ? "text-white/80" : "text-neutral-600"
             }`}
           >
