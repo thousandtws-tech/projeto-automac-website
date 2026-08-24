@@ -93,7 +93,6 @@ export function HistoryVideoSection({
                 preload="metadata"
                 autoPlay="muted"
                 muted
-                controls={false}
                 loop
                 playsInline
                 poster={poster}
