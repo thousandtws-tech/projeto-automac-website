@@ -54,7 +54,7 @@ export function useCountUp(end: number, duration: number = 2000, options: UseCou
   }, [end, duration, startOnView, threshold]);
 
   const formatter = new Intl.NumberFormat(locale, { notation: 'standard' });
-  
+
   const formatWithSuffix = (value: number) => {
     const formatted = formatter.format(value);
     return suffix ? formatted + suffix : formatted;

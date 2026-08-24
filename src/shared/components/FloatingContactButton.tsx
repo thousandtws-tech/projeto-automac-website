@@ -1,8 +1,8 @@
 'use client'
 
-import {FaWhatsapp} from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
-import {useState} from 'react'
+import { useState } from 'react'
 
 export default function Whatsapp() {
     const [isHovered, setIsHovered] = useState(false)
@@ -12,10 +12,10 @@ export default function Whatsapp() {
     return (
         <div className="fixed right-4 bottom-4 z-50 sm:right-5 sm:bottom-5">
             <div className="pointer-events-none absolute right-0 bottom-0 h-12 w-12 sm:h-16 sm:w-16">
-        <span
-            className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
-            style={{backgroundColor: '#25D366'}}
-        ></span>
+                <span
+                    className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
+                    style={{ backgroundColor: '#25D366' }}
+                ></span>
             </div>
 
             {isHovered && (
@@ -32,10 +32,10 @@ export default function Whatsapp() {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 className="animate-slow-pulse relative flex h-12 w-12 items-center justify-center rounded-full text-white shadow-xl transition-transform hover:scale-105 sm:h-16 sm:w-16"
-                style={{backgroundColor: '#25D366'}}
+                style={{ backgroundColor: '#25D366' }}
                 aria-label="Fale com a Thousand TWS no WhatsApp"
             >
-                <FaWhatsapp className="h-7 w-7 sm:h-10 sm:w-10"/>
+                <FaWhatsapp className="h-7 w-7 sm:h-10 sm:w-10" />
             </Link>
         </div>
     )

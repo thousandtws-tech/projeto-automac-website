@@ -137,7 +137,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                     {dictionary.footer.contactsText}
                   </span>
 
-                    <strong className="mt-1 block whitespace-nowrap text-[clamp(0.7rem,3.8vw,0.875rem)] text-black">
+                  <strong className="mt-1 block whitespace-nowrap text-[clamp(0.7rem,3.8vw,0.875rem)] text-black">
                     {dictionary.common.email}
                   </strong>
                 </p>
@@ -275,7 +275,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                     transition-colors hover:bg-brand-red-600
                   "
                   >
-                     <Icon className="h-4 w-4" />
+                    <Icon className="h-4 w-4" />
                   </Link>
                 ))}
               </div>

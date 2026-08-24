@@ -81,19 +81,19 @@ export const dictionary = {
       titleHighlight: "engenharia de precisão",
     },
     videoSection: {
-  badge: "Conheça a Automec",
-  titlePart1: "Uma História Construída",
-  titleHighlight: "com trabalho, inovação e confiança",
-  description:
-    "São mais de 35 anos desenvolvendo soluções que fazem parte de hospitais, indústrias, comércios e grandes empreendimentos em todo o Brasil. Mais do que fabricar portas automáticas, construímos relações duradouras baseadas em qualidade e compromisso.",
-  videoLabel: "Conheça nossa fábrica",
-  metrics: {
-    years: "Anos de Experiência",
-    projects: "Projetos Entregues",
-    technology: "Tecnologia Nacional",
-    doors: "Portas Instaladas",
-  },
-},
+      badge: "Conheça a Automec",
+      titlePart1: "Uma História Construída",
+      titleHighlight: "com trabalho, inovação e confiança",
+      description:
+        "São mais de 35 anos desenvolvendo soluções que fazem parte de hospitais, indústrias, comércios e grandes empreendimentos em todo o Brasil. Mais do que fabricar portas automáticas, construímos relações duradouras baseadas em qualidade e compromisso.",
+      videoLabel: "Conheça nossa fábrica",
+      metrics: {
+        years: "Anos de Experiência",
+        projects: "Projetos Entregues",
+        technology: "Tecnologia Nacional",
+        doors: "Portas Instaladas",
+      },
+    },
   },
   hero: {
     heading: "Engenharia de acesso seguro e inteligente",
@@ -250,7 +250,7 @@ export const dictionary = {
       { name: "Portas Automáticas", href: "/produtos" },
       { name: "Acessórios", href: "/acessorios" },
       { name: "Manutenção", href: "/acessorios" },
-     //{ name: "Simulador 360º", href: "/simulador" },
+      //{ name: "Simulador 360º", href: "/simulador" },
     ],
   },
   sobre: {

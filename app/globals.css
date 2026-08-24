@@ -363,8 +363,8 @@
   }
 
   ::selection {
-    background: var(--automec-red-100);
-    color: var(--automec-red-900);
+    background: #000000;
+    color: #ffffff;
   }
 
   :focus-visible {

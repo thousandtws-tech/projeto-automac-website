@@ -42,9 +42,8 @@ export function CtaBlock({
 
         {description && (
           <p
-            className={`mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed sm:text-xl ${
-              variant === "red" ? "text-white/80" : "text-neutral-600"
-            }`}
+            className={`mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed sm:text-xl ${variant === "red" ? "text-white/80" : "text-neutral-600"
+              }`}
           >
             {description}
           </p>
@@ -52,11 +51,10 @@ export function CtaBlock({
 
         <Button
           asChild
-          className={`mt-8 h-14 w-full rounded-md px-5 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] sm:w-auto sm:px-10 sm:text-sm ${
-            variant === "red"
+          className={`mt-8 h-14 w-full rounded-md px-5 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] sm:w-auto sm:px-10 sm:text-sm ${variant === "red"
               ? "bg-white text-brand-red-600 hover:bg-white/90"
               : "bg-brand-red-500 text-white hover:bg-brand-red-600"
-          }`}
+            }`}
         >
           <Link href={buttonHref}>
             {buttonText}
