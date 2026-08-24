@@ -41,7 +41,7 @@ export function SobreContent({ content }: SobreContentProps) {
 
   return (
     <section className="bg-white">
-      <HistoryVideoSection content={currentContent} />
+      <HistoryVideoSection content={currentContent} splitStory />
       <CtaBlock
         variant="red"
         title={currentContent.ctaTitle}

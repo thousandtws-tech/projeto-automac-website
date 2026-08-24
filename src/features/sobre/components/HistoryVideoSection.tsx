@@ -32,9 +32,13 @@ const muxPlayerStyle = {
 export function HistoryVideoSection({
   content,
   playbackId: playbackIdOverride,
+  storyBelowVideo = false,
+  splitStory = false,
 }: {
   content: HistoryVideoContent;
   playbackId?: string;
+  storyBelowVideo?: boolean;
+  splitStory?: boolean;
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const playbackId =
@@ -43,36 +47,44 @@ export function HistoryVideoSection({
     process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID ||
     defaultPlaybackId;
   const poster = `https://image.mux.com/${playbackId}/thumbnail.png?width=2560&height=1440&time=18&fit_mode=smartcrop`;
+  const storyParagraphs = content.historySub.split(/\n\s*\n/);
+  const upperStoryParagraphs = splitStory ? storyParagraphs.slice(0, 3) : storyParagraphs;
+  const lowerStoryParagraphs = splitStory ? storyParagraphs.slice(3) : [];
 
   return (
     <FadeIn direction="up" delay={0.2}>
       <div className="mt-0 border-b border-black pb-14 pt-[calc(7rem+3rem)] sm:pb-16 sm:pt-[calc(7rem+4rem)] md:mt-10 md:py-24">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
-            <div className="min-w-0 flex flex-col items-start text-left">
+          <div className={`grid grid-cols-1 items-start lg:grid-cols-2 ${splitStory ? "gap-5 lg:gap-6" : "gap-10 lg:gap-12 xl:gap-20"}`}>
+            <div className={`min-w-0 flex flex-col ${splitStory ? "items-center text-center lg:col-span-2" : "items-start text-left"}`}>
               <span className="mb-3 text-sm font- uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
                 {content.credibilityTitle}
               </span>
               <h2 className="mb-5 max-w-full text-balance text-[clamp(1.75rem,5vw,3rem)] font-medium uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 2xl:whitespace-nowrap">
                 {content.historyTitle}
               </h2>
-              <div className="mb-7 border-l-2 border-brand-red-600 pl-4 sm:mb-8 sm:pl-6">
-                <p className="mb-4 whitespace-pre-line text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
-                  {content.historySub}
-                </p>
-                {content.credibilityDesc && (
-                  <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
-                    {content.credibilityDesc}
-                  </p>
-                )}
-              </div>
-              <Button className="h-14 w-full bg-brand-red-600 px-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-neutral-800 sm:w-auto sm:px-10 sm:text-sm sm:tracking-widest">
-                {content.historyButton}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              {!storyBelowVideo && !splitStory && (
+                <>
+                  <div className="mb-7 border-l-2 border-brand-red-600 pl-4 sm:mb-8 sm:pl-6">
+                    <div className="mb-4 flex flex-col gap-2 text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
+                      {upperStoryParagraphs.map((paragraph) => (
+                        <p key={paragraph} className="whitespace-pre-line">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                    {content.credibilityDesc && (
+                      <p className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+                        {content.credibilityDesc}
+                      </p>
+                    )}
+                  </div>
+                  
+                </>
+              )}
             </div>
 
-            <div className="relative min-w-0 aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg lg:mt-[6.875rem]">
+            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md border-2 border-black bg-neutral-900 shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"}`}>
               <MuxPlayer
                 className="automec-mux-player"
                 playbackId={playbackId}
@@ -81,6 +93,7 @@ export function HistoryVideoSection({
                 preload="metadata"
                 autoPlay="muted"
                 muted
+                controls={false}
                 loop
                 playsInline
                 poster={poster}
@@ -106,6 +119,45 @@ export function HistoryVideoSection({
                 </div>
               )}
             </div>
+
+            {splitStory && lowerStoryParagraphs.length > 0 && (
+              <div className="grid gap-8 lg:col-span-2 lg:grid-cols-2 lg:gap-12 xl:gap-20">
+                {[upperStoryParagraphs, lowerStoryParagraphs].map((paragraphs, index) => (
+                  <div key={index} className="border-l-2 border-brand-red-600 pl-4 sm:pl-6">
+                    <div className="flex flex-col gap-2 text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
+                      {paragraphs.map((paragraph) => (
+                        <p key={paragraph} className="whitespace-pre-line">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {storyBelowVideo && (
+              <div className="flex flex-col gap-5 lg:col-span-2">
+                <div className="border-l-2 border-brand-red-600 pl-4 sm:pl-6">
+                  <div className="flex flex-col gap-2 text-lg font-medium leading-relaxed text-neutral-700 sm:text-xl">
+                    {content.historySub.split(/\n\s*\n/).map((paragraph) => (
+                      <p key={paragraph} className="whitespace-pre-line">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                  {content.credibilityDesc && (
+                    <p className="mt-3 text-base leading-relaxed text-neutral-600 sm:text-lg">
+                      {content.credibilityDesc}
+                    </p>
+                  )}
+                </div>
+                <Button className="h-14 w-full bg-brand-red-600 px-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-neutral-800 sm:w-auto sm:px-10 sm:text-sm sm:tracking-widest">
+                  {content.historyButton}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
