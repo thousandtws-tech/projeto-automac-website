@@ -118,7 +118,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             <Image src={LogoMarca} alt="Automec" width={160} height={40} style={{ width: "auto", height: "45px" }} loading="eager" />
           </Link>
 
-          <Image src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785875468/35_anos_sz1i3y.webp" alt="35" width={80} height={90} quality={100}/>
+          <Image src="https://res.cloudinary.com/dpgslwy15/image/upload/v1787596663/35_anos_sz1i3y.webp" alt="35" width={90} height={90} quality={100}/>
 
         
           {/* Desktop nav */}
