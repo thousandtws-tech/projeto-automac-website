@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 import Image from "next/image";
 import LogoMarca from "@/public/logo-png/Artboard-1.png";
+import Logo35Anos from "@/public/logo-35-anos.png";
 import { Dictionary } from "@/src/i18n/dictionaries";
 import { localeLabels, locales, type Locale, withLocale } from "@/src/i18n/config";
 
@@ -29,7 +30,6 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
   const pathname = usePathname();
   const currentPath = pathname.replace(/^\/(pt-BR|en|es)/, "") || "/";
 
-  // Passive native scroll detection
   useEffect(() => {
     let ticking = false;
 
@@ -47,7 +47,6 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -59,7 +58,6 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
     };
   }, [isOpen]);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -71,7 +69,6 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
         scrolled ? "shadow-sm" : ""
       )}
     >
-      {/* Top bar */}
       <div className="bg-black">
         <div className="container mx-auto flex h-10 flex-row items-center justify-end gap-2 px-4 text-[10px] font-medium uppercase tracking-wide sm:justify-between sm:px-6 sm:text-[11px] sm:tracking-wider">
           <div className="hidden items-center gap-2 text-white/80 md:flex">
@@ -121,6 +118,9 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             <Image src={LogoMarca} alt="Automec" width={160} height={40} style={{ width: "auto", height: "45px" }} loading="eager" />
           </Link>
 
+          <Image src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785875468/35_anos_sz1i3y.webp" alt="35" width={80} height={90} quality={100}/>
+
+        
           {/* Desktop nav */}
           <div className="hidden xl:flex items-center gap-5 2xl:gap-8">
             {dictionary.nav.map((item) => (

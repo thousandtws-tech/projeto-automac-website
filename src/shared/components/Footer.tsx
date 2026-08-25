@@ -186,18 +186,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
                  xl:max-w-[160px]
               "
               >
-                <Image
-                  src="https://res.cloudinary.com/dpgslwy15/image/upload/v1785875468/35_anos_sz1i3y.webp"
-                  alt="35 anos Automec"
-                  width={420}
-                  height={320}
-                  sizes="
-                  (max-width: 640px) 180px,
-                  (max-width: 1024px) 210px,
-                  200px
-                "
-                  className="h-auto w-full object-contain"
-                />
+                
               </div>
             </div>
           </div>
