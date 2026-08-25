@@ -55,14 +55,14 @@ export function HistoryVideoSection({
 
   return (
     <FadeIn direction="up" delay={0.2}>
-      <div className="mt-0 border-b border-black pb-14 pt-[calc(7rem+3rem)] sm:pb-16 sm:pt-[calc(7rem+4rem)] md:mt-10 md:py-24">
+      <div className="border-b border-black pb-16 pt-36 sm:pt-40 md:pt-44 md:pb-24 lg:pt-48">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className={`grid grid-cols-1 items-start lg:grid-cols-2 ${splitStory ? "gap-5 lg:gap-6" : "gap-10 lg:gap-12 xl:gap-20"}`}>
             <div className={`min-w-0 flex flex-col ${splitStory || centeredContent ? "items-center text-center" : "items-start text-left"} ${splitStory ? "lg:col-span-2" : ""} ${centeredContent ? "justify-center self-stretch" : ""}`}>
-              <span className="mb-3 text-sm font- uppercase tracking-widest text-brand-red-600 sm:mb-4 sm:text-base">
+              <span className="mb-4 text-sm font-bold uppercase tracking-widest text-brand-red-600 sm:mb-5 sm:text-base">
                 {content.credibilityTitle}
               </span>
-              <h2 className="mb-5 max-w-full text-balance text-[clamp(1.75rem,5vw,3rem)] font-medium uppercase leading-[0.95] tracking-tighter text-black sm:mb-6 2xl:whitespace-nowrap">
+              <h2 className="mb-5 max-w-full text-balance text-[clamp(1.75rem,5vw,3rem)] font-medium uppercase leading-tight tracking-tight text-black sm:mb-6 2xl:whitespace-nowrap">
                 {content.historyTitle}
               </h2>
               {!storyBelowVideo && !splitStory && (
