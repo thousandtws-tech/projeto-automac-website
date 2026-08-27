@@ -186,7 +186,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
               <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 Nossos Serviços
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-black uppercase leading-[0.9]">
+              <h2 className="text-2xl sm:text-3xl 2xl:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9]">
                 Preventiva & Corretiva
               </h2>
             </div>

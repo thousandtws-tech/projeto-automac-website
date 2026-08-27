@@ -60,7 +60,7 @@ export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
 
   return (
     <div className="w-full">
-      <section className="mt-[98px] min-h-dvh bg-white lg:mt-0">
+      <section className="mt-[98px] min-h-dvh bg-white lg:mt-10">
         <FadeIn direction="up" delay={0.2} className="flex min-h-dvh">
           <div className="flex w-full items-center justify-center px-5 py-16 sm:px-12 lg:px-16 lg:py-24">
             <div className="w-full max-w-3xl">
