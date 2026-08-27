@@ -176,7 +176,7 @@ export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-black hover:bg-neutral-800 text-white font-bold uppercase tracking-widest h-14 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-black hover:bg-red-700 cursor-pointer text-white font-bold uppercase tracking-widest h-14 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <Loader2 className="h-5 w-5 animate-spin" />

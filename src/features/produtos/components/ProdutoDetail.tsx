@@ -7,7 +7,6 @@ import {Dictionary} from "@/src/i18n/dictionaries";
 import {ProdutoItem} from "../types";
 import {ProdutosTechnicalSpecs} from "./ProdutosTechnicalSpecs";
 import {ProdutosIdealFor} from "./ProdutosIdealFor";
-import {ProdutosRelatedModels} from "./ProdutosRelatedModels";
 import {ProdutosAccessories} from "./ProdutosAccessories";
 import { FormattedTrademark } from "@shared/components/FormattedTrademark";
 import MuxPlayer from "@mux/mux-player-react/lazy";
@@ -66,7 +65,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
                                     <div className="mb-8">
                                         <span
                                             className="inline-block bg-brand-red-500 text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 py-2 mb-6">{t.automec}</span>
-                                        <h1 className="mb-4 text-5xl font-black uppercase leading-[0.9] tracking-[-0.04em] text-black sm:text-6xl lg:text-7xl"><FormattedTrademark text={produto.model} /></h1>
+                                        <h1 className="mb-4 text-5xl font-semibold uppercase leading-[0.9] tracking-[-0.04em] text-black sm:text-6xl lg:text-7xl whitespace-nowrap"><FormattedTrademark text={produto.model} /></h1>
                                         <p className="text-sm font-bold uppercase tracking-[0.15em] text-neutral-400">{p.title}</p>
                                     </div>
                                     <div className="border-t border-black pt-8">
@@ -134,36 +133,11 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
                 <ProdutosIdealFor dictionary={dictionary} items={p.idealFor}/>
             </FadeIn>
 
-
-            {/*
-<FadeIn direction="up" delay={0.2}>
-  <ProdutosCatalogSection
-    dictionary={dictionary}
-    catalog={p.catalog}
-  />
-</FadeIn>
-*/}
-
             <FadeIn direction="up" delay={0.2}>
                 <ProdutosTechnicalSpecs dictionary={dictionary} specs={p.technicalSpecs} model={produto.model}/>
             </FadeIn>
 
-            {/*
-<FadeIn direction="up" delay={0.2}>
-    <ProdutosApplications
-        dictionary={dictionary}
-        applications={produto.applications?.map((app, i) => ({
-            ...app,
-            label: p.applications?.[i]?.label || "",
-        }))}
-    />
-</FadeIn>
-*/}
-
-            <FadeIn direction="up" delay={0.15}>
-                <ProdutosRelatedModels dictionary={dictionary} categoryLabel={p.relatedCategoryLabel}
-                                       categoryHref={produto.relatedCategoryHref}/>
-            </FadeIn>
+           
         </main>
     );
 }
