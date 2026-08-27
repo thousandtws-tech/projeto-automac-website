@@ -183,10 +183,9 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             {/* Section label */}
             <div className="pt-20 pb-12">
-              <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
+              <span className="text-3xl font-bold uppercase tracking-widest text-brand-red-600 block">
                 Nossos Serviços
               </span>
-            
             </div>
 
             {/* Two columns */}
@@ -225,8 +224,6 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                     </li>
                   ))}
                 </ul>
-
-                
               </div>
 
               {/* ── Image Column (Quadrado de Assistência Técnica) ── */}
