@@ -186,9 +186,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
               <span className="text-2xl font-bold uppercase tracking-widest text-brand-red-600 mb-3 block">
                 Nossos Serviços
               </span>
-              <h2 className="text-2xl sm:text-3xl 2xl:text-5xl font-black tracking-tighter text-black uppercase leading-[0.9]">
-                Preventiva & Corretiva
-              </h2>
+            
             </div>
 
             {/* Two columns */}
@@ -201,7 +199,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                   </div>
                   <div>
                     <h3 className="text-2xl font-black uppercase tracking-tight text-black group-hover:text-white transition-colors">
-                      Preventiva
+                      Preventiva & Corretiva
                     </h3>
                     <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white transition-colors">
                       Programa recorrente
@@ -228,14 +226,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                   ))}
                 </ul>
 
-                <div className="mt-auto pt-4">
-                  <Button className="bg-black text-white hover:text-white group-hover:bg-white group-hover:text-black font-bold uppercase tracking-widest px-8 h-12 text-xs transition-colors" asChild>
-                    <Link href="/contato">
-                      Agendar Preventiva
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </Button>
-                </div>
+                
               </div>
 
               {/* ── Image Column (Quadrado de Assistência Técnica) ── */}
