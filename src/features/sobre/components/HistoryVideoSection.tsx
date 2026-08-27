@@ -62,7 +62,7 @@ export function HistoryVideoSection({
               <span className="mb-4 text-sm font-bold uppercase tracking-widest text-brand-red-600 sm:mb-5 sm:text-base">
                 {content.credibilityTitle}
               </span>
-              <h2 className="mb-5 max-w-full text-balance text-[clamp(1.75rem,5vw,3rem)] font-medium uppercase leading-tight tracking-tight text-black sm:mb-6 2xl:whitespace-nowrap">
+              <h2 className="mb-5 max-w-full text-balance text-[clamp(1.75rem,5vw,3rem)] font-bold uppercase leading-tight tracking-tight text-black sm:mb-6 2xl:whitespace-nowrap">
                 {content.historyTitle}
               </h2>
               {!storyBelowVideo && !splitStory && (
