@@ -248,7 +248,7 @@ export const produtosMock: ProdutoItem[] = [
       "pt-BR": {
         title: "Porta Automática para Ambientes Controlados",
         acronymMeaning: "Sistema de Tração Hermética",
-        description: "Porta Automática Automec modelo STH-70, ideal para ambientes controlados como câmaras frias, laboratórios e salas limpas. Sistema hermético com vedação completa para manter a integridade do ambiente interno.",
+        description: "Porta Automática Automec modelo STH-70, ideal para ambientes controlados como cozinhas industriais, laboratórios e salas limpas. Sistema hermético com vedação completa para manter a integridade do ambiente interno.",
         idealFor: ["Laboratórios", "Hospitais", "Indústrias", "Câmaras Frias", "Salas Limpas", "Farmacêuticas"],
         applications: [{ label: "Aplicação em ambientes controlados" }],
         relatedCategoryLabel: "Portas ambientes controlados",
