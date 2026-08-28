@@ -197,7 +197,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                     <Shield className="h-7 w-7" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black uppercase tracking-tight text-black group-hover:text-white transition-colors">
+                    <h3 className="text-2xl font-bold uppercase tracking-tight text-black group-hover:text-white transition-colors">
                       Preventiva & Corretiva
                     </h3>
                     <p className="text-xs font-bold uppercase tracking-widest text-neutral-500 group-hover:text-white transition-colors">
@@ -206,7 +206,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                   </div>
                 </div>
 
-                <p className="text-base leading-relaxed text-neutral-600 group-hover:text-white transition-colors">
+                <p className="text-base font-semibold leading-relaxed text-neutral-600 group-hover:text-white transition-colors">
                   Inspeções periódicas por programas para calibragem de sensores, lubrificação de engrenagens e teste de sensores e barreiras de segurança. Redução do índice de falhas em até 85%, prolongando a vida útil do automatizador.
                 </p>
 
@@ -218,7 +218,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
                     "Teste de baterias auxiliares de emergência (Quando necessário)",
                     "Limpeza Tecnica",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-neutral-600 group-hover:text-white transition-colors">
+                    <li key={item} className="flex items-start gap-3 text-sm font-semibold text-neutral-600 group-hover:text-white transition-colors">
                       <CheckCircle className="h-4 w-4 mt-0.5 shrink-0 text-brand-red-600 group-hover:text-brand-red-500 transition-colors" />
                       {item}
                     </li>

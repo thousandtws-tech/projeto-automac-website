@@ -103,16 +103,16 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
               {/* Lado esquerdo vermelho */}
               <div className="lg:col-span-6 bg-brand-red-600 lg:bg-transparent px-6 sm:px-8 lg:pr-16 py-16 md:py-24 flex flex-col justify-center">
-                <span className="text-xs font-medium uppercase tracking-widest text-white mb-4 inline-block px-4 py-1.5 bg-white/10 rounded-full w-fit border border-white/20">
+                <span className="text-xs font-bold uppercase tracking-widest text-white mb-4 inline-block px-4 py-1.5 bg-white/10 rounded-full w-fit border border-white/20">
                   {home.about.badge}
                 </span>
 
-                <h2 className="mb-8 text-[clamp(1.75rem,7vw,2.5rem)] font-semibold uppercase leading-[1.2] tracking-tight text-white sm:mb-12">
+                <h2 className="mb-8 text-[clamp(1.75rem,7vw,2.5rem)] font-bold uppercase leading-[1.2] tracking-tight text-white sm:mb-12">
                   {home.about.titlePart1}{" "}
                   <span>{home.about.titleHighlight}</span>
                 </h2>
 
-                <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-xl mb-8">
+                <p className="text-base sm:text-lg font-semibold text-white/90 leading-relaxed max-w-xl mb-8">
                   {home.about.description ||
                     "Com mais de 35 anos de atuação, a Automec oferece cobertura nacional completa com engenharia própria, estoque estratégico de peças e atendimento rápido em todo o Brasil."}
                 </p>

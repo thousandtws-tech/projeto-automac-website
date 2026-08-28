@@ -114,10 +114,10 @@ const Gallery4 = ({
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="mb-8 flex flex-col items-center text-center gap-6 md:mb-14 lg:mb-16">
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl lg:text-4xl">
+            <h2 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-4xl">
               {title}
             </h2>
-            <p className="max-w-2xl text-slate-500 font-medium text-lg md:text-md">{description}</p>
+            <p className="max-w-2xl text-slate-500 font-semibold text-lg md:text-md">{description}</p>
           </div>
         </div>
       </div>
