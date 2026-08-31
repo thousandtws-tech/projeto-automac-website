@@ -75,7 +75,7 @@ export function HistoryVideoSection({
               )}
             </div>
 
-            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md border-2 border-black shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"}`}>
+            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md   shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"}`}>
               <img
                 src={bannerSrc}
                 srcSet={bannerSrcSet}
