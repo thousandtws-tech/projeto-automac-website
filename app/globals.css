@@ -470,13 +470,13 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 35s linear infinite;
+  animation: marquee 70s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
-  animation: marquee-reverse 35s linear infinite;
+  animation: marquee-reverse 70s linear infinite;
 }
 
 @keyframes ken-burns {

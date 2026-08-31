@@ -22,37 +22,40 @@ import { HomeScrollReveal } from "./HomeScrollReveal";
 const featureIcons = [Settings, Shield, Wrench, Zap];
 
 const clientLogos = [
-  { id: "accor", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323953/accor_kzdm1c.svg", alt: "" },
-  { id: "bosch", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323954/Colinas_Shopping_1_h4jrxk.svg", alt: "" },
-  { id: "carrefour", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/graal_cexivn.svg", alt: "" },
-  { id: "colinas", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323951/itau-unibanco_lywegl.svg", alt: "" },
-  { id: "droga-raia", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323952/hines_zdvih6.svg", alt: "" },
-  { id: "drogasil", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323952/bosch_qrqqv7.svg", alt: "" },
-  { id: "ems", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/droga-raia_okln3u.svg", alt: "" },
-  { id: "graal", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323950/Shopping_Market_Place_wdor9s.svg", alt: "" },
-  { id: "sirioli", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323950/hospital_sirioli_banes_oo43mn.svg", alt: " " },
-  { id: "lilly", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/royal_palm_plaza_ajbs5b.svg", alt: "" },
-  { id: "odebrecht", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/Viracopos_amaang.svg", alt: "" },
-  { id: "patio-ciane", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323948/odebrecht_o5b1cg.svg", alt: "" },
-  { id: "rio-galeao", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323947/Lilly_akcs2e.svg", alt: "" },
-  { id: "royal-palm", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323947/P%C3%A1tio_Cian%C3%AA_u1ct1u.svg", alt: "" },
-  { id: "saint-gobain", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323946/Rio_Gale%C3%A3o_vl7ntr.svg", alt: "" },
-  { id: "market-place", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323946/Smart_Fit_jujwc9.svg", alt: "" },
-  { id: "smart-fit", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323943/tetra-pak_jdi6gg.svg", alt: "" },
-  { id: "tetra-pak", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323945/The_Royal_Palm_Plaza_-_V2_jlvuvz.svg", alt: "" },
-  { id: "royal-palm-v2", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323945/drogasil_ragsda.svg", alt: "" },
-  { id: "viracopos", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323944/saint_gobain_dpai7b.svg", alt: "" },
-  {id: "carrefour", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323943/carrefour_ncyzjl.svg", alt: "" },
-  {id: "unimed", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323942/unimed_fp7npm.svg", alt: "" },
-  {id: "good-year", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/goodyear_djhjt6.svg", alt: "" },
-  {id: "natura", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/natura_ulldkj.svg", alt: "" },
-  {id: "Aeroport", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/Aeroport_Intermacional_Gale%C3%A3o_bglqvk.svg", alt: "" },
-  {id: "walmart", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/walmart_qp53r1.svg", alt: "" },
-  {id: "albert-einstein", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323940/albert-einstein_miqvqm.svg", alt: "" }
+  { id: "group-4", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207687/Group_4_twnv4q.svg", alt: "" },
+  { id: "frame-9", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207686/Frame_9_hp3git.svg", alt: "" },
+  { id: "frame-8", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207685/Frame_8_so1atf.svg", alt: "" },
+  { id: "frame-7", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207684/Frame_7_kokcqv.svg", alt: "" },
+  { id: "frame-6", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207683/Frame_6_q4mzco.svg", alt: "" },
+  { id: "frame-5", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207682/Frame_5_swux4z.svg", alt: "" },
+  { id: "frame-4", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207681/Frame_4_eryfqi.svg", alt: "" },
+  { id: "frame-3", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207680/Frame_3_gqjrhc.svg", alt: "" },
+  { id: "frame-31", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207680/Frame_31_nvbqmc.svg", alt: "" },
+  { id: "frame-30", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207680/Frame_30_z5n1pp.svg", alt: "" },
+  { id: "frame-29", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207678/Frame_29_nlhytk.svg", alt: "" },
+  { id: "frame-28", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207677/Frame_28_roaycp.svg", alt: "" },
+  { id: "frame-27", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207676/Frame_27_ozfm2n.svg", alt: "" },
+  { id: "frame-26", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207675/Frame_26_f0zh2q.svg", alt: "" },
+  { id: "frame-25", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207675/Frame_25_ysbbxj.svg", alt: "" },
+  { id: "frame-24", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207674/Frame_24_acdrrr.svg", alt: "" },
+  { id: "frame-23", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207673/Frame_23_asidg4.svg", alt: "" },
+  { id: "frame-22", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207672/Frame_22_ivbdmn.svg", alt: "" },
+  { id: "frame-20", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207672/Frame_20_zmegh4.svg", alt: "" },
+  { id: "frame-21", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207671/Frame_21_q9ekqh.svg", alt: "" },
+  { id: "frame-2", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207670/Frame_2_zk6hnt.svg", alt: "" },
+  { id: "frame-19", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207670/Frame_19_irwoep.svg", alt: "" },
+  { id: "frame-18", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207668/Frame_18_jlgb9r.svg", alt: "" },
+  { id: "frame-10", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207668/Frame_10_eunk0u.svg", alt: "" },
+  { id: "frame-16", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207666/Frame_16_zbgfeb.svg", alt: "" },
+  { id: "frame-17", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207666/Frame_17_g2izwj.svg", alt: "" },
+  { id: "frame-14", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207665/Frame_14_fpmzzl.svg", alt: "" },
+  { id: "frame-13", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207664/Frame_13_ppxxmz.svg", alt: "" },
+  { id: "frame-12", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207663/Frame_12_pmfjsz.svg", alt: "" },
+  { id: "frame-1", src: "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207663/Frame_1_g63ckk.svg", alt: "" }
 ];
 
-const marqueeRow1 = clientLogos.slice(0, 10);
-const marqueeRow2 = clientLogos.slice(10, 20);
+const marqueeRow1 = clientLogos.slice(0, 15);
+const marqueeRow2 = clientLogos.slice(15, 30);
 
 export function HomeClientSections({ dictionary, locale }: { dictionary: any; locale: Locale }) {
   const home = dictionary.home;
@@ -171,15 +174,15 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow1, ...marqueeRow1].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex h-28 w-48 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-40 sm:w-70"
+                      className="flex h-40 w-60 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-52 sm:w-[23rem]"
                     >
                       <img
                         src={logo.src}
                         alt={logo.alt}
                         width={200}
                         height={100}
-                        loading="lazy"
-                        decoding="async"
+                        loading="eager"
+                        decoding="sync"
                         className="max-h-full max-w-full object-contain hover:scale-105 transition-all duration-300"
                       />
                     </div>
@@ -192,15 +195,15 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow2, ...marqueeRow2].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex h-28 w-52 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-40 sm:w-80"
+                      className="flex h-40 w-64 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-52 sm:w-[26rem]"
                     >
                       <img
                         src={logo.src}
                         alt={logo.alt}
                         width={200}
                         height={100}
-                        loading="lazy"
-                        decoding="async"
+                        loading="eager"
+                        decoding="sync"
                         className="max-h-full max-w-full object-contain hover:scale-105 transition-all duration-300"
                       />
                     </div>
