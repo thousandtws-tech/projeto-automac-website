@@ -21,16 +21,16 @@ export interface HistoryVideoContent {
 }
 
 const bannerSrc =
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207689/bg-2300x785px_mcgosj.jpg";
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-2300x785px_awj83w.jpg";
 const bannerSrcSet = [
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207691/bg-600x205px_eqowhu.jpg 600w",
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207690/bg-1024x350px_l6gqwo.jpg 1024w",
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207688/bg-1440x491px_ii25ts.jpg 1440w",
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207689/bg-2300x785px_mcgosj.jpg 2300w",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-600x205px_mcgosj.jpg 600w",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-1024x350px_l6gqwo.jpg 1024w",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-1440x491px_ii25ts.jpg 1440w",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-2300x785px_awj83w.jpg 2300w",
 ].join(", ");
 
 const logo35Src =
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207662/35_anos_banner_umkvcj.webp";
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788281616/35_anos_banner_kv8nfm.webp";
 
 const muxPlayerStyle = {
   width: "100%",
@@ -105,6 +105,7 @@ export function HistoryVideoSection({
                   <MuxPlayer
                     className="automec-mux-player"
                     playbackId={playbackId}
+                    placeholder={poster}
                     streamType="on-demand"
                     loading="viewport"
                     preload="metadata"
@@ -149,10 +150,10 @@ export function HistoryVideoSection({
                     <Image
                       src={logo35Src}
                       alt="35 anos Automec"
-                      width={120}
-                      height={108}
+                      width={592}
+                      height={463}
                       loading="eager"
-                      className="relative z-10 h-auto w-28 sm:w-36 md:w-44 drop-shadow-2xl [image-rendering:-webkit-optimize-contrast]"
+                      className="relative z-10 h-auto w-28 sm:w-36 md:w-87 drop-shadow-2xl [image-rendering:-webkit-optimize-contrast]"
                     />
                   </div>
                 </>
