@@ -1,9 +1,15 @@
 "use client";
 
+import { useState } from "react";
+import MuxPlayer from "@mux/mux-player-react/lazy";
+import type { MuxPlayerCSSProperties } from "@mux/mux-player-react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
+
+const defaultPlaybackId =
+  "Se57ug001px3tdXw00quRrSUi004FYqlK1QoxD1Vks3lrI";
 
 export interface HistoryVideoContent {
   historyTitle: string;
@@ -26,8 +32,19 @@ const bannerSrcSet = [
 const logo35Src =
   "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207662/35_anos_banner_umkvcj.webp";
 
+const muxPlayerStyle = {
+  width: "100%",
+  height: "100%",
+  aspectRatio: "16 / 9",
+  "--media-object-fit": "cover",
+  "--media-object-position": "center",
+  "--seek-backward-button": "none",
+  "--seek-forward-button": "none",
+} satisfies MuxPlayerCSSProperties;
+
 export function HistoryVideoSection({
   content,
+  playbackId: playbackIdOverride,
   storyBelowVideo = false,
   splitStory = false,
   centeredContent = false,
@@ -38,9 +55,17 @@ export function HistoryVideoSection({
   splitStory?: boolean;
   centeredContent?: boolean;
 }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const playbackId =
+    playbackIdOverride ||
+    process.env.NEXT_PUBLIC_MUX_HOME_PLAYBACK_ID ||
+    process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID ||
+    defaultPlaybackId;
+  const poster = `https://image.mux.com/${playbackId}/thumbnail.png?width=2560&height=1440&time=18&fit_mode=smartcrop`;
   const storyParagraphs = content.historySub.split(/\n\s*\n/);
   const upperStoryParagraphs = splitStory ? storyParagraphs.slice(0, 3) : storyParagraphs;
   const lowerStoryParagraphs = splitStory ? storyParagraphs.slice(3) : [];
+  const hasVideo = Boolean(playbackIdOverride);
 
   return (
     <FadeIn direction="up" delay={0.2}>
@@ -70,31 +95,68 @@ export function HistoryVideoSection({
                       </p>
                     )}
                   </div>
-
                 </>
               )}
             </div>
 
-            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md   shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"}`}>
-              <img
-                src={bannerSrc}
-                srcSet={bannerSrcSet}
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                alt="Banner 35 anos Automec"
-                loading="eager"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 z-0 flex items-center justify-center bg-black/20">
-                <Image
-                  src={logo35Src}
-                  alt="35 anos Automec"
-                  width={120}
-                  height={108}
-                  loading="eager"
-                  className="relative z-10 h-auto w-28 sm:w-36 md:w-44 drop-shadow-2xl [image-rendering:-webkit-optimize-contrast]"
-                />
-              </div>
+            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"} ${hasVideo ? "border-2 border-black bg-neutral-900" : ""}`}>
+              {hasVideo ? (
+                <>
+                  <MuxPlayer
+                    className="automec-mux-player"
+                    playbackId={playbackId}
+                    streamType="on-demand"
+                    loading="viewport"
+                    preload="metadata"
+                    autoPlay="muted"
+                    muted
+                    loop
+                    playsInline
+                    poster={poster}
+                    videoTitle={content.videoLabel}
+                    metadata={{
+                      video_id: "automec-fabrica",
+                      video_title: content.videoLabel,
+                    }}
+                    accentColor="#d01c24"
+                    primaryColor="#ffffff"
+                    secondaryColor="#171717"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                    style={muxPlayerStyle}
+                  />
+                  {!isPlaying && (
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-16 sm:px-5 sm:pb-5">
+                      <span className="text-xs font-bold uppercase tracking-widest text-white">
+                        {content.videoLabel}
+                      </span>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  <img
+                    src={bannerSrc}
+                    srcSet={bannerSrcSet}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    alt="Banner 35 anos Automec"
+                    loading="eager"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 z-0 flex items-center justify-center bg-black/20">
+                    <Image
+                      src={logo35Src}
+                      alt="35 anos Automec"
+                      width={120}
+                      height={108}
+                      loading="eager"
+                      className="relative z-10 h-auto w-28 sm:w-36 md:w-44 drop-shadow-2xl [image-rendering:-webkit-optimize-contrast]"
+                    />
+                  </div>
+                </>
+              )}
             </div>
 
             {splitStory && lowerStoryParagraphs.length > 0 && (
