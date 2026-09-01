@@ -146,7 +146,7 @@ export function HistoryVideoSection({
                     decoding="async"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 z-0 flex items-center justify-center bg-black/20">
+                  <div className="absolute inset-0 z-0 flex items-center justify-center">
                     <Image
                       src={logo35Src}
                       alt="35 anos Automec"
