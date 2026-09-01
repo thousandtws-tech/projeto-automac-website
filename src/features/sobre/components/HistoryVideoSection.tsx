@@ -21,12 +21,12 @@ export interface HistoryVideoContent {
 }
 
 const bannerSrc =
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-2300x785px_awj83w.jpg";
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282270/bg-1024x350px_i57bw4.jpg";
 const bannerSrcSet = [
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-600x205px_mcgosj.jpg 600w",
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-1024x350px_l6gqwo.jpg 1024w",
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-1440x491px_ii25ts.jpg 1440w",
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282271/bg-2300x785px_awj83w.jpg 2300w",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282270/bg-1024x350px_i57bw4.jpg",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282270/bg-1024x350px_i57bw4.jpg",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282270/bg-1024x350px_i57bw4.jpg",
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788282270/bg-1024x350px_i57bw4.jpg",
 ].join(", ");
 
 const logo35Src =
