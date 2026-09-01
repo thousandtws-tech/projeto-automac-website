@@ -22,37 +22,41 @@ import { HomeScrollReveal } from "./HomeScrollReveal";
 const featureIcons = [Settings, Shield, Wrench, Zap];
 
 const clientLogos = [
-  { id: "accor", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323953/accor_kzdm1c.svg", alt: "" },
-  { id: "bosch", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323954/Colinas_Shopping_1_h4jrxk.svg", alt: "" },
-  { id: "carrefour", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/graal_cexivn.svg", alt: "" },
-  { id: "colinas", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323951/itau-unibanco_lywegl.svg", alt: "" },
-  { id: "droga-raia", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323952/hines_zdvih6.svg", alt: "" },
-  { id: "drogasil", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323952/bosch_qrqqv7.svg", alt: "" },
-  { id: "ems", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/droga-raia_okln3u.svg", alt: "" },
-  { id: "graal", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323950/Shopping_Market_Place_wdor9s.svg", alt: "" },
-  { id: "sirioli", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323950/hospital_sirioli_banes_oo43mn.svg", alt: " " },
-  { id: "lilly", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/royal_palm_plaza_ajbs5b.svg", alt: "" },
-  { id: "odebrecht", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323949/Viracopos_amaang.svg", alt: "" },
-  { id: "patio-ciane", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323948/odebrecht_o5b1cg.svg", alt: "" },
-  { id: "rio-galeao", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323947/Lilly_akcs2e.svg", alt: "" },
-  { id: "royal-palm", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323947/P%C3%A1tio_Cian%C3%AA_u1ct1u.svg", alt: "" },
-  { id: "saint-gobain", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323946/Rio_Gale%C3%A3o_vl7ntr.svg", alt: "" },
-  { id: "market-place", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323946/Smart_Fit_jujwc9.svg", alt: "" },
-  { id: "smart-fit", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323943/tetra-pak_jdi6gg.svg", alt: "" },
-  { id: "tetra-pak", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323945/The_Royal_Palm_Plaza_-_V2_jlvuvz.svg", alt: "" },
-  { id: "royal-palm-v2", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323945/drogasil_ragsda.svg", alt: "" },
-  { id: "viracopos", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323944/saint_gobain_dpai7b.svg", alt: "" },
-  {id: "carrefour", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323943/carrefour_ncyzjl.svg", alt: "" },
-  {id: "unimed", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323942/unimed_fp7npm.svg", alt: "" },
-  {id: "good-year", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/goodyear_djhjt6.svg", alt: "" },
-  {id: "natura", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/natura_ulldkj.svg", alt: "" },
-  {id: "Aeroport", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/Aeroport_Intermacional_Gale%C3%A3o_bglqvk.svg", alt: "" },
-  {id: "walmart", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323941/walmart_qp53r1.svg", alt: "" },
-  {id: "albert-einstein", src: "https://res.cloudinary.com/lz9vero5/image/upload/v1787323940/albert-einstein_miqvqm.svg", alt: "" }
+  { id: "3m", src: "/clientes/3m.svg", alt: "3M" },
+  { id: "accor", src: "/clientes/accor.svg", alt: "Accor" },
+  { id: "aeroporto-galeao", src: "/clientes/Aeroport Intermacional Galeão.svg", alt: "Aeroporto Internacional Galeão" },
+  { id: "albert-einstein", src: "/clientes/albert-einstein.svg", alt: "Albert Einstein" },
+  { id: "bosch", src: "/clientes/bosch.svg", alt: "Bosch" },
+  { id: "carrefour", src: "/clientes/carrefour.svg", alt: "Carrefour" },
+  { id: "colinas-shopping", src: "/clientes/Colinas  Shopping (1).svg", alt: "Colinas Shopping" },
+  { id: "droga-raia", src: "/clientes/droga-raia.svg", alt: "Droga Raia" },
+  { id: "drogasil", src: "/clientes/drogasil.svg", alt: "Drogasil" },
+  { id: "ems", src: "/clientes/EMS.svg", alt: "EMS" },
+  { id: "goodyear", src: "/clientes/goodyear.svg", alt: "Goodyear" },
+  { id: "graal", src: "/clientes/graal.svg", alt: "Graal" },
+  { id: "hines", src: "/clientes/hines.svg", alt: "Hines" },
+  { id: "hospital-sirioli", src: "/clientes/hospital sirioli banes.svg", alt: "Hospital Sirioli Banes" },
+  { id: "itau-unibanco", src: "/clientes/itau-unibanco.svg", alt: "Itaú Unibanco" },
+  { id: "lilly", src: "/clientes/Lilly.svg", alt: "Lilly" },
+  { id: "natura", src: "/clientes/natura.svg", alt: "Natura" },
+  { id: "odebrecht", src: "/clientes/odebrecht.svg", alt: "Odebrecht" },
+  { id: "patio-ciane", src: "/clientes/Pátio Cianê.svg", alt: "Pátio Cianê" },
+  { id: "rio-galeao", src: "/clientes/Rio Galeão.svg", alt: "Rio Galeão" },
+  { id: "royal-palm-plaza", src: "/clientes/royal palm plaza.svg", alt: "Royal Palm Plaza" },
+  { id: "saint-gobain", src: "/clientes/saint gobain.svg", alt: "Saint-Gobain" },
+  { id: "shopping-market-place", src: "/clientes/Shopping Market Place.svg", alt: "Shopping Market Place" },
+  { id: "smart-fit", src: "/clientes/Smart Fit.svg", alt: "Smart Fit" },
+  { id: "tetra-pak", src: "/clientes/tetra-pak.svg", alt: "Tetra Pak" },
+  { id: "the-royal-palm-plaza", src: "/clientes/The Royal Palm Plaza - V2.svg", alt: "The Royal Palm Plaza" },
+  { id: "tok-stok", src: "/clientes/tok-stok.svg", alt: "Tok Stok" },
+  { id: "unimed", src: "/clientes/unimed.svg", alt: "Unimed" },
+  { id: "viracopos", src: "/clientes/Viracopos.svg", alt: "Viracopos" },
+  { id: "walmart", src: "/clientes/walmart.svg", alt: "Walmart" },
 ];
 
-const marqueeRow1 = clientLogos.slice(0, 10);
-const marqueeRow2 = clientLogos.slice(10, 20);
+const half = Math.ceil(clientLogos.length / 2);
+const marqueeRow1 = clientLogos.slice(0, half);
+const marqueeRow2 = clientLogos.slice(half);
 
 export function HomeClientSections({ dictionary, locale }: { dictionary: any; locale: Locale }) {
   const home = dictionary.home;
