@@ -24,7 +24,7 @@ const bannerSrcSet = [
 ].join(", ");
 
 const logo35Src =
-  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788207662/35_anos_banner_umkvcj.webp";
+  "https://res.cloudinary.com/dpgslwy15/image/upload/v1788280326/logo-35-anos-novo_copy_nwlxip.webp";
 
 export function HistoryVideoSection({
   content,
