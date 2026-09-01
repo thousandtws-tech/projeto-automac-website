@@ -175,7 +175,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow1, ...marqueeRow1].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex h-60 w-60 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-52 sm:w-80 md:h-60 md:w-96"
+                      className="flex h-60 w-60 shrink-0 items-center justify-center border-black bg-white p-4 sm:h-52 sm:w-80 md:h-60 md:w-96"
                     >
                       <img
                         src={logo.src}
@@ -196,7 +196,7 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow2, ...marqueeRow2].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex h-60 w-60 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-52 sm:w-80 md:h-60 md:w-96"
+                      className="flex h-60 w-60 shrink-0 items-center justify-center border-black bg-white p-4 sm:h-52 sm:w-80 md:h-60 md:w-96"
                     >
                       <img
                         src={logo.src}
