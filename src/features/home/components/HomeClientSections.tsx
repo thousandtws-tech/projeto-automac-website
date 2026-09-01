@@ -175,13 +175,13 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow1, ...marqueeRow1].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex h-28 w-48 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-40 sm:w-70"
+                      className="flex h-60 w-60 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-52 sm:w-80 md:h-60 md:w-70"
                     >
                       <img
                         src={logo.src}
                         alt={logo.alt}
-                        width={200}
-                        height={100}
+                        width={300}
+                        height={150}
                         loading="lazy"
                         decoding="async"
                         className="max-h-full max-w-full object-contain hover:scale-105 transition-all duration-300"
@@ -196,13 +196,13 @@ export function HomeClientSections({ dictionary, locale }: { dictionary: any; lo
                   {[...marqueeRow2, ...marqueeRow2].map((logo, index) => (
                     <div
                       key={`${logo.id}-${index}`}
-                      className="flex h-28 w-52 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-40 sm:w-80"
+                      className="flex h-60 w-60 shrink-0 items-center justify-center border-black bg-white p-4 shadow sm:h-52 sm:w-80 md:h-60 md:w-70"
                     >
                       <img
                         src={logo.src}
                         alt={logo.alt}
-                        width={200}
-                        height={100}
+                        width={300}
+                        height={150}
                         loading="lazy"
                         decoding="async"
                         className="max-h-full max-w-full object-contain hover:scale-105 transition-all duration-300"
