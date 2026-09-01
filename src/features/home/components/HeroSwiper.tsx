@@ -255,7 +255,7 @@ export function HeroMetricsDock({
         ref={parallaxRef}
         className="w-full transform-gpu will-change-transform"
       >
-        <div className="relative w-full overflow-hidden border-y  border-white/10 shadow-2xl shadow-black/20">
+        <div className="relative w-full overflow-hidden shadow-2xl shadow-black/20">
           <div
             aria-hidden="true"
             className="absolute inset-0 bg-gradient from-black/70 via-neutral-900/55 to-amber-950/35 "
