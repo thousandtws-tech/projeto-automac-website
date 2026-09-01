@@ -85,8 +85,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
   ];
 
   return (
-    <footer className="border-t border-neutral-200 bg-white shadow-[0_-3px_12px_rgba(0,0,0,0.025)]">
-      <div className="border-b border-neutral-200 bg-neutral-50">
+    <footer className="bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.04)]">
+      <div className="bg-neutral-50">
         <div
           className="
           container mx-auto grid min-w-0 grid-cols-1 gap-8
@@ -100,8 +100,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
           {/* Contatos */}
           <div
             className="
-            min-w-0 space-y-5 border-b border-black/20 pb-8
-            lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6
+            min-w-0 space-y-5 pb-8
+            lg:pb-0 lg:pr-6
             xl:pr-8
           "
           >
@@ -194,8 +194,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
           {/* Endereço e mapa */}
           <div
             className="
-            min-w-0 space-y-5 border-b border-black/20 pb-8
-            lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8
+            min-w-0 space-y-5 pb-8
+            lg:pb-0 lg:pr-8
             xl:pr-10
           "
           >
@@ -210,7 +210,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-xl border border-black/10 bg-white">
+            <div className="overflow-hidden rounded-xl bg-white">
               <LazyMap
                 title="Localização da Automec Portas Automáticas"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14706.809156150564!2d-47.090868564738926!3d-22.850501468143122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c703df8a0725%3A0xe3ff1d1ffa1bec7b!2sAutomec%20Portas%20Autom%C3%A1ticas!5e0!3m2!1spt-BR!2sbr!4v1785872348589!5m2!1spt-BR!2sbr"
