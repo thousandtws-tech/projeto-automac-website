@@ -99,11 +99,13 @@ export function HistoryVideoSection({
               )}
             </div>
 
-            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md`}>
+            <div className={`relative min-w-0  w-full overflow-hidden rounded-md ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"} ${hasVideo ? "border-2  " : ""}`}>
               {hasVideo ? (
-               <section>
-                 <Image src={"https://res.cloudinary.com/dpgslwy15/image/upload/v1788453233/WhatsApp_Image_2026-09-03_at_12.07.56_nwazrf.jpg"} alt={""} width={1600} height={883} quality={100}/>
-               </section>
+                <section>
+                  <section>
+                    <Image src={"https://res.cloudinary.com/dpgslwy15/image/upload/v1788453233/WhatsApp_Image_2026-09-03_at_12.07.56_nwazrf.jpg"} alt={""} width={1600} height={883} quality={100}/>
+                  </section>
+                </section>
               ) : (
                 <>
                   <img
