@@ -13,7 +13,7 @@ const fallbackContent = {
   title: "PROJETOS",
   highlight: "CUSTOMIZADOS",
   description: "Temos soluções personalizadas para desafios complexos de engenharia de acesso.",
-  button: "Falar com Especialista",
+  button: "Fale com um especialista",
 };
 
 export function AcessoriosCTA({ content }: AcessoriosCTAProps) {

@@ -15,7 +15,7 @@ export default function Produtos() {
           
           <div className="mt-32 rounded-[48px] bg-slate-900 p-16 lg:p-24 text-center">
             <h3 className="text-4xl lg:text-6xl font-black tracking-tighter text-white">
-              SOLUÇÕES EM <span className="text-brand-red-500">ACESSOS</span>
+              TECNOLOGIA PARA <span className="text-brand-red-500">ACESSOS</span>
             </h3>
             <p className="mt-8 text-xl text-white/40 font-medium max-w-xl mx-auto">
               Tecnologia, segurança e design para o seu projeto de automação.

@@ -32,8 +32,8 @@ Vocês são, e sempre serão, o nosso maior patrimônio.`,
   credibilityTitle: "Credibilidade",
   credibilityDesc: "",
   videoLabel: "Conheça nossa fábrica",
-  ctaTitle: "Faça parte da história de mais de 30 mil portas instaladas",
-  ctaButton: "Solicitar Orçamento",
+  ctaTitle: "Seu projeto pode ser o nosso próximo case de sucesso.",
+  ctaButton: "Solicite um orçamento",
 };
 
 export function SobreContent({ content }: SobreContentProps) {

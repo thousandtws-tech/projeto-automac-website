@@ -20,8 +20,8 @@ export function ProdutosClient({ locale, dictionary }: { locale: Locale; diction
       </section>
       <CtaBlock
         variant="white"
-        title={dictionary.produtos.ctaTitle}
-        highlight={dictionary.produtos.ctaHighlight}
+        title={dictionary.produtos.productPageCtaTitle}
+        highlight={dictionary.produtos.productPageCtaHighlight}
         description={dictionary.produtos.ctaDescription}
         buttonText={dictionary.produtos.ctaButton}
       />

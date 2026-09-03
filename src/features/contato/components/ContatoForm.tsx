@@ -215,13 +215,9 @@ export function ContatoForm({ dictionary }: { dictionary: Dictionary }) {
           </div>
         </FadeIn>
       </section>
-      <CtaBlock
-          variant="white"
-          title={dictionary.produtos.ctaTitle}
-          highlight={dictionary.produtos.ctaHighlight}
-          description={dictionary.produtos.ctaDescription}
-          buttonText={dictionary.produtos.ctaButton}
-      />
+     <section>
+       <CtaBlock title={"SEU PROJETO COMEÇA AQUI"} variant={"white"} buttonText={"SOLICITAR ORÇAMENTO"} description={"Conte com 35 anos de experiência para encontrar a solução certa em automcação, segurança e acessibilidade."}/>
+     </section>
     </div>
   );
 }

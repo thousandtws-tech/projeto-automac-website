@@ -121,6 +121,8 @@ export const dictionary = {
     ctaHighlight: "SOLUTIONS",
     ctaDescription: "Technology, safety and design for your automation project.",
     ctaButton: "Request a Quote",
+    productPageCtaTitle: "Technology for",
+    productPageCtaHighlight: "access",
     detail: {
       backToProducts: "Products",
       automec: "Automec",
@@ -234,7 +236,7 @@ export const dictionary = {
       title: "CUSTOM",
       highlight: "PROJECTS",
       description: "We provide tailored solutions for complex access engineering challenges.",
-      button: "Talk to a Specialist",
+      button: "Talk to a specialist",
     },
   },
   footer: {
@@ -282,8 +284,8 @@ export const dictionary = {
     visionDesc: "Continuous improvement of our products, contributing to modernization and accessibility.",
     valuesTitle: "Values",
     valuesDesc: "We value people and talents; grounded in technology and innovation.",
-    ctaTitle: "Be part of the history of over 30 thousand installed doors",
-    ctaButton: "Request a Quote",
+    ctaTitle: "Your project can be our next success story.",
+    ctaButton: "Request a quote",
   },
   contato: {
     headline: "For the Engineering Director who won’t tolerate delays or rework.\n",

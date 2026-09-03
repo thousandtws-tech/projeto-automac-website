@@ -121,6 +121,8 @@ export const dictionary = {
     ctaHighlight: "ACCESO",
     ctaDescription: "Tecnología, seguridad y diseño para tu proyecto de automatización.",
     ctaButton: "Solicitar Presupuesto",
+    productPageCtaTitle: "Tecnología para",
+    productPageCtaHighlight: "accesos",
     detail: {
       backToProducts: "Productos",
       automec: "Automec",
@@ -235,7 +237,7 @@ export const dictionary = {
       title: "PROYECTOS",
       highlight: "PERSONALIZADOS",
       description: "Tenemos soluciones personalizadas para desafíos complejos de ingeniería de acceso.",
-      button: "Hablar con Especialista",
+      button: "Hable con un especialista",
     },
   },
   footer: {
@@ -283,8 +285,8 @@ export const dictionary = {
     visionDesc: "Mejora continua de nuestros productos, contribuyendo a la modernización y accesibilidad.",
     valuesTitle: "Valores",
     valuesDesc: "Valoramos a las personas y los talentos; basados en tecnología e innovación.",
-    ctaTitle: "Sea parte de la historia de más de 30 mil puertas instaladas",
-    ctaButton: "Solicitar Presupuesto",
+    ctaTitle: "Su proyecto puede ser nuestro próximo caso de éxito.",
+    ctaButton: "Solicite un presupuesto",
   },
   manutencao: {
     header: {
