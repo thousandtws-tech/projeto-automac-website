@@ -99,42 +99,11 @@ export function HistoryVideoSection({
               )}
             </div>
 
-            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"} ${hasVideo ? "border-2 border-black bg-neutral-900" : ""}`}>
+            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md`}>
               {hasVideo ? (
-                <>
-                  <MuxPlayer
-                    className="automec-mux-player"
-                    playbackId={playbackId}
-                    placeholder={poster}
-                    streamType="on-demand"
-                    loading="viewport"
-                    preload="metadata"
-                    autoPlay="muted"
-                    muted
-                    loop
-                    playsInline
-                    poster={poster}
-                    videoTitle={content.videoLabel}
-                    metadata={{
-                      video_id: "automec-fabrica",
-                      video_title: content.videoLabel,
-                    }}
-                    accentColor="#d01c24"
-                    primaryColor="#ffffff"
-                    secondaryColor="#171717"
-                    onPlay={() => setIsPlaying(true)}
-                    onPause={() => setIsPlaying(false)}
-                    onEnded={() => setIsPlaying(false)}
-                    style={muxPlayerStyle}
-                  />
-                  {!isPlaying && (
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-16 sm:px-5 sm:pb-5">
-                      <span className="text-xs font-bold uppercase tracking-widest text-white">
-                        {content.videoLabel}
-                      </span>
-                    </div>
-                  )}
-                </>
+               <section>
+                 <Image src={"https://res.cloudinary.com/dpgslwy15/image/upload/v1788453233/WhatsApp_Image_2026-09-03_at_12.07.56_nwazrf.jpg"} alt={""} width={1600} height={883} quality={100}/>
+               </section>
               ) : (
                 <>
                   <img
