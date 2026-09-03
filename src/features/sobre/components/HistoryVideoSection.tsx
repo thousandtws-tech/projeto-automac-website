@@ -69,7 +69,7 @@ export function HistoryVideoSection({
 
   return (
     <FadeIn direction="up" delay={0.2}>
-      <div className="border-b border-black pb-16 pt-48 sm:pt-40 md:pt-44 md:pb-24 lg:pt-48">
+      <div className="border-b  border-zinc-300 pb-16 pt-48 sm:pt-40 md:pt-44 md:pb-24 lg:pt-48">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12">
           <div className={`grid grid-cols-1 items-start lg:grid-cols-2 ${splitStory ? "gap-5 lg:gap-6" : "gap-10 lg:gap-12 xl:gap-20"}`}>
             <div className={`min-w-0 flex flex-col ${splitStory || centeredContent ? "items-center text-center" : "items-start text-left"} ${splitStory ? "lg:col-span-2" : ""} ${centeredContent ? "justify-center self-stretch" : ""}`}>

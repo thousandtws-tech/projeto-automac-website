@@ -15,7 +15,6 @@ import {
   Factory,
   Stethoscope,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/fade-in";
 import { CtaBlock } from "@shared/components/CtaBlock";
 import type { Locale } from "@/src/i18n/config";
@@ -179,7 +178,7 @@ export function ManutencaoContent({ dictionary }: { dictionary: Dictionary; loca
           3. SERVICES — Preventiva vs Corretiva split layout
       ═══════════════════════════════════════════════════════════════ */}
       <FadeIn direction="up" delay={0.15}>
-        <div className="border-b shadow ">
+        <div className="border-b shadow">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12">
             {/* Section label */}
             <div className="pt-20 pb-12">
