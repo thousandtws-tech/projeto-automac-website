@@ -31,7 +31,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
     return (
         <main className="min-h-screen bg-white">
             {/* Breadcrumb bar */}
-            <div className="border-b border-black bg-white pt-28 md:pt-30">
+            <div className="border-b  border-zinc-300 bg-white pt-28 md:pt-30">
                 <div className="container mx-auto px-6 sm:px-8 lg:px-12">
                     <nav className="flex items-center gap-2 py-4">
                         <Link
@@ -51,10 +51,10 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
 
             {/* Hero */}
             <FadeIn direction="up" delay={0.1}>
-                <section className="border-b border-black bg-white">
+                <section className="border-b  border-zinc-300 bg-white">
                     <div className="container mx-auto px-6 sm:px-8 lg:px-12">
                         <div className="grid grid-cols-12 gap-0">
-                            <div className="col-span-12 md:col-span-7 border-b md:border-b-0 md:border-r border-black">
+                            <div className="col-span-12 md:col-span-7 border-b md:border-b-0 md:border-r  border-zinc-300">
                                 <div className="relative aspect-[4/3] w-full bg-neutral-50">
                                     <Image src={produto.image} alt={p.title} fill sizes="(min-width: 768px) 50vw, 100vw"
                                            className="object-contain p-12 md:p-16" priority/>
@@ -68,7 +68,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
                                         <h1 className="mb-4 text-5xl font-semibold uppercase leading-[0.9] tracking-[-0.04em] text-black sm:text-6xl lg:text-7xl whitespace-nowrap"><FormattedTrademark text={produto.model} /></h1>
                                         <p className="text-sm font-bold uppercase tracking-[0.15em] text-neutral-400">{p.title}</p>
                                     </div>
-                                    <div className="border-t border-black pt-8">
+                                    <div className="border-t  border-zinc-300 pt-8">
                                         <p className="text-sm leading-relaxed text-neutral-600 line-clamp-4">{p.description.split("\n")[0]}</p>
                                         <a href="#especificacao"
                                            className="inline-flex items-center gap-2 mt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-red-500 hover:text-brand-red-700 transition-colors">
@@ -84,7 +84,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
 
             {produto.videoPlaybackId && (
                 <FadeIn direction="up" delay={0.12}>
-                    <section className="border-b border-black bg-white">
+                    <section className="border-b  border-zinc-300 bg-white">
                         <div className="w-full px-5 py-8 sm:px-8 sm:py-12">
                             <div className="mx-auto aspect-video w-full max-w-[850px] overflow-hidden rounded-lg border border-neutral-300 bg-black shadow-[0_6px_20px_rgba(0,0,0,0.10)]">
                                 <MuxPlayer
@@ -112,7 +112,7 @@ export function ProdutoDetail({locale, dictionary, produto}: ProdutoDetailProps)
             <FadeIn direction="up" delay={0.15}>
                 <section id="especificacao" className="scroll-mt-32">
                     <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-                        <div className="grid grid-cols-12 gap-0 border-b border-black">
+                        <div className="grid grid-cols-12 gap-0 border-b  border-zinc-300">
                             <div className="col-span-12 md:col-span-4 bg-brand-red-500 p-8 md:p-12 flex items-center">
                                 <h2 className="text-2xl md:text-3xl font-black tracking-[-0.02em] text-white uppercase">{t.specification}</h2>
                             </div>

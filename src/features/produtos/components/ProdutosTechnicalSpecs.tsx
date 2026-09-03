@@ -20,10 +20,10 @@ export function ProdutosTechnicalSpecs({ dictionary, specs, model }: ProdutosTec
   const t = dictionary.produtos.detail;
 
   return (
-    <section className="border-b border-black">
+    <section className="border-b  border-zinc-300">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
-        <div className="border-b border-black py-8">
+        <div className="border-b  border-zinc-300 py-8">
           <h2 className="text-2xl md:text-3xl font-black tracking-[-0.02em] text-black uppercase">
             {t.technicalSpecs}
           </h2>

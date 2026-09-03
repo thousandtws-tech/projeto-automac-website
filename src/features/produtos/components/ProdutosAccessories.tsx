@@ -8,7 +8,7 @@ export function ProdutosAccessories({ dictionary }: ProdutosAccessoriesProps) {
   const t = dictionary.produtos.detail;
 
   return (
-    <section className="border-b border-black">
+    <section className="border-b  border-zinc-300">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-12 gap-0">
           {/* Label */}
