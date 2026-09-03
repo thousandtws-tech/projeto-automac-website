@@ -99,8 +99,65 @@ export function HistoryVideoSection({
               )}
             </div>
 
-            <div className={`relative min-w-0 aspect-video w-full overflow-hidden  `}>
-              <Image src={"https://res.cloudinary.com/dpgslwy15/image/upload/v1788453233/WhatsApp_Image_2026-09-03_at_12.07.56_nwazrf.jpg"} alt={"banner"} width={1600} height={883} />
+            <div className={`relative min-w-0 aspect-video w-full overflow-hidden rounded-md shadow-lg ${splitStory ? "lg:col-span-2 lg:aspect-[21/9]" : storyBelowVideo ? "" : "lg:mt-[6.875rem]"} ${hasVideo ? "border-2 border-black bg-neutral-900" : ""}`}>
+              {hasVideo ? (
+                <>
+                  <MuxPlayer
+                    className="automec-mux-player"
+                    playbackId={playbackId}
+                    placeholder={poster}
+                    streamType="on-demand"
+                    loading="viewport"
+                    preload="metadata"
+                    autoPlay="muted"
+                    muted
+                    loop
+                    playsInline
+                    poster={poster}
+                    videoTitle={content.videoLabel}
+                    metadata={{
+                      video_id: "automec-fabrica",
+                      video_title: content.videoLabel,
+                    }}
+                    accentColor="#d01c24"
+                    primaryColor="#ffffff"
+                    secondaryColor="#171717"
+                    onPlay={() => setIsPlaying(true)}
+                    onPause={() => setIsPlaying(false)}
+                    onEnded={() => setIsPlaying(false)}
+                    style={muxPlayerStyle}
+                  />
+                  {!isPlaying && (
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-16 sm:px-5 sm:pb-5">
+                      <span className="text-xs font-bold uppercase tracking-widest text-white">
+                        {content.videoLabel}
+                      </span>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  <img
+                    src={bannerSrc}
+                    srcSet={bannerSrcSet}
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    alt="Banner 35 anos Automec"
+                    loading="eager"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 z-0 flex items-center justify-center">
+                    <Image
+                      src={logo35Src}
+                      alt="35 anos Automec"
+                      width={592}
+                      height={463}
+                      loading="eager"
+                      className="relative z-10 h-auto w-28 sm:w-36 md:w-87 drop-shadow-2xl [image-rendering:-webkit-optimize-contrast]"
+                    />
+                  </div>
+                </>
+              )}
             </div>
 
             {splitStory && lowerStoryParagraphs.length > 0 && (
